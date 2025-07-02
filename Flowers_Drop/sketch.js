@@ -28,6 +28,9 @@ function draw() {
 function mousePressed() {
   falling = true;
 }
+function touchStarted() {
+  falling = true;
+}
 
 function mouseDragged() {
   flowers.push(new Flower(mouseX, mouseY));
