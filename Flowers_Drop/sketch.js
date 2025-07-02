@@ -10,6 +10,10 @@ strokeWeight(0.2);        // Thin outline
   // 🌸 No flowers here — start empty
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   background("#e5e1dc");
 
