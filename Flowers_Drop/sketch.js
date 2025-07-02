@@ -32,3 +32,7 @@ function mousePressed() {
 function mouseDragged() {
   flowers.push(new Flower(mouseX, mouseY));
 }
+function touchMoved() {
+  flowers.push(new Flower(mouseX, mouseY));
+}
+
