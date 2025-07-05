@@ -21,7 +21,7 @@ function draw() {
   textSize(min(width, height) / 80); // Responsive size based on screen
   fill("#5F5F5F");
   textFont('Press Start 2P'); // Text color
-  text("Flowers Drop - made by enchax", width / 2, height / 1.05);
+  text("°❀⋆ flowers drop - made by enchax .ೃ࿔*:･", width / 2, height / 1.05);
   
   for (let f of flowers) {
     if (falling) {
