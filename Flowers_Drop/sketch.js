@@ -1,6 +1,11 @@
 let flowers = [];
 let colors = ["#309898", "#CB0404", "#c6b6d5", "#FF9F00", "#a4cd98", "#F4631E"];
 let falling = false;
+let pixelFont;
+
+function preload() {
+  pixelFont = loadFont('PressStart2P-Regular.ttf'); // ✅ Load font before setup
+}
 
 function setup() {
   createCanvas(600, 600);
@@ -16,7 +21,7 @@ function windowResized() {
 
 function draw() {
   background("#e5e1dc");
-  
+   textFont(pixelFont); // ✅ Apply font
     textAlign(CENTER, CENTER);
   textSize(min(width, height) / 40); // Responsive size based on screen
   fill("#5F5F5F");
