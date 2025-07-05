@@ -9,6 +9,7 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
+  textFont(pixelFont); // ✅ Apply font
   frameRate(60);
   stroke(0);              // Black outline
 strokeWeight(0.2);        // Thin outline
@@ -21,7 +22,7 @@ function windowResized() {
 
 function draw() {
   background("#e5e1dc");
-   textFont(pixelFont); // ✅ Apply font
+   
     textAlign(CENTER, CENTER);
   textSize(min(width, height) / 40); // Responsive size based on screen
   fill("#5F5F5F");
