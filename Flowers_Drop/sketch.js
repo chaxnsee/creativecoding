@@ -8,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   textFont(pixelFont); // ✅ Apply font
   frameRate(60);
   stroke(0);              // Black outline
