@@ -9,7 +9,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  textFont(pixelFont); // ✅ Apply font
+  textFont('Press Start 2P');  // ✅ Font from Google Fonts
   frameRate(60);
   stroke(0);              // Black outline
 strokeWeight(0.2);        // Thin outline
