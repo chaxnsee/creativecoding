@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   overflow: hidden; /* ✅ This stops scrollbars */
   height: 100%;      /* Optional: Ensures body fills screen */
+  font-family: 'Press Start 2P', monospace;
 }
 canvas {
   display: block;     /* Removes canvas gap */
