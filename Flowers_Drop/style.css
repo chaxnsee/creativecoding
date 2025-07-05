@@ -1,7 +1,10 @@
+/* Prevent scrolling */
 html, body {
   margin: 0;
   padding: 0;
+  overflow: hidden; /* ✅ This stops scrollbars */
+  height: 100%;      /* Optional: Ensures body fills screen */
 }
 canvas {
-  display: block;
+  display: block;     /* Removes canvas gap */
 }
