@@ -16,7 +16,13 @@ function windowResized() {
 
 function draw() {
   background("#e5e1dc");
-
+  
+    textAlign(CENTER, CENTER);
+  textSize(min(width, height) / 40); // Responsive size based on screen
+  fill("#5F5F5F");
+  textFont("'Press Start 2P'"); // Text color
+  text("Flowers Drop - made by enchax", width / 2, height / 1.05);
+  
   for (let f of flowers) {
     if (falling) {
       f.fall();
@@ -38,4 +44,3 @@ function mouseDragged() {
 function touchMoved() {
   flowers.push(new Flower(mouseX, mouseY));
 }
-
