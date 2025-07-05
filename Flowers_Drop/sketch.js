@@ -1,11 +1,6 @@
 let flowers = [];
 let colors = ["#309898", "#CB0404", "#c6b6d5", "#FF9F00", "#a4cd98", "#F4631E"];
 let falling = false;
-let pixelFont;
-
-function preload() {
-  pixelFont = loadFont('PressStart2P-Regular.ttf'); // ✅ Load font before setup
-}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
