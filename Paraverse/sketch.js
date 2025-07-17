@@ -11,7 +11,7 @@ https://www.pattvira.com/
 ----------------------------------------
 */
 
-let molds = []; let num = 2000;
+let molds = []; let num = 1600;
 let d; 
 
 function setup() {
