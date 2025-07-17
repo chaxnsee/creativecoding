@@ -27,8 +27,8 @@ class Mold {
   update() {   
     // Using this.stop to control when molds stop moving
     if (this.stop) {
-      this.vx = 2;
-      this.vy = 2;
+      this.vx = 0;
+      this.vy = 0;
     } else {
       this.vx = cos(this.heading);
       this.vy = sin(this.heading);
