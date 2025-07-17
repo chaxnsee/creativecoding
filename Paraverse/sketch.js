@@ -29,7 +29,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 8);
+  background(0, 225);
  loadPixels(); // Call ONCE before update loop
 molds.forEach(m => m.update());
   textAlign(CENTER, CENTER);
