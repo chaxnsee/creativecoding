@@ -11,13 +11,13 @@ https://www.pattvira.com/
 ----------------------------------------
 */
 
-let molds = []; let num = 1600;
+let molds = []; let num = 2000;
 let d; 
 
 function setup() {
   createCanvas(400, 400);
   angleMode(DEGREES);
-  d = 2; // Global variable (put in `setup()`)
+  d = 4; // Global variable (put in `setup()`)
   d = pixelDensity();
   
   
@@ -29,7 +29,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0);
+  background(0, 8);
  loadPixels(); // Call ONCE before update loop
 molds.forEach(m => m.update());
   textAlign(CENTER, CENTER);
