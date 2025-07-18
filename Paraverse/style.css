@@ -11,8 +11,8 @@ html, body {
 }
 
 canvas {
-  width: 90vmin; /* Scales based on the smaller dimension (viewport height/width) */
-  height: 90vmin;
+  width: 100vmin; /* Scales based on the smaller dimension (viewport height/width) */
+  height: 100vmin;
   max-width: 100%;
   max-height: 100%;
   display: block;
