@@ -1,0 +1,78 @@
+/*
+----- Coding Tutorial by Patt Vira ----- 
+Name: Slime Molds (Physarum)
+Video Tutorial: https://youtu.be/VyXxSNcgDtg
+
+References: 
+1. Algorithm by Jeff Jones: https://uwe-repository.worktribe.com/output/980579/characteristics-of-pattern-formation-and-evolution-in-approximations-of-physarum-transport-networks
+
+Connect with Patt: @pattvira
+https://www.pattvira.com/
+----------------------------------------
+*/
+
+let molds = [];
+let num = 1000;
+let d;
+let countryMask;
+let angleSlider, angleLabel;
+
+function preload() {
+  countryMask = loadImage("myanmar-map-mask.png");  // Use exact file name
+}
+function setup() {
+  createCanvas(500, 500);
+  frameRate(30);
+  angleMode(DEGREES);
+  d = 1; // Global variable (put in `setup()`)
+  d = pixelDensity();
+  
+ // SENSOR ANGLE SLIDER
+  angleSlider = createSlider(20, 90, 20, 1); // min, max, default, step
+  angleSlider.position(250, 480);
+  angleSlider.style('width', '100px');
+  angleSlider.style('accent-color', '#9ADDFF');
+
+  angleLabel = createDiv('Sensor Angle: 20°');
+  angleLabel.position(260, 500);
+  angleLabel.style('color', '#FFFFFF');
+  angleLabel.style('font-family', 'monospace');
+  
+  for (let i = 0; i < num; i++) {
+    molds[i] = new Mold();
+  }
+}
+
+function draw() {
+  background(0,12);
+  
+   let angleValue = angleSlider.value();
+  angleLabel.html('X value: ' + angleValue + '°');
+
+  // Apply new angle to all molds
+  for (let i = 0; i < molds.length; i++) {
+    molds[i].sensorAngle = angleValue;
+  }
+  
+  
+  loadPixels(); // Call ONCE before update loop
+  molds.forEach((m) => m.update());
+  textAlign(CENTER, CENTER);
+  textSize(min(width, height) / 45); // Responsive size based on screen
+  fill("#BEBEBE");
+  textFont("Press Start 2P"); // Text color
+  text("  ", width / 2, height / 1.05);
+  for (let i = 0; i < num; i++) {
+    if (key == "s") {
+      // If "s" key is pressed, molds stop moving
+      molds[i].stop = true;
+      updatePixels();
+      noLoop();
+    } else {
+      molds[i].stop = false;
+    }
+
+    molds[i].update();
+    molds[i].display();
+  }
+}
