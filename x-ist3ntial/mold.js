@@ -115,7 +115,7 @@ display() {
     
    
     // Apply shadow (glow)
-  drawingContext.shadowBlur = 8.5;                      // Glow size
+  drawingContext.shadowBlur = 10.5;                      // Glow size
   drawingContext.shadowColor = currentColor;           // Glow color
 ellipse(this.x, this.y, this.r * 4, this.r * 4);
   // Reset shadow for next drawing calls (important!)
