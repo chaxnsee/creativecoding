@@ -12,7 +12,7 @@ https://www.pattvira.com/
 */
 
 let molds = [];
-let num = 1600;
+let num = 1800;
 let d;
 let countryMask;
 let angleSlider, angleLabel;
