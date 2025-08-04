@@ -12,7 +12,7 @@ https://www.pattvira.com/
 */
 
 let molds = [];
-let num = 1200;
+let num = 1600;
 let d;
 let countryMask;
 let angleSlider, angleLabel;
@@ -53,7 +53,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(0,12);
+  background(0,15);
   
    let angleValue = angleSlider.value();
   angleLabel.html('X value: ' + angleValue + '°');
