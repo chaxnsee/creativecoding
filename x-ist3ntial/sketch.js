@@ -53,7 +53,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(0,15);
+  background(0,10);
   
    let angleValue = angleSlider.value();
   angleLabel.html('X value: ' + angleValue + '°');
