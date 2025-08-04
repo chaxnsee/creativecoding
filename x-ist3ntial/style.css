@@ -1,13 +1,18 @@
- html, body {
-        margin: 0;
-        padding: 0;
-        background: black;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-   overflow: hidden;
-      }
-      canvas {
-        display: block;
-      }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  width: 100vmin;      /* Makes it visually large */
+  height: 100vmin;     /* Maintains square aspect ratio */
+  image-rendering: pixelated; /* Keeps crisp pixel look */
+  display: block;
+}
