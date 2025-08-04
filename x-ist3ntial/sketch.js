@@ -32,7 +32,7 @@ function setup() {
   angleSlider.position(250, 480);
   angleSlider.style('width', '100px');
   angleSlider.style('accent-color', '#9ADDFF');
-  angleSlider.position((windowWidth - 100) / 2, (windowHeight + 480) / 2); // Responsive center
+  angleSlider.position((windowWidth - 100) / 2, (windowHeight + 460) / 2); // Responsive center
 
 
   angleLabel = createDiv('Sensor Angle: 20°');
@@ -40,7 +40,7 @@ function setup() {
   angleLabel.style('color', '#FFFFFF');
   angleLabel.style('font-family', 'monospace');
   angleLabel.style('font-size', '12px');
-angleLabel.position((windowWidth - 65) / 2, (windowHeight + 455) / 2);
+angleLabel.position((windowWidth - 65) / 2, (windowHeight + 435) / 2);
   
   for (let i = 0; i < num; i++) {
     molds[i] = new Mold();
@@ -48,8 +48,8 @@ angleLabel.position((windowWidth - 65) / 2, (windowHeight + 455) / 2);
 }
 
 function windowResized() {
-  angleSlider.position((windowWidth - 100) / 2, (windowHeight + 480) / 2);
-  angleLabel.position((windowWidth - 65) / 2, (windowHeight + 455) / 2);
+  angleSlider.position((windowWidth - 100) / 2, (windowHeight + 460) / 2);
+  angleLabel.position((windowWidth - 65) / 2, (windowHeight + 435) / 2);
 }
 
 function draw() {
