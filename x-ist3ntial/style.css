@@ -11,8 +11,8 @@ html, body {
 }
 
 canvas {
-  width: 100vmin;      /* Makes it visually large */
-  height: 100vmin;     /* Maintains square aspect ratio */
+  width: 200vmin;      /* Makes it visually large */
+  height: 200vmin;     /* Maintains square aspect ratio */
   image-rendering: pixelated; /* Keeps crisp pixel look */
   display: block;
 }
