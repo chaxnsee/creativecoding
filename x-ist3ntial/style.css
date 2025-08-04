@@ -12,8 +12,8 @@ html, body {
 }
 
 canvas {
-  width: min(90vmin, 500px);
-  height: min(90vmin, 500px);
+  width: 500px;
+  height: 500px;
   image-rendering: pixelated; /* Keeps crisp pixel look */
   display: block;
 }
