@@ -28,7 +28,7 @@ function setup() {
   d = pixelDensity();
   
   // SENSOR ANGLE SLIDER
-  angleSlider = createSlider(20, 90, 20, 1); // min, max, default, step
+  angleSlider = createSlider(0, 180, 20, 1); // min, max, default, step
   angleSlider.position(250, 480);
   angleSlider.style('width', '100px');
   angleSlider.style('accent-color', '#9ADDFF');
