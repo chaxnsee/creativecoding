@@ -5,14 +5,15 @@ html, body {
   width: 100%;
   background: black;
   overflow: hidden;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 canvas {
-  width: 200vmin;      /* Makes it visually large */
-  height: 200vmin;     /* Maintains square aspect ratio */
+  width: min(90vmin, 500px);
+  height: min(90vmin, 500px);
   image-rendering: pixelated; /* Keeps crisp pixel look */
   display: block;
 }
