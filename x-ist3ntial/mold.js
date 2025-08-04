@@ -6,7 +6,7 @@ class Mold {
     this.y = sin(height); 
     // this.x = random(width/2 - 20, width/2 + 20);
     // this.y = random(height/2 - 20, height/2 + 20); 
-    this.r = 0.8;
+    this.r = 0.6;
     
     this.heading = random(360);
     this.vx = cos(this.heading);
