@@ -12,7 +12,7 @@ https://www.pattvira.com/
 */
 
 let molds = [];
-let num = 1600;
+//let num = 1600;
 let d;
 let countryMask;
 let angleSlider, angleLabel;
@@ -28,11 +28,10 @@ function setup() {
   const isSmallScreen = windowWidth <= 768;
 
   if (isMobile || isSmallScreen) {
-    num = 2600;
+    num = 3200;
   } else {
     num = 1600;
   }
-
   
   angleMode(DEGREES);
    // Global variable (put in `setup()`)
