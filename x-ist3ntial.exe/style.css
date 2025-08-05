@@ -1,0 +1,92 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Use Flexbox to split left (text) and right (canvas) */
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  padding: 80px;
+  gap: 0px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+
+}
+
+/* Left side text panel */
+.text-panel {
+  flex: 1;
+  max-width: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+h1 {
+  
+  font-family: 'Syne Mono', monospace;
+  color: #AFC9D6;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Right side canvas panel */
+.canvas-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Canvas itself */
+canvas {
+  aspect-ratio: 1 / 1;
+  width: 500px;
+  height: 500px;
+  image-rendering: pixelated;
+  display: block;
+  border: 2px solid #444;
+  background-color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .text-panel {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+}
+/* Responsive canvas */
+canvas {
+  display: block;
+  margin: 30px auto;
+    margin-right: 200px;
+
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  image-rendering: pixelated;
+}
