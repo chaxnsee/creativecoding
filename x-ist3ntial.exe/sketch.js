@@ -33,8 +33,6 @@ function setup() {
     num = 1600;
   }
 
-  console.log("Using num =", num);
-}
   
   angleMode(DEGREES);
    // Global variable (put in `setup()`)
