@@ -51,7 +51,8 @@ angleLabel.position((windowWidth + 230) / 2, (windowHeight + 445) / 2);
   }
 }
 
-function windowResized() {
+function windowResized() { 
+  resizeCanvas(500, 500);
   angleSlider.position((windowWidth - 195) / 2, (windowHeight + 480) / 2);
   angleLabel.position((windowWidth - 230) / 2, (windowHeight + 445) / 2);
 }
