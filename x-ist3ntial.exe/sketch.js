@@ -24,6 +24,18 @@ function preload() {
 function setup() {
   createCanvas(500, 500);
   frameRate(30);
+  const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+  const isSmallScreen = windowWidth <= 768;
+
+  if (isMobile || isSmallScreen) {
+    num = 2600;
+  } else {
+    num = 1600;
+  }
+
+  console.log("Using num =", num);
+}
+  
   angleMode(DEGREES);
    // Global variable (put in `setup()`)
   d = pixelDensity();
