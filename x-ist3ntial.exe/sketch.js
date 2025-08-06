@@ -29,8 +29,12 @@ function setup() {
 
   if (isMobile || isSmallScreen) {
     num = 3200;
+    this.r = 0.6; // reduce for mobile
+
   } else {
     num = 1600;
+    this.r = 0.8; // default for desktop
+
   }
   
   angleMode(DEGREES);
