@@ -7,9 +7,8 @@ html, body {
   overflow: hidden;
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
-  /* Add touch-action for better mobile interaction */
   touch-action: manipulation;
 }
 
@@ -66,14 +65,13 @@ canvas {
   display: block;
   border: 2px solid #444;
   background-color: black;
-  /* Prevent touch interference with canvas */
   touch-action: none;
 }
 
-/* MOBILE RESPONSIVE - Portrait Mode */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   main {
-    flex-direction: column; /* Stack vertically - text on top, canvas below */
+    flex-direction: column;
     padding: 20px;
     gap: 20px;
     justify-content: flex-start;
@@ -83,35 +81,35 @@ canvas {
   }
   
   html, body {
-    overflow: auto; /* Allow scrolling on mobile */
+    overflow: auto;
     position: relative;
     height: auto;
     min-height: 100vh;
   }
   
   .text-panel {
-    flex: none; /* Don't flex on mobile */
+    flex: none;
     max-width: 100%;
     width: 100%;
     padding-right: 0;
-    order: 1; /* Text appears first (top) */
+    order: 1;
   }
   
   .canvas-wrapper {
     flex: none;
     width: 100%;
-    order: 2; /* Canvas appears second (bottom) */
+    order: 2;
   }
   
   canvas {
-    width: 90vw; /* Use viewport width for responsiveness */
-    height: 90vw; /* Keep it square */
+    width: 90vw;
+    height: 90vw;
     max-width: 500px;
     max-height: 500px;
   }
   
   h1 {
-    font-size: 1.8rem; /* Slightly smaller on mobile */
+    font-size: 1.8rem;
     text-align: center;
   }
   
@@ -130,8 +128,8 @@ canvas {
   canvas {
     width: 85vw;
     height: 85vw;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
   }
   
   h1 {
@@ -143,53 +141,33 @@ canvas {
   }
 }
 
-/* ANGLE SLIDER CONTROLS STYLING */
+/* === FIXED TOUCH-FRIENDLY CYBERCORE ANGLE SLIDER === */
 .slider-controls {
   position: absolute;
-  bottom: -70px; /* Position clearly below canvas */
+  bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  z-index: 10; /* Make sure it's on top */
-  /* Critical mobile touch fixes */
-  touch-action: manipulation;
+  gap: 4px;
+  z-index: 9999;
   pointer-events: auto;
 }
 
 .angle-slider {
-  width: 150px !important;
-  height: 20px;
-  accent-color: #9ADDFF !important;
-  background: #FFFFFF;
-  cursor: pointer;
-  
-  /* MOBILE SLIDER FIXES */
-  -webkit-appearance: none;
-  appearance: none;
-  outline: none;
-  touch-action: manipulation;
-  pointer-events: auto;
-  
-  /* Ensure minimum touch target size for mobile */
-  min-height: 44px; /* Apple's recommended minimum touch target */
-  padding: 12px 0; /* Add padding to increase touch area */
-  
-  /* Custom slider track styling */
+  width: 150px;
+  height: 6px;
   background: linear-gradient(to right, #2A5A5C 0%, #BD0030 100%);
   border-radius: 45px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  touch-action: none; /* prevents scroll during drag */
 }
 
-/* Webkit slider customization for mobile */
-.angle-slider::-webkit-slider-track {
-  height: 6px;
-  background: #FFFFFF;
-  border-radius: 3px;
-  border: none;
-}
-
+/* WebKit thumb */
 .angle-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -199,104 +177,68 @@ canvas {
   background: #9ADDFF;
   border: 2px solid #FFFFFF;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  /* Ensure thumb is touchable */
-  touch-action: manipulation;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.15s ease;
+}
+.angle-slider::-webkit-slider-thumb:active {
+  transform: scale(1.2);
 }
 
-/* Firefox slider customization */
-.angle-slider::-moz-range-track {
-  height: 6px;
-  background: #FFFFFF;
-  border-radius: 3px;
-  border: none;
-}
-
+/* Firefox thumb */
 .angle-slider::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   background: #9ADDFF;
   border: 2px solid #FFFFFF;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  /* Remove default border */
-  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.15s ease;
+}
+.angle-slider::-moz-range-thumb:active {
+  transform: scale(1.2);
 }
 
+/* Firefox track */
+.angle-slider::-moz-range-track {
+  height: 6px;
+  background: linear-gradient(to right, #2A5A5C 0%, #BD0030 100%);
+  border-radius: 45px;
+}
+
+/* Label */
 .angle-label {
-  color: #FFFFFF !important;
-  font-family: 'Syne Mono', monospace !important;
-  font-size: 12px !important;
-  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Syne Mono', monospace;
+  font-size: 12px;
   user-select: none;
-  /* Prevent label from interfering with touch */
   pointer-events: none;
 }
 
-/* Desktop slider positioning */
+/* Desktop slider position */
 @media (min-width: 769px) {
   .canvas-wrapper {
-    position: relative; /* Important for absolute positioning of slider */
+    position: relative;
   }
-  
   .slider-controls {
-    bottom: -300px; /* Further below canvas on desktop */
+    bottom: -300px;
     left: 270px;
-  }
-  
-  .angle-slider {
-    min-height: 20px; /* Reset to normal height on desktop */
-    padding: 0;
   }
 }
 
-/* Mobile slider positioning */
+/* Mobile slider spacing */
 @media (max-width: 768px) {
   .canvas-wrapper {
     position: relative;
-    margin-bottom: 140px; /* Add space so slider doesn't get cut off */
+    margin-bottom: 140px;
   }
-  
   .slider-controls {
-    bottom: -80px; /* Position below canvas on mobile */
+    bottom: -80px;
   }
-  
   .angle-slider {
-    width: 120px !important; /* Slightly wider for easier touch */
-    min-height: 44px; /* Maintain minimum touch target */
+    width: 120px;
   }
-  
   .angle-label {
-    font-size: 14px !important;
-  }
-}
-
-/* Landscape tablets - keep desktop layout but adjust sizes */
-@media (min-width: 769px) and (max-width: 1024px) {
-  main {
-    padding: 40px;
-  }
-  
-  canvas {
-    width: 500px;
-    height: 500px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Additional mobile-specific fixes */
-@media (max-width: 768px) {
-  /* Prevent zoom on touch */
-  input[type="range"] {
-    touch-action: manipulation;
-  }
-  
-  /* Ensure slider container doesn't interfere */
-  .slider-controls * {
-    touch-action: manipulation;
+    font-size: 14px;
   }
 }
