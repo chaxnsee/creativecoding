@@ -1,13 +1,14 @@
 class Mold {
-  constructor() {
+  constructor(r) {
     
     // Mold variables
     this.x = cos(width);
     this.y = sin(height); 
     // this.x = random(width/2 - 20, width/2 + 20);
     // this.y = random(height/2 - 20, height/2 + 20); 
+    this.r = r;
     this.r = 0.8;
-    
+
     this.heading = random(360);
     this.vx = cos(this.heading);
     this.vy = sin(this.heading);
