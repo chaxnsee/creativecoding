@@ -1,3 +1,6 @@
+/* Import fonts directly in CSS (backup method) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne+Mono:wght@400;700&family=Press+Start+2P&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -44,6 +47,9 @@ p {
   color: #ccc;
   font-size: 0.95rem;
   font-weight: 1000;
+  /* Force font loading */
+  font-display: swap;
+
 }
 
 /* Right side canvas panel */
