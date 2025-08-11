@@ -1,6 +1,3 @@
-/* Import fonts directly in CSS (backup method) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne+Mono:wght@400;700&family=Press+Start+2P&display=swap');
-
 html, body {
   margin: 0;
   padding: 0;
@@ -34,22 +31,20 @@ main {
 }
 
 h1 {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Syne Mono', 'Courier New', monospace;
   color: #AFC9D6;
   font-size: 2.4rem;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   line-height: 1.6;
   margin-bottom: 10px;
   color: #ccc;
   font-size: 0.95rem;
-  font-weight: 1000;
-  /* Force font loading */
-  font-display: swap;
-
+  font-weight: 500;
 }
 
 /* Right side canvas panel */
@@ -76,7 +71,7 @@ canvas {
   main {
     flex-direction: column; /* Stack vertically - text on top, canvas below */
     padding: 20px;
-    gap: 40px;
+    gap: 20px;
     justify-content: flex-start;
     overflow-y: auto;
     height: auto;
@@ -178,8 +173,7 @@ canvas {
   }
   
   .slider-controls {
-    bottom: -300px; /* Further below canvas on desktop */
-    left: 270px;
+    bottom: -70px; /* Further below canvas on desktop */
   }
 }
 
@@ -187,7 +181,7 @@ canvas {
 @media (max-width: 768px) {
   .canvas-wrapper {
     position: relative;
-    margin-top: -570px; /* Add space so slider doesn't get cut off */
+    margin-bottom: 80px; /* Add space so slider doesn't get cut off */
   }
   
   .slider-controls {
@@ -196,12 +190,10 @@ canvas {
   
   .angle-slider {
     width: 100px !important; /* Slightly smaller on mobile */
-    
   }
   
   .angle-label {
     font-size: 11px !important;
-    margin-bottom: 10px;
   }
 }
 
@@ -212,8 +204,8 @@ canvas {
   }
   
   canvas {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
   }
   
   h1 {
