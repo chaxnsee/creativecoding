@@ -1,4 +1,4 @@
-/*
+  /*
 ----- Coding Tutorial by Patt Vira ----- 
 Name: Slime Molds (Physarum)
 Video Tutorial: https://youtu.be/VyXxSNcgDtg
@@ -24,40 +24,43 @@ function preload() {
 function setup() {
   createCanvas(500, 500);
   frameRate(30);
+  
   const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
   const isSmallScreen = windowWidth <= 768;
 
   if (isMobile || isSmallScreen) {
     num = 3200;
-    this.r = 0.6; // reduce for mobile
-
+    this.r = 0.4; // reduce for mobile
   } else {
     num = 1600;
     this.r = 0.8; // default for desktop
 
   }
+
+  
   
   angleMode(DEGREES);
    // Global variable (put in `setup()`)
   d = pixelDensity();
   scaleFactor = 1 / d;
   
-  // SENSOR ANGLE SLIDER
-  angleSlider = createSlider(0, 180, 20, 1); // min, max, default, step
-  angleSlider.position(250, 480);
-  angleSlider.style('width', '100px');
-  angleSlider.style('accent-color', '#9ADDFF');
-  angleSlider.position((windowWidth + 195) / 2, (windowHeight + 480) / 2); // Responsive center
-angleSlider.parent(document.querySelector(".canvas-wrapper")); // Attach under canvas
-
-
-  angleLabel = createDiv('Sensor Angle: 20°');
-  angleLabel.position(260, 500);
-  angleLabel.style('color', '#FFFFFF');
-  angleLabel.style('font-family', 'monospace');
-  angleLabel.style('font-size', '12px');
-angleLabel.position((windowWidth + 230) / 2, (windowHeight + 445) / 2);
+  // SIMPLIFIED SLIDER CREATION - CSS handles positioning
+  angleSlider = createSlider(0, 180, 20, 1);
+  angleSlider.class('angle-slider'); // Add CSS class
+  angleSlider.parent(document.querySelector(".canvas-wrapper"));
+  
+  angleLabel = createDiv('X value: 20°');
+  angleLabel.class('angle-label'); // Add CSS class
   angleLabel.parent(document.querySelector(".canvas-wrapper"));
+  
+  // Create container div for both slider and label
+  let sliderContainer = createDiv('');
+  sliderContainer.class('slider-controls');
+  sliderContainer.parent(document.querySelector(".canvas-wrapper"));
+  
+  // Move slider and label into container
+  angleSlider.parent(sliderContainer);
+  angleLabel.parent(sliderContainer);
 
   for (let i = 0; i < num; i++) {
     molds[i] = new Mold();
@@ -71,7 +74,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(0,25);
+  background(0,20);
   
    let angleValue = angleSlider.value();
   angleLabel.html('X value: ' + angleValue + '°');
