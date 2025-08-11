@@ -170,10 +170,12 @@ canvas {
 @media (min-width: 769px) {
   .canvas-wrapper {
     position: relative; /* Important for absolute positioning of slider */
+    
   }
   
   .slider-controls {
-    bottom: -70px; /* Further below canvas on desktop */
+    bottom: -300px; /* Further below canvas on desktop */
+    left: 270px;
   }
 }
 
