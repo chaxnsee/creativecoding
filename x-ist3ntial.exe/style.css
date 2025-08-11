@@ -10,16 +10,16 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-/* Use Flexbox to split left (text) and right (canvas) */
+
+/* Desktop Layout - Landscape (text left, canvas right) */
 main {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
   padding: 80px;
-  gap: 0px;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
-
+  gap: 20px;
+  align-items: center;
 }
 
 /* Left side text panel */
@@ -27,11 +27,10 @@ main {
   flex: 1;
   max-width: 400px;
   overflow-y: auto;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 h1 {
-  
   font-family: 'Syne Mono', monospace;
   color: #AFC9D6;
   font-size: 2.4rem;
@@ -54,39 +53,163 @@ p {
   justify-content: center;
 }
 
-/* Canvas itself */
+/* Canvas styling */
 canvas {
-  aspect-ratio: 1 / 1;
   width: 500px;
   height: 500px;
+  max-width: 500px;
   image-rendering: pixelated;
   display: block;
   border: 2px solid #444;
   background-color: black;
 }
 
-/* Responsive adjustments */
-@media (max-width: 500px) {
+/* MOBILE RESPONSIVE - Portrait Mode */
+@media (max-width: 768px) {
   main {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    flex-direction: column; /* Stack vertically - text on top, canvas below */
+    padding: 20px;
+    gap: 40px;
+    justify-content: flex-start;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
   }
-
+  
+  html, body {
+    overflow: auto; /* Allow scrolling on mobile */
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+  }
+  
   .text-panel {
+    flex: none; /* Don't flex on mobile */
     max-width: 100%;
+    width: 100%;
     padding-right: 0;
+    order: 1; /* Text appears first (top) */
   }
-
+  
+  .canvas-wrapper {
+    flex: none;
+    width: 100%;
+    order: 2; /* Canvas appears second (bottom) */
+  }
+  
+  canvas {
+    width: 90vw; /* Use viewport width for responsiveness */
+    height: 90vw; /* Keep it square */
+    max-width: 400px;
+    max-height: 400px;
+  }
+  
+  h1 {
+    font-size: 1.8rem; /* Slightly smaller on mobile */
+    text-align: center;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
-/* Responsive canvas */
-canvas {
-  display: block;
-  margin: 30px auto;
-    margin-right: 200px;
 
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  image-rendering: pixelated;
+/* Extra small phones */
+@media (max-width: 480px) {
+  main {
+    padding: 15px;
+  }
+  
+  canvas {
+    width: 85vw;
+    height: 85vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ANGLE SLIDER CONTROLS STYLING */
+.slider-controls {
+  position: absolute;
+  bottom: -70px; /* Position clearly below canvas */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 10; /* Make sure it's on top */
+}
+
+.angle-slider {
+  width: 120px !important;
+  accent-color: #9ADDFF !important;
+  cursor: pointer;
+}
+
+.angle-label {
+  color: #FFFFFF !important;
+  font-family: 'Syne Mono', monospace !important;
+  font-size: 12px !important;
+  text-align: center;
+  user-select: none;
+}
+
+/* Desktop slider positioning */
+@media (min-width: 769px) {
+  .canvas-wrapper {
+    position: relative; /* Important for absolute positioning of slider */
+  }
+  
+  .slider-controls {
+    bottom: -300px; /* Further below canvas on desktop */
+    left: 270px;
+  }
+}
+
+/* Mobile slider positioning */
+@media (max-width: 768px) {
+  .canvas-wrapper {
+    position: relative;
+    margin-top: -570px; /* Add space so slider doesn't get cut off */
+  }
+  
+  .slider-controls {
+    bottom: -60px; /* Position below canvas on mobile */
+  }
+  
+  .angle-slider {
+    width: 100px !important; /* Slightly smaller on mobile */
+    
+  }
+  
+  .angle-label {
+    font-size: 11px !important;
+    margin-bottom: 10px;
+  }
+}
+
+/* Landscape tablets - keep desktop layout but adjust sizes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    padding: 40px;
+  }
+  
+  canvas {
+    width: 400px;
+    height: 400px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
 }
