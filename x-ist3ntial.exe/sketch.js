@@ -14,6 +14,8 @@ let d;
 let countryMask;
 let angleSlider, angleLabel;
 let scaleFactor; // for consistent sizing
+let moldRadius;
+
 
 function preload() {
   countryMask = loadImage("myanmar-map-mask.png");  // Use exact file name
@@ -27,11 +29,16 @@ function setup() {
   const isSmallScreen = windowWidth <= 768;
   if (isMobile || isSmallScreen) {
     num = 3200;
-    this.r = 0.4; // reduce for mobile
+      moldRadius = 0.4;
+ // reduce for mobile
   } else {
     num = 1600;
-    this.r = 0.8; // default for desktop
+    moldRadius = 0.8; // default for desktop
   }
+  
+  for (let i = 0; i < num; i++) {
+  molds[i] = new Mold(moldRadius);
+}
   
   angleMode(DEGREES);
   // Global variable
@@ -77,14 +84,13 @@ function createSliderControls() {
   angleLabel.class('angle-label');
   angleLabel.parent(sliderContainer);
   
-  // Prevent slider from disappearing on touch/scroll
-  angleSlider.elt.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-  });
   
-  angleSlider.elt.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-  });
+  
+  // Prevent slider from disappearing on touch/scroll
+  angleSlider.elt.addEventListener('touchstart', e => e.stopPropagation(), { passive: true });
+  
+  
+ angleSlider.elt.addEventListener('touchmove', e => e.stopPropagation(), { passive: true });
 }
 
 // PREVENT SLIDER DISAPPEARING ON RESIZE
