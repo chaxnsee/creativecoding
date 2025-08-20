@@ -114,7 +114,7 @@ canvas {
   }
   
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 }
@@ -230,23 +230,16 @@ canvas {
 @media (max-width: 768px) {
   .canvas-wrapper {
     position: relative;
-    margin-bottom: 100px;
-    margin-left: 500px;
+    margin-bottom: 10px;
   }
   .slider-controls {
-    bottom: 600px;
-    flex-direction: column;
-    justify-content: center;
+    bottom: -10px;
   }
   .angle-slider {
     width: 120px;
-    transform: rotate(90deg);
-    transform-origin: center center;
-    margin: 60px 0; /* Space for the rotated element */
+    
   }
   .angle-label {
-    font-size: 14px;
-    transform: rotate(90deg);
-    margin-top: 40px;
+    font-size: 12px;
   }
 }
