@@ -28,8 +28,8 @@ function setup() {
   const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
   const isSmallScreen = windowWidth <= 768;
   if (isMobile || isSmallScreen) {
-    num = 3200;
-      moldRadius = 0.4;
+    num = 3400;
+      moldRadius = 0.2;
  // reduce for mobile
   } else {
     num = 1600;
