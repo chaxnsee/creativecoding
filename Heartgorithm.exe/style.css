@@ -20,6 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  
 }
 
 #canvas-container {
@@ -34,6 +35,12 @@ canvas {
   border: 1px solid #6B6B6B;
   box-shadow: 0 0 10px rgba(151,151,151,0.3), 0 0 40px rgba(172,172,172,0.2);
   cursor: pointer;
+   image-rendering: pixelated;
+  
+   /* 🔥 Add these 3 lines to ensure perfect 1:1 & large size */
+  width: 90vmin;
+  height: 90vmin;
+  max-width: 100%;
 }
 
 #controls-container {
