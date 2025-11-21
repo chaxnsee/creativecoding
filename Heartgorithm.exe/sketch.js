@@ -53,7 +53,7 @@ function setup() {
   let instructionText = createDiv('Slide to control the algorithm. The heart follows its own pattern.');
   instructionText.parent('controls-container');
   instructionText.style('color', '#888');
-  instructionText.style('font-family', 'monospace');
+  instructionText.style('font-family', 'Share Tech Mono');
   instructionText.style('font-size', '12px');
   instructionText.style('font-style', 'italic');
   instructionText.style('text-align', 'center');
