@@ -1,6 +1,6 @@
 // Heartgorithm - sketch.js - Optimized version
 let molds = [];
-let num = 1600; // Reduced particle count
+let num = 1800; // Reduced particle count
 let outerMask = null;
 let innerMask = null;
 let angleSlider, angleLabel;
@@ -87,10 +87,10 @@ function draw() {
   }
   
   // Glitch effect (less frequent)
-  if (random(1) < 0.5) {
+  if (random(1) < 0.01) {
     glitchIntensity = random(10);
-    glitchOffset.x = (random(1) - 1.5) * glitchIntensity;
-    glitchOffset.y = (random(1) - 1.5) * glitchIntensity;
+    glitchOffset.x = (random(1) - 0.5) * glitchIntensity;
+    glitchOffset.y = (random(1) - 0.5) * glitchIntensity;
   } else {
     glitchIntensity *= 0.85;
     glitchOffset.x *= 0.85;
@@ -101,7 +101,7 @@ function draw() {
   background(0, 40);
   
   // UI update
-  angleLabel.html('Heartgorithm - Sensor Angle: ' + angleVal + '°');
+  angleLabel.html('Heartgorithm - Sensor Complexity: ' + angleVal + '°');
   
   // Update and display agents
   for (let i = 0; i < molds.length; i++) {
@@ -194,10 +194,10 @@ class Mold {
     this.heading = random(TWO_PI);
     this.vx = cos(this.heading);
     this.vy = sin(this.heading);
-    this.rotAngle = radians(45);
+    this.rotAngle = radians(165);
     this.sensorDist = 50;
     this.sensorAngle = 90;
-    this.twinkleSeed = random(1600);
+    this.twinkleSeed = randomGaussian(1800);
     this.isInner = false;
   }
   
