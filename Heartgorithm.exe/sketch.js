@@ -60,6 +60,16 @@ function setup() {
   instructionText.style('margin', '5px 0');
   instructionText.style('line-height', '1.4');
   
+  let creditText = createDiv('made by enchax');
+  creditText.parent('controls-container');
+  creditText.style('color', '#EC1C1C');
+  creditText.style('font-family', 'Share Tech Mono');
+  creditText.style('font-size', '10px');
+  creditText.style('font-style', 'italic');
+  creditText.style('text-align', 'center');
+  creditText.style('margin', '5px 0');
+  creditText.style('line-height', '1.4');
+  
   // Restart on click
   canvas.mousePressed(restartSimulation);
 }
