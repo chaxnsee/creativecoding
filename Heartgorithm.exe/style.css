@@ -124,8 +124,8 @@ input[type="range"]::-moz-range-thumb {
 /* Mobile Responsive */
 @media (max-width: 768px) {
   canvas {
-    width: 70vmin;
-    height: 70vmin;
+    width: 90vmin;
+    height: 90vmin;
   }
 
   #controls-container {
