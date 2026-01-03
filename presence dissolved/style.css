@@ -1,0 +1,54 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  background-color: #000;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#loader {
+  position: absolute;
+  top: auto;
+  bottom: 40px;
+  /* Lower position */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'VT323', monospace;
+  /* Retro Y2K font */
+  font-size: 1.2rem;
+  /* Smaller font */
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  pointer-events: none;
+  font-weight: 400;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+  /* White Glow */
+  transition: opacity 0.5s ease-out;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1.0;
+  }
+}

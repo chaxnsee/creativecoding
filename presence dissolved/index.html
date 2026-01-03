@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluid Acid Glass</title>
+  <link rel="stylesheet" href="./style.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+  <style>
+    #error-log {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: red;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      font-family: 'VT323', monospace;
+      display: none;
+      max-width: 80%;
+      white-space: pre-wrap;
+    }
+  </style>
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "@mediapipe/tasks-vision": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.9/+esm"
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <div id="loader">RAISE YOUR HAND</div>
+  <div id="error-log"></div>
+  <video id="webcam" playsinline style="display:none;"></video>
+  <canvas id="canvas"></canvas>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
