@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Booth - Cute AI Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Quicksand:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Heart Booth <span>♥</span></h1>
+            <p id="status-text">Loading AI model...</p>
+        </header>
+
+        <main>
+            <div class="booth-container">
+                <div class="camera-wrapper">
+                    <video id="webcam" autoplay playsinline></video>
+                    <canvas id="output_canvas" style="position: absolute; left: 0; top: 0;"></canvas>
+                    <div id="countdown-overlay" class="hidden">3</div>
+                    <div id="flash-overlay" class="hidden"></div>
+                    <div id="instruction-overlay">
+                        <div class="icon-heart-hands">🫶</div>
+                        <p>Make a heart to start!</p>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="download-btn" class="btn primary hidden" disabled>
+                        <span class="material-icons-round">download</span> Save Strip
+                    </button>
+                    <button id="reset-btn" class="btn secondary hidden">
+                        <span class="material-icons-round">refresh</span> New Pics
+                    </button>
+                    <!-- Filter selection can go here if we want more options -->
+                    <div class="filters hidden">
+                        <button class="filter-btn active" data-filter="vintage">Vintage</button>
+                        <button class="filter-btn" data-filter="cute">Cute</button>
+                        <button class="filter-btn" data-filter="bw">B&W</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-section">
+                <div class="film-strip" id="film-strip">
+                    <!-- Photos will appear here -->
+                    <div class="strip-header">HEART BOOTH</div>
+                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder"></div>
+                    <div class="strip-footer">
+                        <div id="date-text"></div>
+                        <div class="insta-handle">@chaxnsee <span style="color: var(--accent-color)">♥</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Hidden canvas for processing -->
+    <canvas id="processing_canvas" style="display: none;"></canvas>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
