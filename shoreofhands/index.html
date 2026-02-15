@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shore of Hands - Interactive Digital Shoreline</title>
+    <meta name="description" content="Shore of Hands is an interactive web artwork where visitors sculpt a fragile world using their hands. A meditation on freedom, memory, and impermanence.">
+    <link rel="stylesheet" href="style.css">
+    <!-- p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <!-- Main Script -->
+    <script type="module" src="main.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div id="ui-layer">
+            <h1 class="title">Shore of Hands</h1>
+            <div id="instructions" class="fade-in">
+                <p>Raise your hand to the camera to gather the sand.</p>
+                <p>Hold to build. Release to let the ocean claim it.</p>
+                <div class="loader" id="loader">Initializing Camera & Vision...</div>
+            </div>
+        </div>
+        <main id="sketch-container"></main>
+    </div>
+</body>
+</html>
