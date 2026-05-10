@@ -1,0 +1,343 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #090a0d;
+  color: #f6f7f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(214, 25, 47, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 100%, rgba(24, 206, 117, 0.2), transparent 34%),
+    #090a0d;
+}
+
+button {
+  border: 0;
+  font: inherit;
+}
+
+.phone-stage {
+  position: relative;
+  width: min(100vw, calc(100svh * 9 / 16));
+  height: min(100svh, calc(100vw * 16 / 9));
+  max-width: 520px;
+  overflow: hidden;
+  background: #111318;
+  isolation: isolate;
+}
+
+#camera {
+  display: none;
+}
+
+#stage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #111318;
+}
+
+.hud {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
+  pointer-events: none;
+}
+
+.prompt-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 84px;
+  padding: max(14px, env(safe-area-inset-top)) 16px 10px;
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.78), rgba(5, 5, 7, 0));
+}
+
+.eyebrow {
+  display: block;
+  color: rgba(246, 247, 244, 0.6);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+#promptLabel {
+  display: block;
+  margin-top: 3px;
+  font-size: 32px;
+  line-height: 0.95;
+}
+
+.timer {
+  min-width: 74px;
+  padding: 9px 11px;
+  border: 1px solid rgba(246, 247, 244, 0.24);
+  border-radius: 8px;
+  background: rgba(5, 5, 7, 0.44);
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.split {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 0;
+  padding: 12px 14px;
+  border-block: 1px solid rgba(246, 247, 244, 0.08);
+  transition:
+    background 140ms ease,
+    box-shadow 140ms ease,
+    opacity 140ms ease;
+}
+
+.split-red {
+  background: linear-gradient(180deg, rgba(229, 21, 46, 0.16), rgba(229, 21, 46, 0.04));
+}
+
+.split-green {
+  background: linear-gradient(180deg, rgba(22, 205, 116, 0.05), rgba(22, 205, 116, 0.14));
+}
+
+.split.active.split-red {
+  background: linear-gradient(180deg, rgba(229, 21, 46, 0.34), rgba(229, 21, 46, 0.08));
+  box-shadow: inset 0 0 42px rgba(229, 21, 46, 0.22);
+}
+
+.split.active.split-green {
+  background: linear-gradient(180deg, rgba(22, 205, 116, 0.08), rgba(22, 205, 116, 0.32));
+  box-shadow: inset 0 0 42px rgba(22, 205, 116, 0.22);
+}
+
+.panel-copy span {
+  display: block;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.panel-copy small {
+  display: block;
+  max-width: 235px;
+  margin-top: 3px;
+  color: rgba(246, 247, 244, 0.66);
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.panel-state {
+  min-width: 76px;
+  padding: 7px 9px;
+  border: 1px solid rgba(246, 247, 244, 0.18);
+  border-radius: 999px;
+  background: rgba(5, 5, 7, 0.36);
+  color: rgba(246, 247, 244, 0.78);
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.panel-state.ready {
+  border-color: rgba(246, 247, 244, 0.5);
+  color: #fff;
+}
+
+.bottom-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px max(14px, env(safe-area-inset-bottom));
+  background: linear-gradient(0deg, rgba(5, 5, 7, 0.86), rgba(5, 5, 7, 0));
+  pointer-events: auto;
+}
+
+.icon-button,
+.record-button,
+#startButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  border-radius: 8px;
+  color: #f6f7f4;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.icon-button {
+  padding: 0 13px;
+  border: 1px solid rgba(246, 247, 244, 0.2);
+  background: rgba(246, 247, 244, 0.11);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.46;
+}
+
+.icon-button.active {
+  border-color: rgba(246, 247, 244, 0.48);
+  background: rgba(246, 247, 244, 0.19);
+}
+
+.icon {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(246, 247, 244, 0.16);
+  font-size: 12px;
+}
+
+.record-button {
+  flex: 1;
+  padding: 0 16px;
+  background: #f6f7f4;
+  color: #111318;
+}
+
+.record-button.recording {
+  background: #e5152e;
+  color: #fff;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e5152e;
+}
+
+.recording .dot {
+  background: #fff;
+  animation: blink 1s steps(2, end) infinite;
+}
+
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.flash-red {
+  background:
+    radial-gradient(circle at 50% 43%, rgba(255, 255, 255, 0.38), transparent 14%),
+    radial-gradient(circle at 50% 47%, rgba(229, 21, 46, 0.66), transparent 42%);
+}
+
+.flash-green {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.3), transparent 12%),
+    radial-gradient(circle at 50% 46%, rgba(22, 205, 116, 0.58), transparent 44%);
+}
+
+.flash.on {
+  animation: flash 520ms ease-out;
+}
+
+.startup {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  align-content: center;
+  gap: 13px;
+  padding: 26px;
+  background:
+    linear-gradient(180deg, rgba(9, 10, 13, 0.74), rgba(9, 10, 13, 0.94)),
+    #111318;
+  text-align: center;
+}
+
+.startup.hidden {
+  display: none;
+}
+
+.startup h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.startup p {
+  max-width: 280px;
+  margin: 0 auto;
+  color: rgba(246, 247, 244, 0.68);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#startButton {
+  width: min(100%, 260px);
+  margin: 6px auto 0;
+  background: #f6f7f4;
+  color: #111318;
+}
+
+#statusText {
+  min-height: 18px;
+  color: rgba(246, 247, 244, 0.62);
+  font-size: 12px;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  22% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (min-width: 640px) {
+  .phone-stage {
+    border: 1px solid rgba(246, 247, 244, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 22px 90px rgba(0, 0, 0, 0.48);
+  }
+}

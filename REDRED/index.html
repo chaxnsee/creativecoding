@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>RED RED / GREEN GREEN Tracking Demo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="phone-stage" aria-label="Gesture tracking demo">
+      <video id="camera" playsinline muted></video>
+      <canvas id="stage"></canvas>
+
+      <section class="hud" aria-label="Gesture status">
+        <div class="prompt-bar">
+          <div>
+            <span class="eyebrow">current call</span>
+            <strong id="promptLabel">LOADING</strong>
+          </div>
+          <div class="timer" id="timerLabel">--.-</div>
+        </div>
+
+        <div class="split split-red" id="redPanel">
+          <div class="panel-copy">
+            <span>RED RED</span>
+            <small>cross wrists into an X at chest level</small>
+          </div>
+          <div class="panel-state" id="redState">waiting</div>
+        </div>
+
+        <div class="split split-green" id="greenPanel">
+          <div class="panel-copy">
+            <span>GREEN GREEN</span>
+            <small>place hands beside each ear line</small>
+          </div>
+          <div class="panel-state" id="greenState">waiting</div>
+        </div>
+
+        <div class="bottom-controls">
+          <button class="icon-button active" id="mirrorButton" type="button" aria-pressed="true" title="Mirror mode">
+            <span class="icon">M</span>
+            <span>Mirror</span>
+          </button>
+          <button class="record-button" id="recordButton" type="button" title="Record video" disabled>
+            <span class="dot"></span>
+            <span id="recordLabel">Record</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="flash flash-red" id="redFlash"></div>
+      <div class="flash flash-green" id="greenFlash"></div>
+      <div class="startup" id="startup">
+        <h1>Tracking Demo</h1>
+        <p>Camera, hands, pose, and face tracking initialize here.</p>
+        <button id="startButton" type="button">Start Camera</button>
+        <span id="statusText">Ready</span>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
