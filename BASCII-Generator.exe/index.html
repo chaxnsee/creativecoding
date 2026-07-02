@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BASCII</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gif.js.optimized/dist/gif.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-label="BASCII portrait studio">
+      <aside class="panel tool-panel" aria-label="Live controls">
+        <div class="brand">
+          <img class="brand-mark" src="./assets/brand-icon.png" alt="BASCII icon" />
+          <div>
+            <h1 data-i18n="title">BASCII</h1>
+            <p data-i18n="subtitle">Burmese + American Standard Code for Information Interchange</p>
+          </div>
+        </div>
+
+        <div class="source-row">
+          <button id="cameraButton" class="tool-button" title="Start webcam" data-source-button="camera" data-title-i18n="startCamera">
+            <i data-lucide="video"></i>
+            <span data-i18n="camera">Camera</span>
+          </button>
+          <button id="ambientButton" class="tool-button" title="No camera mode" data-source-button="ambient" data-title-i18n="noCameraMode">
+            <i data-lucide="sparkles"></i>
+            <span data-i18n="noCamera">No Cam</span>
+          </button>
+          <label class="tool-button" title="Upload image or video" data-source-button="image" data-title-i18n="uploadImage">
+            <i data-lucide="image-up"></i>
+            <span data-i18n="image">Media</span>
+            <input id="imageInput" type="file" accept="image/*,video/*" />
+          </label>
+        </div>
+
+        <div class="segmented" aria-label="Output aspect ratio">
+          <button class="ratio-segment active" data-aspect="1 / 1">1:1</button>
+          <button class="ratio-segment" data-aspect="4 / 3">4:3</button>
+          <button class="ratio-segment" data-aspect="9 / 16">9:16</button>
+        </div>
+
+        <div class="segmented" aria-label="Character mode">
+          <button class="segment active" data-mode="burmese" data-i18n="burmese">Burmese</button>
+          <button class="segment" data-mode="ascii">ASCII</button>
+          <button class="segment" data-mode="hybrid" data-i18n="hybrid">Hybrid</button>
+        </div>
+
+        <div class="segmented four-up" aria-label="Symbol pack">
+          <button class="pack-segment active" data-pack="core" data-i18n="corePack">Core</button>
+          <button class="pack-segment" data-pack="symbols" data-i18n="symbolsPack">Symbols</button>
+          <button class="pack-segment" data-pack="cute" data-i18n="cutePack">Cute</button>
+          <button class="pack-segment" data-pack="internet" data-i18n="internetPack">Net</button>
+        </div>
+
+        <div class="art-mode-row">
+          <button id="loveButton" class="love-button" title="အချစ် special mode" data-title-i18n="loveModeTitle">
+            <i data-lucide="heart"></i>
+            <span>အချစ်</span>
+          </button>
+          <button id="artcoreButton" class="artcore-button" title="Insert copyable galaxy artcore" data-title-i18n="artcoreModeTitle">
+            <i data-lucide="palette"></i>
+            <span data-i18n="artcore">စကြဝဠာ Artcore</span>
+          </button>
+        </div>
+
+        <div class="segmented" aria-label="Flow mode">
+          <button class="flow-segment active" data-flow="drift" data-i18n="drift">Drift</button>
+          <button class="flow-segment" data-flow="rain" data-i18n="rain">Rain</button>
+          <button class="flow-segment" data-flow="orbit" data-i18n="orbit">Orbit</button>
+        </div>
+
+        <section class="photo-tools media-edit-only" aria-label="Media editing controls">
+          <div class="panel-label">
+            <span data-i18n="photoBlend">Media Stylizer</span>
+            <span data-i18n="imageOnly">Image / video</span>
+          </div>
+          <div class="segmented compact-stack" aria-label="Image blend mode">
+            <button class="photo-mode-segment active" data-photo-mode="normal" data-i18n="normalBlend">Normal</button>
+            <button class="photo-mode-segment" data-photo-mode="screen" data-i18n="screenBlend">Screen</button>
+            <button class="photo-mode-segment" data-photo-mode="difference" data-i18n="differenceBlend">Difference</button>
+          </div>
+          <label class="photo-slider">
+            <span data-i18n="photoStrength">Strength</span>
+            <input id="photoAmount" type="range" min="0" max="1" value="0.72" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="sourceMix">Source Mix</span>
+            <input id="sourceMix" type="range" min="0" max="1" value="0" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="sourceSize">Back Size</span>
+            <input id="sourceScale" type="range" min="0.25" max="4" value="1" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="sourceX">Back X</span>
+            <input id="sourceOffsetX" type="range" min="-1" max="1" value="0" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="sourceY">Back Y</span>
+            <input id="sourceOffsetY" type="range" min="-1" max="1" value="0" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="sourceBlur">Back Blur</span>
+            <input id="sourceBlur" type="range" min="0" max="24" value="0" step="0.5" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="sourceBright">Back Light</span>
+            <input id="sourceBrightness" type="range" min="0.25" max="1.8" value="1" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="dither">Dither</span>
+            <input id="dither" type="range" min="0" max="1" value="0" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="posterize">Posterize</span>
+            <input id="posterize" type="range" min="0" max="1" value="0" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="imageSize">Size</span>
+            <input id="imageScale" type="range" min="0.45" max="2.6" value="1" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="imageX">Image X</span>
+            <input id="imageOffsetX" type="range" min="-0.7" max="0.7" value="0" step="0.01" />
+          </label>
+          <label class="photo-slider">
+            <span data-i18n="imageY">Image Y</span>
+            <input id="imageOffsetY" type="range" min="-0.7" max="0.7" value="0" step="0.01" />
+          </label>
+        </section>
+
+        <div class="control-grid">
+          <label>
+            <span data-i18n="density">Density</span>
+            <input id="density" type="range" min="0.25" max="1" value="0.58" step="0.01" />
+          </label>
+          <label>
+            <span data-i18n="font">Font</span>
+            <input id="fontSize" type="range" min="8" max="30" value="15" step="1" />
+          </label>
+          <label>
+            <span data-i18n="pixelScale">Resolution</span>
+            <input id="renderScale" type="range" min="0.2" max="4" value="1" step="0.01" />
+          </label>
+          <label>
+            <span data-i18n="flow">Flow</span>
+            <input id="flowStrength" type="range" min="0" max="2" value="0.10" step="0.01" />
+          </label>
+          <label class="no-cam-hidden">
+            <span data-i18n="depth">Depth</span>
+            <input id="depthIntensity" type="range" min="0" max="4" value="1.35" step="0.01" />
+          </label>
+          <label class="no-cam-hidden">
+            <span data-i18n="smoothing">Smoothing</span>
+            <input id="smoothing" type="range" min="0" max="0.95" value="0.58" step="0.01" />
+          </label>
+          <label>
+            <span data-i18n="speed">Speed</span>
+            <input id="animationSpeed" type="range" min="0" max="2.4" value="0.9" step="0.01" />
+          </label>
+          <label class="fps-control">
+            <span data-i18n="fps">FPS</span>
+            <select id="fpsTarget" aria-label="Frame rate target">
+              <option value="original" selected>Original</option>
+              <option value="12">12 FPS</option>
+              <option value="30">30 FPS</option>
+              <option value="60">60 FPS</option>
+              <option value="120">120 FPS</option>
+            </select>
+          </label>
+          <label class="no-cam-hidden">
+            <span data-i18n="contrast">Contrast</span>
+            <input id="contrast" type="range" min="0.45" max="2.2" value="1.25" step="0.01" />
+          </label>
+          <label>
+            <span data-i18n="saturation">Saturation</span>
+            <input id="saturation" type="range" min="0" max="2" value="1.05" step="0.01" />
+          </label>
+          <label>
+            <span data-i18n="glow">Glow</span>
+            <input id="glow" type="range" min="0" max="32" value="10" step="1" />
+          </label>
+          <label>
+            <span data-i18n="textLight">Text Light</span>
+            <input id="textLight" type="range" min="0" max="1" value="0.68" step="0.01" />
+          </label>
+          <label>
+            <span data-i18n="blend">Blend</span>
+            <input id="blend" type="range" min="0" max="1" value="0.86" step="0.01" />
+          </label>
+        </div>
+
+        <section class="post-tools" aria-label="Post-processing controls">
+          <div class="panel-label">
+            <span data-i18n="postProcessing">Post-Processing</span>
+            <span>CRT / film / glitch</span>
+          </div>
+          <div class="control-grid compact-controls">
+            <label>
+              <span data-i18n="vignette">Vignette</span>
+              <input id="postVignette" type="range" min="0" max="1" value="0.12" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="scanLines">Scan Lines</span>
+              <input id="postScanlines" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="crtCurvature">CRT Curve</span>
+              <input id="postCurvature" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="chromatic">Chromatic</span>
+              <input id="postChromatic" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="bloom">Bloom</span>
+              <input id="postBloom" type="range" min="0" max="1" value="0.08" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="charBloom">Char Bloom</span>
+              <input id="postCharBloom" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="charChromatic">Char Chrom</span>
+              <input id="postCharChromatic" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="filmGrain">Film Grain</span>
+              <input id="postFilmGrain" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="glitch">Glitch</span>
+              <input id="postGlitch" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="rgbSplit">RGB Split</span>
+              <input id="postRgbSplit" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="pixelate">Pixelate</span>
+              <input id="postPixelate" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="halftone">Halftone</span>
+              <input id="postHalftone" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+            <label>
+              <span data-i18n="filmDust">Film Dust</span>
+              <input id="postFilmDust" type="range" min="0" max="1" value="0" step="0.01" />
+            </label>
+          </div>
+        </section>
+
+        <div class="toggle-row">
+          <label class="switch">
+            <input id="poeticMode" type="checkbox" checked />
+            <span></span>
+            <em data-i18n="poeticMode">Poetic mode</em>
+          </label>
+          <label class="switch no-cam-hidden">
+            <input id="mirrorMode" type="checkbox" checked />
+            <span></span>
+            <em data-i18n="mirror">Mirror</em>
+          </label>
+          <label class="switch">
+            <input id="transparentBg" type="checkbox" />
+            <span></span>
+            <em data-i18n="transparentBg">Transparent</em>
+          </label>
+          <label class="switch media-edit-only">
+            <input id="invertMedia" type="checkbox" />
+            <span></span>
+            <em data-i18n="invertMedia">Invert media</em>
+          </label>
+        </div>
+
+        <section class="poem-editor" aria-label="Poetic text editor">
+          <div class="panel-label">
+            <span data-i18n="poemEditor">Poetic Text</span>
+            <span data-i18n="liveText">Live</span>
+          </div>
+          <input id="poemTitle" type="text" value="" aria-label="Poem title" />
+          <textarea id="poemParagraph" rows="3" aria-label="Poem paragraph"></textarea>
+          <input id="poemAuthor" type="text" value="" aria-label="Poem author" />
+          <div class="format-row">
+            <button class="format-button active" data-format="bold" title="Bold"><strong>B</strong></button>
+            <button class="format-button" data-format="italic" title="Italic"><em>I</em></button>
+            <button class="format-button" data-format="underline" title="Underline"><u>U</u></button>
+            <button class="align-button active" data-align="center" title="Center"><i data-lucide="align-center"></i></button>
+            <button class="align-button" data-align="left" title="Left"><i data-lucide="align-left"></i></button>
+            <button class="align-button" data-align="right" title="Right"><i data-lucide="align-right"></i></button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="preview-area" aria-label="Rendered portrait screen">
+        <div class="screen-shell">
+          <div class="screen-meta">
+            <span data-i18n="output">Output</span>
+            <span id="aspectLabel">1:1</span>
+          </div>
+          <div id="screenFrame" class="screen-frame">
+            <canvas id="portraitCanvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel output-panel" aria-label="Color, source, and export controls">
+        <div class="source-monitor">
+          <div class="panel-label">
+            <span data-i18n="source">Source</span>
+            <span id="sourceLabel">Idle</span>
+          </div>
+          <div class="feed-window">
+            <video id="webcam" playsinline muted></video>
+            <img id="uploadPreview" alt="" />
+            <span class="feed-empty" data-i18n="noSource">No camera or image</span>
+          </div>
+        </div>
+
+        <section class="info-card" aria-label="ASCII and Burmese context">
+          <span class="eyebrow">What is ASCII?</span>
+          <p>
+            ASCII, pronounced ASS-kee, means American Standard Code for Information Interchange. It is a character
+            encoding standard for 95 printable English-focused characters and 33 control characters, making 128 code
+            points that shaped early computer text, programming syntax, and markup.
+          </p>
+          <p>
+            Translating the ASCII portrait idea into Burmese matters because Myanmar script brings a different rhythm,
+            memory, and visual identity into a medium that was originally built around English characters. The face is
+            no longer only pixels; it becomes language, culture, and signal.
+          </p>
+        </section>
+
+        <div class="preset-grid">
+          <button class="preset active" data-preset="terminal">
+            <span style="--swatch-a: #09230d; --swatch-b: #3fff7f"></span>
+            <span data-i18n="terminal">Terminal</span>
+          </button>
+          <button class="preset" data-preset="cyberpunk">
+            <span style="--swatch-a: #090011; --swatch-b: #00f0ff"></span>
+            <span data-i18n="neon">Neon</span>
+          </button>
+          <button class="preset" data-preset="thingyan">
+            <span style="--swatch-a: #1c1306; --swatch-b: #ffd166"></span>
+            <span data-i18n="thingyan">Thingyan</span>
+          </button>
+          <button class="preset" data-preset="mono">
+            <span style="--swatch-a: #111111; --swatch-b: #f1f1e8"></span>
+            <span data-i18n="mono">Mono</span>
+          </button>
+        </div>
+
+        <div class="color-grid">
+          <label>
+            <span data-i18n="glyph">Glyph</span>
+            <input id="fgColor" type="color" value="#55ff92" />
+          </label>
+          <label>
+            <span data-i18n="depth">Depth</span>
+            <input id="depthColor" type="color" value="#fff4a8" />
+          </label>
+          <label>
+            <span data-i18n="back">Back</span>
+            <input id="bgColor" type="color" value="#020805" />
+          </label>
+        </div>
+        <div id="gradientPreview" class="gradient-preview"></div>
+
+        <section class="bascii-text-tool" aria-label="Text to BASCII controls">
+          <div class="panel-label">
+            <span data-i18n="textToAscii">Text Mixer</span>
+            <button id="clearDrawingButton" class="mini-button" title="Clear BASCII text" data-i18n="clearDrawing">Clear</button>
+          </div>
+          <p class="bascii-text-hint" data-i18n="textMixerHint">
+            Replaces the existing glyph slots with your typed English or Burmese text.
+          </p>
+          <textarea
+            id="drawTextInput"
+            rows="4"
+            spellcheck="false"
+            data-i18n-placeholder="drawTextPlaceholder"
+            placeholder="Type English or Burmese text to replace the live glyph field..."
+          ></textarea>
+          <div class="bascii-mix-grid">
+            <label class="bascii-text-size">
+              <span data-i18n="textMixAmount">Mix</span>
+              <input id="textMixAmount" type="range" min="0" max="1" value="1" step="0.01" />
+            </label>
+            <label class="bascii-text-size">
+              <span data-i18n="textMixOrder">Order</span>
+              <select id="textMixMode">
+                <option value="sequence" data-i18n="mixSequence">Sequence</option>
+                <option value="random" data-i18n="mixRandom">Random</option>
+                <option value="wave" data-i18n="mixWave">Wave</option>
+              </select>
+            </label>
+          </div>
+          <button id="drawTextButton" class="draw-text-button" data-i18n="renderBascii">Apply Text Mix</button>
+        </section>
+
+        <div class="export-grid">
+          <button id="pngButton" class="icon-button" title="Export PNG">
+            <i data-lucide="download"></i>
+            <span>PNG</span>
+          </button>
+          <button id="gifButton" class="icon-button" title="Export looping GIF">
+            <i data-lucide="film"></i>
+            <span>GIF</span>
+          </button>
+          <button id="videoButton" class="icon-button" title="Record short video">
+            <i data-lucide="radio"></i>
+            <span data-i18n="video">Video</span>
+          </button>
+          <button id="txtButton" class="icon-button" title="Download text output">
+            <i data-lucide="file-text"></i>
+            <span>TXT</span>
+          </button>
+          <button id="copyButton" class="icon-button" title="Copy text output">
+            <i data-lucide="copy"></i>
+            <span data-i18n="copyText">Copy Text</span>
+          </button>
+          <button id="shuffleButton" class="icon-button" title="Shuffle glyph layout" data-title-i18n="shuffleGlyphs">
+            <i data-lucide="shuffle"></i>
+            <span data-i18n="shuffle">Shuffle</span>
+          </button>
+        </div>
+        <textarea
+          id="textExport"
+          class="text-export"
+          rows="8"
+          readonly
+          spellcheck="false"
+          aria-label="Copyable generated text output"
+          placeholder="Generated Burmese / ASCII / Hybrid text appears here."
+        ></textarea>
+
+        <output id="status" role="status" data-status-key="waiting">Waiting for camera or image.</output>
+      </aside>
+
+      <footer class="site-credit">
+        <a href="https://www.asciiart.eu" target="_blank" rel="noreferrer">ASCII art reference: asciiart.eu</a>
+        <a href="https://creativelyenchanted.com" target="_blank" rel="noreferrer">creativelyenchanted.com</a>
+      </footer>
+    </main>
+
+    <script type="module" src="./src/app.js?v=bascii-text-mixer-20260701"></script>
+  </body>
+</html>
