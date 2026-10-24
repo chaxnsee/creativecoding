@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P5 Sketch Lab — 20 Methods, Remix & Audio</title>
+  <meta name="description" content="A bilingual English and Burmese generative art lab with 20 methods, remix layers, hand tracking, audio reactivity and video recording.">
+  <style>html,body{margin:0;background:#080808;color:#fff}#boot{position:fixed;inset:0;display:grid;place-items:center;font:12px monospace;letter-spacing:3px}</style>
+</head>
+<body>
+  <div id="boot">OPENING THE SKETCH LAB…</div>
+  <script>
+    try{const language=localStorage.getItem('redSignalLanguage');if(language==='my'){document.documentElement.lang='my';document.getElementById('boot').textContent='ပုံဖန်တီးစမ်းသပ်ခန်းကို ဖွင့်နေသည်…';}}catch(error){}
+  </script>
+  <script src="vendor/p5.min.js"></script>
+  <script src="sketch.js"></script>
+  <script>
+    window.addEventListener('load',()=>document.getElementById('boot').remove());
+    window.addEventListener('error',e=>{const b=document.getElementById('boot');if(b)b.textContent=document.documentElement.lang==='my'?'စမ်းသပ်ခန်းကို စတင်၍ မရပါ။ စာမျက်နှာကို ပြန်ဖွင့်ပြီး လိုအပ်သောဖိုင်များ ရရှိမှုကို စစ်ပါ။':'Unable to start the lab. Reload the page and check that the app files loaded.';});
+  </script>
+</body>
+</html>
