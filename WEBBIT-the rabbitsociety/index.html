@@ -1,0 +1,1599 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WEBBIT! — The Rabbit Society</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+:root{--ink:#1a1a1a;--cream:#fff1c9;--red:#e8322a;--yel:#ffd21f;--blu:#1f5fbf;font-family:"Trebuchet MS","Chalkboard SE","Comic Neue",system-ui,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:#04051a;color:var(--ink)}
+#c{position:fixed;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}
+#v{position:fixed;left:0;top:0;width:2px;height:2px;opacity:0;pointer-events:none}
+#msg{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:max-content;max-width:max(150px,min(380px,calc(100vw - 2*clamp(84px,19vw,140px) - 150px)));padding:9px 14px;border:3px solid #000;border-radius:14px;background:var(--cream);box-shadow:0 4px 0 #000;font-size:13px;font-weight:700}
+#msg:empty{display:none}
+.cam{position:fixed;top:12px;--d:clamp(84px,19vw,140px);width:calc(var(--d) + 58px);text-align:center;background:var(--cream);border:3px solid #000;border-radius:18px;padding:16px 10px 9px;box-shadow:0 5px 0 #000}
+#camL{left:12px}#camR{right:12px}
+.iris{width:var(--d);height:var(--d);margin:0 auto 24px;border-radius:50%;overflow:hidden;background:#1b1030;box-shadow:0 0 0 3px #000,0 0 0 8px var(--yel),0 0 0 11px #000,0 0 0 16px var(--red),0 0 0 19px #000}
+.iris canvas{width:100%;height:100%;display:block}
+.cam h3{margin:0 0 5px;font:900 15px/1 "Arial Black",Impact,sans-serif;color:var(--red);-webkit-text-stroke:1px #000;paint-order:stroke fill;text-shadow:2px 2px 0 #000}
+.m{display:grid;grid-template-columns:auto 1fr auto;gap:3px 6px;align-items:center;font-size:11px;font-weight:700;text-align:left}
+.m b{font-variant-numeric:tabular-nums;min-width:38px;text-align:right}
+.t{height:9px;border:2px solid #000;border-radius:5px;background:#fff;position:relative;overflow:hidden}
+.t i{position:absolute;top:0;bottom:0;background:var(--red)}.t.u i{background:var(--blu)}
+#panel{position:fixed;left:12px;bottom:12px;width:min(350px,calc(100vw - 24px));max-height:54vh;overflow:auto;background:var(--cream);border:3px solid #000;border-radius:18px;box-shadow:0 5px 0 #000;font-size:13px;font-weight:600}
+summary{cursor:pointer;padding:10px 14px;font:900 21px/1 "Arial Black",Impact,sans-serif;color:#fff;-webkit-text-stroke:2px #000;paint-order:stroke fill;text-shadow:3px 3px 0 #000;background:repeating-radial-gradient(circle at 12% 150%,var(--red) 0 12px,var(--yel) 12px 24px,var(--blu) 24px 36px,#fff 36px 48px);border-bottom:3px solid #000;list-style:none}
+.in{padding:6px 14px 12px}
+h4{margin:12px 0 4px;font:900 13px/1 "Arial Black",Impact,sans-serif}
+.row{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}
+button{font:inherit;font-weight:800;color:var(--ink);background:var(--yel);border:3px solid #000;border-radius:12px;padding:5px 9px;cursor:pointer;box-shadow:0 4px 0 #000}
+button:active{transform:translateY(3px);box-shadow:0 1px 0 #000}
+button.on{background:var(--red);color:#fff}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--blu);outline-offset:2px}
+label.s{display:grid;grid-template-columns:112px 1fr;align-items:center;gap:8px;margin:3px 0}
+.er{display:grid;grid-template-columns:96px 1fr 1fr;align-items:center;gap:8px;margin:3px 0}
+.er.h{font-weight:900;text-align:center}
+label.k{display:inline-flex;gap:5px;align-items:center;margin:4px 12px 4px 0}
+input[type=range],input[type=checkbox]{accent-color:var(--red)}
+input[type=range]{width:100%;min-width:0}
+p.n{margin:8px 0 0;line-height:1.4}
+#calStatus{background:#fffaf0;border:2px solid #1a1a1a;border-radius:10px;padding:8px;margin:8px 0 4px;line-height:1.4;font-size:12px}
+#calProgress{height:9px;background:#fff;border:2px solid #000;border-radius:7px;overflow:hidden;margin:5px 0 8px}
+#calFill{display:block;width:0%;height:100%;background:var(--red);transition:width .12s linear}
+#profile{font-size:11px;line-height:1.4;display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0}
+#profile span{padding:5px;background:#fff;border:2px solid #000;border-radius:8px}
+.modeSelect{width:100%;padding:5px;background:#fff;border:2px solid #000;border-radius:9px;font:inherit}
+.note{font-size:11px;line-height:1.45;margin:7px 0;color:#333}
+@media(max-width:800px){#panel{max-height:43vh}#camF{width:140px;bottom:10px}#msg{top:185px;max-width:65vw;font-size:11px} .cam{--d:clamp(72px,15vw,110px);width:calc(var(--d) + 30px);padding:10px 6px 8px} .iris{margin-bottom:16px} .m{font-size:10px;gap:2px 3px}}
+#camF{position:fixed;right:12px;bottom:12px;width:200px;background:var(--cream);border:3px solid #000;border-radius:18px;padding:10px 10px 8px;box-shadow:0 5px 0 #000;text-align:center}
+.fw{position:relative}
+#cF{width:100%;display:block;border:3px solid #000;border-radius:12px;background:#1b1030}
+#camF h3{margin:8px 0 0}
+.live{position:absolute;top:8px;left:8px;background:var(--red);color:#fff;font:900 10px "Arial Black",Impact,sans-serif;padding:2px 6px;border:2px solid #000;border-radius:8px;animation:bl 1.4s steps(2) infinite}
+@keyframes bl{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.live{animation:none}}
+dialog{padding:0;border:3px solid #000;border-radius:18px;background:var(--cream);box-shadow:0 6px 0 #000;width:min(580px,calc(100vw - 24px));max-height:88vh;overflow:auto;color:var(--ink);font-size:14px;line-height:1.5}
+dialog::backdrop{background:rgba(4,5,26,.75)}
+.dh{padding:14px 18px;font:900 34px/1 "Arial Black",Impact,sans-serif;color:#fff;-webkit-text-stroke:2px #000;paint-order:stroke fill;text-shadow:4px 4px 0 #000;background:repeating-radial-gradient(circle at 10% 160%,var(--red) 0 14px,var(--yel) 14px 28px,var(--blu) 28px 42px,#fff 42px 56px);border-bottom:3px solid #000}
+.db{padding:4px 18px 18px}
+.db h2{margin:16px 0 6px;font:900 18px/1.1 "Arial Black",Impact,sans-serif;color:var(--red);-webkit-text-stroke:1px #000;paint-order:stroke fill;text-shadow:2px 2px 0 #000}
+.db ol,.db ul{margin:6px 0;padding-left:22px}.db li{margin:4px 0}
+.big{margin:8px 0;padding:10px 14px;background:var(--yel);border:3px solid #000;border-radius:14px;box-shadow:0 4px 0 #000;font:900 18px/1.25 "Arial Black",Impact,sans-serif;text-align:center}
+.db a{color:var(--blu);font-weight:800}
+
+/* Webbit v3: natural/minimal art direction */
+:root{--ink:#e9e8e5;--cream:#13151b;--red:#cba4b0;--yel:#b8a2bc;--blu:#98a4be;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
+html,body{background:#05070a;color:var(--ink)}
+#c{cursor:default}
+.cam,#camF{display:none!important}
+#msg{top:20px;max-width:360px;width:auto;min-height:0;text-align:center;color:#d3d1d3;background:rgba(17,18,24,.9);border:1px solid #40404b;border-radius:12px;box-shadow:none;font-size:12px;font-weight:500}
+#panel{left:18px;bottom:18px;width:min(326px,calc(100vw - 36px));max-height:56vh;background:#101218e8;border:1px solid #33353e;border-radius:14px;box-shadow:0 16px 38px #0008;font-size:12px;font-weight:450;backdrop-filter:blur(18px)}
+summary{background:#171a20;border-bottom:1px solid #343640;color:#eee;font:650 15px/1.3 Inter,system-ui,sans-serif;-webkit-text-stroke:0;text-shadow:none;border-radius:13px 13px 0 0;padding:12px 15px}
+.in{padding:8px 14px 16px}
+h4{font:650 12px Inter,system-ui,sans-serif;color:#b7b8c2;letter-spacing:.03em;text-transform:uppercase;margin:16px 0 9px}
+button{border:1px solid #4a4a55;box-shadow:none;background:#23252f;color:#f1eef0;border-radius:9px;font-size:11px;font-weight:600;padding:8px 10px}
+button.on,button:hover{background:#6e5260;color:#fff;border-color:#9a7586}
+button:active{transform:none;box-shadow:none}
+input[type=range],input[type=checkbox]{accent-color:#b48a9e}
+label.s{grid-template-columns:130px 1fr}
+#calStatus{background:#191c24;color:#dad7de;border:1px solid #383943;font-size:11px;padding:10px}
+#calProgress{height:6px;background:#282a31;border:0}
+#calFill{background:#c7a2b5}
+#profile span{background:#1c1d26;border:1px solid #393944;color:#c7c5cd}
+.note,p.n{color:#a7a7b0}
+.modeSelect{background:#17191f;border:1px solid #383a44;color:white}
+dialog{background:#14161c;color:#ededf0;border:1px solid #58525a;box-shadow:0 30px 80px #000a}
+dialog::backdrop{background:#030406dc}
+.dh{color:#faf8f7;background:#1f222a;-webkit-text-stroke:0;text-shadow:none;border-bottom:1px solid #393c48;font:700 25px Inter,system-ui,sans-serif}
+.db h2{color:#d2acbd;-webkit-text-stroke:0;text-shadow:none;font:700 17px Inter,system-ui,sans-serif}
+.big{background:#2b2530;border:1px solid #534658;color:#e8dee3;box-shadow:none;font:600 15px Inter,system-ui,sans-serif}
+.db a{color:#bebbe5}
+#welcome{position:fixed;z-index:50;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 65%,#1b161e 0%,#090a0e 68%,#050608 100%);padding:24px}
+#welcome.hidden{display:none}
+.welcome-inner{max-width:480px;text-align:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.25em;font-size:10px;color:#ac9ba7}
+.welcome-inner h1{font-size:clamp(36px,5vw,60px);line-height:1.03;letter-spacing:-.05em;font-weight:650;margin:22px 0 18px}
+.welcome-inner p{color:#d0c9cf;line-height:1.6;font-size:15px}
+.welcome-inner p.welcome-sub{font-size:13px;color:#a49da8;max-width:350px;margin:18px auto 25px}
+#welcome #begin{font-size:14px;padding:13px 22px;border-radius:11px;background:#b08b9e;color:#100d12;border:1px solid #d7b5c7;font-weight:700;cursor:pointer}
+#welcome #begin:hover{background:#d1adbf}
+#welcome .privacy{font-size:10px;color:#72717c;margin-top:16px}
+@media(max-width:740px){#panel{max-height:42vh;left:10px;bottom:10px;width:min(280px,calc(100vw - 20px))}#msg{top:14px;max-width:70vw}.welcome-inner h1{font-size:40px}}
+
+/* WEBBIT! — 1990s hand-drawn cartoon, silver moon + pixel UI decorations. */
+:root{--navy:#10152c;--paper:#f7ead2;--rose:#ea8598;--gold:#f3cd73;--violet:#7b79a6;--ink:#10152c;--cream:#f7ead2;--red:#ea8598;--yel:#f3cd73;--blu:#7b79a6;font-family:'Trebuchet MS',system-ui,sans-serif}
+html,body{background:var(--navy);color:var(--paper);overflow:hidden}
+#c{cursor:default;z-index:0}
+#welcome{z-index:70;background:rgba(16,21,44,.78);backdrop-filter:blur(6px);padding:18px}
+.welcome-inner{max-width:530px;width:100%;background:var(--paper);border:4px solid var(--navy);outline:3px solid var(--gold);border-radius:26px;box-shadow:12px 13px 0 #080c1c;padding:25px 28px 22px;color:var(--navy);text-align:center;position:relative}
+.welcome-inner:before{content:'★  ENCHAX PRESENTS: WEBBIT!  ★';display:block;color:var(--navy);background:var(--gold);border:2px solid var(--navy);padding:6px 10px;border-radius:50px;font:900 10px 'Trebuchet MS',sans-serif;letter-spacing:.15em;margin:-10px auto 15px;max-width:310px}
+#welcome .eyebrow{font:900 11px 'Trebuchet MS',sans-serif;letter-spacing:.2em;color:#75637f}
+.welcome-inner h1{font:italic 1000 clamp(44px,7vw,75px)/.95 Impact,'Arial Black',system-ui,sans-serif;letter-spacing:-.035em;transform:rotate(-2deg);margin:13px 0 9px;text-shadow:3px 3px 0 var(--rose)}
+.welcome-inner p{color:var(--navy);font:700 15px/1.45 'Trebuchet MS',sans-serif}
+.welcome-inner p.welcome-sub{font:500 12px/1.5 'Trebuchet MS',sans-serif;color:#39364e;max-width:370px;margin:10px auto 16px}
+.welcome-inner .privacy{font-size:11px;color:#515067;margin:12px 0 0}
+#welcome #begin{background:var(--rose);color:var(--navy);border:3px solid var(--navy);box-shadow:4px 4px 0 var(--navy);font:900 15px 'Trebuchet MS',sans-serif;padding:12px 19px;border-radius:50px}
+#welcome #begin:hover{background:var(--gold)}
+#msg{z-index:60;top:72px;left:50%;max-width:min(440px,95vw);border:2px solid var(--navy);color:var(--navy);background:var(--gold);box-shadow:4px 4px 0 #030715;font:700 12px/1.35 'Trebuchet MS',sans-serif;border-radius:14px;min-height:0}
+#brand{position:fixed;left:24px;top:15px;z-index:12;pointer-events:none;display:flex;align-items:center;gap:12px}
+#brand strong{font:italic 1000 clamp(26px,3.2vw,43px)/1 Impact,'Arial Black',sans-serif;letter-spacing:-.03em;color:var(--paper);text-shadow:4px 4px 0 #8d466f,-2px -2px 0 var(--navy)}
+#brand small{font:900 10px/1.2 'Trebuchet MS',sans-serif;letter-spacing:.16em;color:var(--gold)}
+#topActions{position:fixed;right:18px;top:18px;z-index:22;display:flex;gap:8px;align-items:center}
+#topActions button{background:var(--paper);border:2px solid var(--navy);color:var(--navy);border-radius:30px;box-shadow:3px 3px 0 #060916;padding:8px 12px;font:900 11px 'Trebuchet MS',sans-serif}
+#topActions button:hover{background:var(--gold)}
+#badge90{position:fixed;right:28px;top:66px;font:900 10px 'Trebuchet MS',sans-serif;color:var(--gold);letter-spacing:.18em;z-index:9;opacity:.7;pointer-events:none}
+#stageHud{position:fixed;left:24px;bottom:22px;width:min(328px,calc(100vw - 48px));z-index:18;background:var(--paper);color:var(--navy);border:3px solid var(--navy);box-shadow:6px 6px 0 #06091e;border-radius:20px;padding:13px 15px 15px;transition:transform .2s ease}
+#stageHud .hudTitle{display:flex;justify-content:space-between;align-items:center;font:900 10px 'Trebuchet MS',sans-serif;letter-spacing:.15em}
+#stageHud .pill{background:var(--gold);border:2px solid var(--navy);padding:4px 8px;border-radius:20px;font:900 10px 'Trebuchet MS',sans-serif;letter-spacing:0}
+#stageHud .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+#stageHud .step{display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px 3px;border:2px solid #b5a9a6;border-radius:12px;background:#efe3d1;opacity:.6;transition:background .2s,opacity .2s}
+#stageHud .step.active{border-color:var(--navy);background:var(--gold);opacity:1;box-shadow:2px 2px 0 var(--navy)}
+#stageHud .step.done{opacity:1;background:#eac7b4;border-color:var(--navy)}
+#stageHud .step .stepname{font:900 10px 'Trebuchet MS',sans-serif}
+#stageHud .step svg{display:block;width:55px;height:46px;overflow:visible}
+#stageHud #instruction{margin:12px 0 4px;font:900 16px/1.15 'Trebuchet MS',sans-serif;min-height:38px}
+#stageHud #subInstruction{font:600 11px/1.45 'Trebuchet MS',sans-serif;color:#555267;min-height:32px;margin:0}
+#stageHud #calProgress{height:10px;margin:10px 0 0;border:2px solid var(--navy);background:#f4e5df;border-radius:12px}
+#stageHud #calFill{display:block;height:100%;width:0;background:var(--rose)}
+#stageHud #calStatus{background:transparent;border:0;padding:0;font:800 10px 'Trebuchet MS',sans-serif;min-height:15px;margin:6px 0 0;color:#574d66}
+#stageHud #profile{font:700 10px 'Trebuchet MS',sans-serif;display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:6px}
+#stageHud #profile span{background:#ede0d1;color:var(--navy);border:1px solid #978c9a;border-radius:7px;padding:5px}
+#panel{position:fixed;left:auto;right:20px;bottom:20px;width:min(318px,calc(100vw - 40px));max-height:min(67vh,610px);background:var(--paper);color:var(--navy);border:3px solid var(--navy);border-radius:19px;box-shadow:6px 6px 0 #06091e;backdrop-filter:none;overflow:auto;font:600 11px 'Trebuchet MS',sans-serif;z-index:20}
+#panel summary{background:var(--rose);color:var(--navy);border:0;border-radius:14px 14px 0 0;font:italic 1000 17px 'Arial Black',Impact,sans-serif;text-shadow:none;letter-spacing:.01em;list-style:none;cursor:pointer}
+#panel:not([open]) summary{border-radius:14px}
+#panel .in{padding:10px 13px 14px}
+#panel h4{font:900 10px 'Trebuchet MS',sans-serif;color:#504360;letter-spacing:.13em;text-transform:uppercase;margin:15px 0 8px}
+#panel button,dialog button{background:var(--gold);color:var(--navy);font:900 11px 'Trebuchet MS',sans-serif;border:2px solid var(--navy);border-radius:9px;box-shadow:2px 2px 0 var(--navy);padding:7px 9px}
+#panel button.on{background:var(--rose)}
+#panel button:hover,dialog button:hover{background:var(--rose)}
+#panel input[type=range],#panel input[type=checkbox]{accent-color:#ab5c81}
+#panel #themes{gap:4px}
+#panel #themes button{font-size:10px}
+#panel .note,#panel .n{color:#5a5069}
+#panel .er{grid-template-columns:91px 1fr 1fr}
+#panel .er.h{font-size:10px}
+#panel .s{grid-template-columns:126px 1fr}
+#panel #go{display:none}
+#panel #cal{background:var(--rose)}
+#panel .row{gap:5px}
+#panel .advanced{border-top:2px dashed #b8a4ae;margin-top:12px;padding-top:4px}
+#panel #calProgress,#panel #calStatus,#panel #profile{display:none}
+#panel .mini-explain{background:#ebd9cf;padding:9px 11px;border-radius:9px;border:1px solid var(--navy);font-size:11px;line-height:1.4}
+dialog{background:var(--paper);color:var(--navy);border:4px solid var(--navy);box-shadow:12px 12px 0 #090e21;border-radius:18px;max-width:560px}
+dialog::backdrop{background:#0c1026db}
+.dh{background:var(--rose);border-bottom:3px solid var(--navy);color:var(--navy);font:italic 1000 30px 'Arial Black',Impact,sans-serif;letter-spacing:-.02em;padding:15px}
+.db{padding:12px 22px 22px}
+.db h2{color:#8d456d;font:900 17px 'Trebuchet MS',sans-serif}
+.db .big{background:var(--gold);border:2px solid var(--navy);box-shadow:3px 3px 0 var(--navy);color:var(--navy);font:900 15px 'Trebuchet MS',sans-serif}
+.db a{color:#7c3a66}
+.ear-hero{display:flex;justify-content:center;gap:15px;align-items:end;margin:4px 0}
+.ear-hero svg{height:90px;width:82px;transform:rotate(-7deg)}
+.ear-hero svg+svg{transform:rotate(7deg)}
+.welcome-decor{color:#9e456d;letter-spacing:.24em;font:900 12px 'Trebuchet MS',sans-serif;margin:0 0 7px}
+@media(max-width:760px){#brand{left:12px;top:10px}#brand small{font-size:8px}#topActions{right:9px;top:12px}#topActions button{font-size:10px;padding:7px}#badge90{display:none}#stageHud{left:9px;top:64px;bottom:auto;width:min(235px,58vw);padding:9px}#stageHud .steps{gap:3px;margin-top:8px}#stageHud .step{padding:3px 1px}#stageHud .step svg{width:42px;height:32px}#stageHud .step .stepname{font-size:8px}#stageHud #instruction{font-size:13px;min-height:28px;margin:8px 0 2px}#stageHud #subInstruction{font-size:9px;min-height:26px}#stageHud #profile{display:none}#panel{right:9px;bottom:9px;width:min(180px,39vw);max-height:46vh}#panel summary{font-size:12px;padding:10px}#panel .in{padding:8px}#panel .er{grid-template-columns:60px 1fr 1fr;gap:3px}#panel h4{font-size:9px}#panel button{font-size:9px;padding:4px}#msg{top:55px;font-size:10px}.welcome-inner{padding:20px 14px}.welcome-inner h1{font-size:47px}}
+@media(max-width:440px){#brand strong{font-size:24px}#brand small{display:none}#stageHud{width:min(215px,57vw)}#stageHud .hudTitle{font-size:8px}#panel{width:36vw}#panel .in{font-size:10px}#panel summary{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.step{transition:none!important}}
+
+
+/* 199X cartoon art direction + comic calibration bubbles */
+.ear-hero{gap:18px;align-items:center}.ear-hero .pixel-icon{filter:drop-shadow(3px 3px 0 #10152c);image-rendering:pixelated}
+.pixel-icon{image-rendering:pixelated;shape-rendering:crispEdges;flex-shrink:0}
+#stageHud .step .pixel-icon{height:46px;max-width:60px;image-rendering:pixelated}
+#stageHud .step.active{background:#f3cd73;outline:3px solid #ea8598;outline-offset:2px;transform:translateY(-3px)}
+#stageHud .step.done:after{content:'✓';position:absolute;right:3px;top:0;color:#10152c;font-size:14px}
+#stageHud .step{position:relative}
+#stageHud .thought{position:relative;background:#fffaf0;border:3px solid var(--navy);box-shadow:3px 3px 0 var(--rose);border-radius:21px;padding:11px 12px 9px;margin:15px 0 12px}
+#stageHud .thought:after{content:'';position:absolute;bottom:-11px;left:34px;width:13px;height:13px;border-right:3px solid var(--navy);border-bottom:3px solid var(--navy);transform:rotate(45deg);background:#fffaf0}
+#stageHud .thought-tag{display:inline-block;background:#ea8598;border:1px solid #10152c;border-radius:30px;padding:3px 7px;font-size:9px;font-weight:900;letter-spacing:.09em}
+#stageHud .thought #instruction{font-size:17px;min-height:0;margin:8px 0 4px;color:#10152c}
+#stageHud .thought #subInstruction{font-size:11px;min-height:0;color:#3c3554;margin:0;line-height:1.5}
+#welcome .byline{font-size:12px;line-height:1.45;margin:4px auto 12px;max-width:410px;background:#fff7e8;border:2px dashed #b47b8f;border-radius:13px;padding:9px}
+.welcome-links,.creator-links{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:11px}
+.welcome-links a,.creator-links a,.donate{display:inline-block;color:#10152c!important;background:#f3cd73;border:2px solid #10152c;border-radius:8px;font:900 10px 'Trebuchet MS',sans-serif;padding:7px 10px;text-decoration:none;box-shadow:2px 2px 0 #10152c}
+.welcome-links a:last-child,.creator-links a:last-child,.donate{background:#ea8598}
+.creator-panel{margin-top:14px;border:2px solid #10152c;background:#fff7e6;border-radius:12px;padding:12px;font-size:11px;line-height:1.55}
+.creator-panel>strong{display:block;font-size:12px}.creator-panel>span{display:block}.creator-panel a{color:#893b65}.creator-panel p{margin:6px 0}
+.creator-panel .funfact{background:#f3cd73;border-radius:7px;padding:7px 9px;font-weight:800}
+.creator-links{justify-content:flex-start}
+.about-creator{background:#fff6e9;padding:10px 14px;border:2px dashed #bd8594;border-radius:13px;margin:15px 0}
+#sound[aria-pressed="false"]{opacity:.62;background:#d2cadd}
+@media(max-width:760px){#stageHud .step .pixel-icon{width:42px;height:32px}#stageHud .thought{margin:10px 0 7px;padding:7px;border-width:2px}#stageHud .thought #instruction{font-size:12px;margin:3px 0}#stageHud .thought #subInstruction{font-size:9px;line-height:1.24}#stageHud .thought-tag{font-size:7px}#topActions{gap:4px}#topActions button{font-size:9px;padding:6px 7px}.welcome-inner .byline{font-size:11px}}
+@media(max-width:420px){#stageHud .thought #instruction{font-size:11px}#stageHud .thought #subInstruction{font-size:8px}}
+
+/* WEBBIT! / AERO SCAN — glossy 199X cartoon meets translucent 2.5D interfaces. */
+:root{--aero-ice:#e9fbff;--aero-sky:#a0e8f2;--aero-teal:#64b7cb;--aero-deep:#112344}
+#welcome{background:radial-gradient(ellipse at 48% 47%,rgba(80,163,190,.23),rgba(9,18,43,.76) 48%,rgba(3,9,26,.94) 100%);backdrop-filter:blur(12px)}
+.welcome-inner{background:linear-gradient(155deg,rgba(255,255,255,.99) 0%,#e3f5f8 22%,#fbf9e9 52%,#dcebf4 100%);border:2px solid #d5f8ff;outline:2px solid rgba(111,214,232,.55);border-radius:34px;box-shadow:0 28px 75px #000b,0 0 0 7px #b4edff19,inset 0 3px 4px white,inset 0 -15px 25px #81bccc38;overflow:hidden}
+.welcome-inner:after{content:'';position:absolute;z-index:0;top:-35%;left:-16%;width:90%;height:52%;background:linear-gradient(120deg,#fff9,transparent);transform:rotate(-12deg);pointer-events:none}
+.welcome-inner:before{background:linear-gradient(180deg,#fdfcff,#c3f2f7);border:1px solid #a6d5e6;box-shadow:0 3px 8px #3b688f3b}
+#welcome #begin{background:linear-gradient(180deg,#fff9 0%,#d8fbff 9%,#a5e2ef 50%,#5fb1ce 100%);border:2px solid #22536c;box-shadow:inset 0 3px 2px #fff,0 8px 0 #23516c,0 12px 24px #1f455a50;color:#10283f;text-shadow:0 1px white;transition:transform .15s,box-shadow .15s}
+#welcome #begin:hover{background:linear-gradient(#fff,#bdeefa 30%,#82c5dc)}
+#welcome #begin:active{transform:translateY(5px);box-shadow:inset 0 2px 4px #689dbb,0 3px 0 #23516c}
+#welcome .welcome-sub{color:#293b58}
+#welcome .privacy{color:#4a6475}
+#brand strong{text-shadow:0 0 28px #7dc8e485,4px 4px 0 #754269}
+#topActions button{background:linear-gradient(#fff,#d5f4f7 42%,#b0d9e8);border:1px solid #d8faff;box-shadow:inset 0 2px 1px white,0 4px 13px #0006;color:#17394d}
+#panel{background:linear-gradient(145deg,rgba(250,253,255,.98),rgba(220,237,247,.97) 48%,rgba(244,236,239,.98));border:2px solid #daffff;box-shadow:0 18px 35px #0007,0 0 0 3px #83c7d538,inset 0 2px 3px white;backdrop-filter:blur(16px)}
+#panel summary{background:linear-gradient(180deg,#fffef7,#9adce9 55%,#76b7ce);border-bottom:1px solid #7da9bf;text-shadow:0 1px 0 white}
+#panel button{background:linear-gradient(#fff,#eef9f8 38%,#a7d9e7);border:1px solid #729bb7;box-shadow:inset 0 2px 1px white,0 2px 4px #3c607544;color:#14354c}
+#panel #cal{background:linear-gradient(#fff,#ffdce8 30%,#e89bb6)}
+#panel .mini-explain,#panel .creator-panel{background:#f9faffce;border-color:#a4c7d5}
+#msg{background:linear-gradient(120deg,#f3fdff,#bdeefa);border:1px solid #dbffff;box-shadow:0 7px 24px #02111c88;color:#17364c}
+#stageHud{background:linear-gradient(145deg,#fafaff 0%,#eafcfe 31%,#d0eff4 70%,#b8cbdc 100%);border:2px solid #e7ffff;box-shadow:0 20px 48px #000a,0 0 0 4px #8ed0de40,inset 0 3px 3px white,inset 0 -5px 12px #4386a02b;border-radius:26px;overflow:visible}
+#stageHud .pill{background:linear-gradient(#f8ffff,#c1f5f7 38%,#80c9db);border:1px solid #76b6c6;color:#18344b;box-shadow:inset 0 1px 1px white}
+#stageHud .step{background:linear-gradient(160deg,#fff,#dbeaf2);border:1px solid #a2c7d3;border-radius:15px;box-shadow:inset 0 2px 2px white}
+#stageHud .step.active{background:linear-gradient(170deg,#fff,#b9f4f8 48%,#89d7e9);border:2px solid #79bdd0;outline:2px solid #b9effb;box-shadow:inset 0 3px 2px white,0 6px 14px #4c91bb55}
+#stageHud .step.done{background:linear-gradient(#faffff,#d8fae4);border:1px solid #79bba6}
+#stageHud .thought{background:linear-gradient(160deg,#fff,#fbffff 48%,#ecf6ff);border:2px solid #b1deed;box-shadow:inset 0 2px 5px white,0 7px 20px #5e8faa40;border-radius:26px}
+#stageHud .thought:after{border-right:2px solid #b1deed;border-bottom:2px solid #b1deed;background:#edf6fd}
+#stageHud .thought-tag{background:linear-gradient(#fff,#c6f8fa);border:1px solid #90ccd7;color:#245970}
+#stageHud #calProgress{height:13px;border:1px solid #8bc6d6;background:#8eb8cb5c;box-shadow:inset 0 2px 4px #40698750;overflow:hidden}
+#stageHud #calFill{background:linear-gradient(180deg,#f9ffff,#bffef7 25%,#5dcad6 70%,#4e9fc8);box-shadow:0 0 18px #48d9f5;position:relative}
+#stageHud #calFill:after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(105deg,transparent 0 18px,#ffffff66 18px 24px,transparent 24px 36px)}
+#stageHud #calStatus{color:#456477}
+#stageHud #profile span{background:#f9ffffa6;border:1px solid #b3d0df}
+#stageHud .scanStage{display:none}
+#stageHud.cal-active,#stageHud.cal-done{position:fixed;top:50%;left:clamp(16px,4vw,70px);bottom:auto;width:min(556px,calc(100vw - 32px));max-height:calc(100dvh - 36px);overflow:auto;transform:translateY(-50%);padding:22px 24px 19px;z-index:42}
+#stageHud.cal-active .scanStage,#stageHud.cal-done .scanStage{display:block}
+#stageHud.cal-active .hudTitle,#stageHud.cal-done .hudTitle{font-size:13px;color:#24556c}
+#stageHud.cal-active .pill,#stageHud.cal-done .pill{font-size:13px;padding:6px 13px}
+#stageHud.cal-active .step,#stageHud.cal-done .step{padding:7px}
+#stageHud.cal-active .stepname,#stageHud.cal-done .stepname{font-size:12px}
+#stageHud.cal-active .thought,#stageHud.cal-done .thought{margin:18px 0 16px;padding:15px 19px 18px}
+#stageHud.cal-active #instruction,#stageHud.cal-done #instruction{font:1000 clamp(25px,3.3vw,38px)/1.05 'Arial Black',Impact,sans-serif;letter-spacing:-.035em;color:#123252;min-height:0;margin:9px 0 10px;text-transform:uppercase;text-wrap:balance}
+#stageHud.cal-active #subInstruction,#stageHud.cal-done #subInstruction{font-size:15px;font-weight:700;line-height:1.42;color:#34536b;min-height:0}
+#stageHud.cal-active #profile,#stageHud.cal-done #profile{font-size:12px}
+#stageHud.cal-active #calStatus,#stageHud.cal-done #calStatus{font-size:13px;line-height:1.35;margin:8px 0}
+#stageHud .scanCaption{display:flex;justify-content:space-between;align-items:center;margin:17px 2px 6px;font:900 11px 'Trebuchet MS',sans-serif;color:#34607b;letter-spacing:.12em}
+#stageHud .scanCaption #scanSeconds{display:inline-block;color:#1b3b58;background:#f5ffff;padding:3px 10px;border:1px solid #b1e4ed;border-radius:99px;font-size:15px;letter-spacing:0;font-variant-numeric:tabular-nums}
+#stageHud .scanner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;border-radius:27px;padding:14px 18px 21px;background:radial-gradient(ellipse at 50% 0%,#eafeff,#c8eaf2 42%,#91b7d5 100%);border:1px solid #b3edfb;box-shadow:inset 0 4px 8px #fff,inset 0 -6px 16px #33637a35,0 8px 18px #42637b40;overflow:hidden}
+#stageHud .scanner:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 15px,#ffffff33 15px 16px),linear-gradient(115deg,#ffffff69 0%,transparent 37%,#ffffff40 76%,transparent);pointer-events:none}
+.scanEar{position:relative;min-height:150px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;opacity:.40;filter:saturate(.4);transition:opacity .25s,filter .25s,transform .25s}
+.scanEar svg{width:min(140px,100%);height:142px;filter:drop-shadow(0 8px 3px #345b7e4d);overflow:visible}
+.scanEar .earLetter{font:1000 12px 'Trebuchet MS',sans-serif;letter-spacing:.16em;color:#224b6f;background:#fff9;border:1px solid #b8e4ec;padding:4px 10px;border-radius:30px}
+.scanEar.focus{opacity:1;filter:none;transform:translateY(-2px)}
+.scanEar.focus svg{filter:drop-shadow(0 0 20px #e6ffff) drop-shadow(0 9px 5px #3d6d9965)}
+.scanEar .scanline{position:absolute;top:12px;left:7%;right:7%;height:8px;background:linear-gradient(90deg,transparent,#d4ffff,#44c6e6,#dfffff,transparent);box-shadow:0 0 20px 5px #75e5ff,0 0 6px white;border-radius:30px;opacity:0;pointer-events:none}
+.scanEar.focus .scanline{opacity:1;animation:scannerSweep 1.45s ease-in-out infinite alternate}
+.scanEar.focus svg{animation:scannerBob 1.7s ease-in-out infinite alternate}
+.scanEar.focus:after{content:'✦';position:absolute;top:7%;right:12%;font-size:23px;color:white;text-shadow:0 0 12px #20b8d8;animation:scanTwinkle 1.2s infinite alternate}
+#stageHud[data-phase="0"] .scanEar{opacity:1;filter:none}
+#stageHud[data-phase="0"] .scanEar .scanline{opacity:.8;animation:scannerSweep 2s ease-in-out infinite alternate}
+#stageHud[data-phase="3"] .scanEar{opacity:1;filter:none}
+#stageHud[data-phase="3"] .scanEar svg{animation:scannerBob 1.3s ease-in-out infinite alternate}
+#stageHud[data-phase="3"] .scanEar .scanline{display:none}
+@keyframes scannerSweep{0%{top:10%;transform:scaleX(.75)}100%{top:70%;transform:scaleX(1)}}
+@keyframes scannerBob{from{transform:rotate(-2deg) translateY(1px)}to{transform:rotate(3deg) translateY(-3px)}}
+@keyframes scanTwinkle{from{opacity:.3;transform:scale(.8)}to{opacity:1;transform:scale(1.2)}}
+#stageHud .scanHelp{font:700 11px/1.35 'Trebuchet MS',sans-serif;color:#2c546c;text-align:center;margin:10px 0 0}
+#enterScene{display:none;margin:10px auto 2px;padding:12px 24px;background:linear-gradient(#fff,#d2fff5 20%,#75c9e0);border:1px solid #6faabd;border-radius:40px;box-shadow:inset 0 2px 2px white,0 6px 0 #316a85,0 8px 14px #31536c60;color:#153e52;font:900 17px 'Trebuchet MS',sans-serif;cursor:pointer}
+#stageHud.cal-done #enterScene{display:block}
+#enterScene:active{transform:translateY(4px);box-shadow:inset 0 2px 2px #90ccda,0 2px 0 #316a85}
+#calBackdrop{position:fixed;inset:0;z-index:37;pointer-events:none;background:linear-gradient(90deg,#06162bb3 0%,#0b213a4a 52%,#030b2212 100%);opacity:0;transition:opacity .25s}
+body.is-calibrating #calBackdrop{opacity:1}
+body.is-calibrating #panel{pointer-events:none;opacity:.27;filter:blur(2px)}
+body.is-calibrating #msg{display:none}
+@media(max-width:760px){
+ #stageHud.cal-active,#stageHud.cal-done{top:51%;left:10px;width:calc(100vw - 20px);padding:14px 16px;max-height:calc(100dvh - 24px);transform:translateY(-50%)}
+ #stageHud.cal-active .thought,#stageHud.cal-done .thought{margin:10px 0;padding:11px 14px 14px}
+ #stageHud.cal-active #instruction,#stageHud.cal-done #instruction{font-size:clamp(24px,7vw,32px);min-height:0}
+ #stageHud.cal-active #subInstruction,#stageHud.cal-done #subInstruction{font-size:13px;min-height:0}
+ #stageHud.cal-active .step .pixel-icon,#stageHud.cal-done .step .pixel-icon{width:55px;height:42px}
+ #stageHud.cal-active .stepname,#stageHud.cal-done .stepname{font-size:10px}
+ #stageHud .scanEar{min-height:128px}.scanEar svg{height:115px;width:120px}
+ #stageHud .scanner{padding:5px 12px 10px;gap:8px}
+ #stageHud .scanCaption{margin-top:9px}
+ #stageHud.cal-active #calStatus,#stageHud.cal-done #calStatus{font-size:11px}
+ #stageHud.cal-active #profile,#stageHud.cal-done #profile{display:none}
+ #stageHud .scanHelp{font-size:10px}
+ #stageHud.cal-active .hudTitle,#stageHud.cal-done .hudTitle{font-size:10px}
+ #stageHud.cal-active .pill,#stageHud.cal-done .pill{font-size:10px;padding:5px 8px}
+}
+@media(max-width:370px), (max-height:660px){
+ #stageHud .scanEar{min-height:86px}.scanEar svg{height:75px;width:90px}
+ #stageHud.cal-active .thought,#stageHud.cal-done .thought{margin:7px 0;padding:8px 10px}
+ #stageHud.cal-active #instruction,#stageHud.cal-done #instruction{font-size:22px;margin:3px 0 6px}
+ #stageHud.cal-active #subInstruction,#stageHud.cal-done #subInstruction{font-size:11px}
+ #stageHud .scanCaption{margin:7px 0 4px}
+ #stageHud.cal-active .step .pixel-icon,#stageHud.cal-done .step .pixel-icon{width:33px;height:28px}
+}
+@media(prefers-reduced-motion:reduce){.scanEar.focus svg,.scanEar .scanline,.scanEar.focus:after{animation:none!important}}
+
+
+#stageHud .scanEar .signalTrack{width:88%;height:8px;margin-top:3px;border:1px solid #9dd1dc;background:#e4f7fb;border-radius:10px;box-shadow:inset 0 1px 4px #35627c55;overflow:hidden}
+#stageHud .scanEar .signalTrack i{display:block;width:3%;height:100%;background:linear-gradient(#efffff,#8cebf3 40%,#42b8d1);border-radius:20px;box-shadow:0 0 10px #62fff4;transition:width .08s linear}
+#stageHud .scanSignal{font:900 10px/1.3 'Trebuchet MS',sans-serif;color:#29617e;text-align:center;letter-spacing:.035em;margin:7px 0 0;min-height:14px}
+@media(max-width:760px){#stageHud .scanSignal{font-size:9px}}
+
+
+/* WEBBIT! — The Rabbit Society Photo Booth */
+#boothOpen{background:linear-gradient(180deg,#fffdfc,#ffd6ed 35%,#e5a5c7)!important;color:#25334c!important;border:2px solid #f7eafd!important;box-shadow:inset 0 2px 1px #fff,0 3px 0 #8b5f86!important;font-weight:1000!important;white-space:nowrap}
+#photoBooth{position:fixed;inset:0;z-index:130;background:rgba(4,10,26,.91);display:none;align-items:center;justify-content:center;padding:12px;backdrop-filter:blur(16px)}
+#photoBooth.open{display:flex}
+#pbCard{width:min(880px,98vw);height:min(95dvh,880px);min-height:420px;overflow:auto;display:flex;flex-direction:column;align-items:stretch;position:relative;border:2px solid #d1e9ff;border-radius:26px;background:linear-gradient(135deg,#f3f9ff 0%,#d4f1fb 34%,#ffebf4 69%,#e2d7ff 100%);box-shadow:0 20px 100px #000a,inset 0 2px 6px white;color:#15243a}
+#pbCard::before{content:'';height:6px;position:absolute;top:0;left:15px;right:15px;background:repeating-linear-gradient(90deg,#aef4ec 0 11px,#ee93b9 11px 20px,#bfc8ff 20px 28px);border-radius:12px}
+#pbHeader{padding:18px 24px 8px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+#pbHeader h2{font:1000 clamp(19px,3vw,31px)/1.05 'Arial Black',Impact,sans-serif;letter-spacing:-.05em;margin:0;color:#243554;text-shadow:2px 2px #fff}
+#pbHeader p{margin:4px 0 0;font:bold 10px/1.3 monospace;letter-spacing:.06em;color:#53617c}
+#pbClose{border:2px solid #5c7091!important;background:#f9fbff!important;color:#25334c!important;border-radius:50%!important;font:bold 22px Arial!important;width:40px;height:40px;padding:0!important;flex-shrink:0}
+#pbBody{display:grid;grid-template-columns:minmax(230px,1fr) minmax(250px,1.05fr);gap:18px;padding:8px 22px 16px;min-height:0;flex:1}
+#pbLeft{display:flex;flex-direction:column;justify-content:center;min-height:0;gap:12px}
+#pbPreviewWrap{position:relative;align-self:center;width:min(100%,245px);aspect-ratio:9/16;border-radius:13px;padding:7px;background:#ffffff;box-shadow:0 9px 24px #3a527b55,0 0 0 2px #bed9ea}
+#pbPreview{width:100%;height:100%;object-fit:contain;display:block;background:#131b37;border-radius:8px;image-rendering:auto}
+#pbCount{position:absolute;inset:9px;border-radius:8px;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:rgba(9,21,46,.66);color:white;text-shadow:0 2px 3px #090e20}
+#pbCount.active{display:flex}#pbCountNum{font:1000 clamp(64px,10vw,115px)/1 Impact,'Arial Black',sans-serif;color:#fff3ad;-webkit-text-stroke:2px #263b62}
+#pbCountLabel{font:1000 20px/1.1 'Arial Black',sans-serif;background:#fce1ef;color:#26324e;border:2px solid #314668;padding:7px 10px;transform:rotate(-3deg);max-width:95%}
+#pbRight{display:flex;flex-direction:column;gap:8px;justify-content:center;min-width:0}
+#pbRight .speech{position:relative;border-radius:24px 24px 24px 6px;border:2px solid #718cad;background:#ffffffd9;padding:12px 16px;box-shadow:4px 6px 0 #d5dfef}
+#pbRight .speech strong{font:1000 clamp(18px,2.5vw,25px)/1.08 'Arial Black',sans-serif;color:#2f3b61;display:block}
+#pbRight .speech small{font:700 11px/1.4 'Trebuchet MS',sans-serif;color:#59617d;display:block;margin-top:5px}
+.pbBeats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.pbBeat{border:2px solid #bbcade;border-radius:12px;background:#ffffffc9;padding:10px 4px;text-align:center;color:#334965;font:1000 11px/1.3 monospace;transition:transform .15s,background .15s}
+.pbBeat b{display:block;font:1000 24px/1 Impact,'Arial Black',sans-serif;color:#a8649a;margin-bottom:4px}
+.pbBeat.hot{background:#ffccdf;border-color:#ab6491;transform:translateY(-3px);box-shadow:0 4px 0 #b98caf}
+#pbStatus{font:700 12px/1.5 'Trebuchet MS',sans-serif;color:#46566d;min-height:36px}
+.pbActions{display:flex;flex-wrap:wrap;gap:7px}
+.pbActions button,.pbActions a{background:linear-gradient(#fff,#d3eefa)!important;border:2px solid #7495b3!important;color:#1b3558!important;border-radius:12px!important;padding:11px 12px!important;box-shadow:0 4px 0 #7596b6!important;font:bold 12px/1.2 'Trebuchet MS',sans-serif!important;text-align:center;text-decoration:none;cursor:pointer}
+.pbActions button.primary{background:linear-gradient(#ffeef6,#f2adca)!important;border-color:#9c6a90!important;box-shadow:0 4px 0 #a06c93!important}
+.pbActions button:disabled{opacity:.5;cursor:not-allowed}
+#pbFooter{padding:7px 22px 16px;display:flex;justify-content:space-between;gap:8px;font:700 10px/1.35 'Trebuchet MS',sans-serif;color:#465779}
+#pbFooter a{color:#854d89;font-weight:900}
+#pbPrivacy{display:flex;gap:6px;align-items:center;font:bold 11px 'Trebuchet MS',sans-serif;color:#43516d}
+#pbPrivacy input{accent-color:#985f91}
+#pbShareNote{font-size:10px;color:#647086;line-height:1.35}
+@media(max-width:690px){#pbCard{height:min(97dvh,960px);width:min(440px,98vw)}#pbBody{display:flex;flex-direction:column;gap:9px;padding:4px 13px 9px}#pbHeader{padding:17px 14px 7px}#pbHeader h2{font-size:21px}#pbLeft{min-height:0;flex:0 0 auto}#pbPreviewWrap{width:min(33vh,185px);min-width:125px}#pbRight{gap:6px;flex:1;justify-content:flex-start}#pbRight .speech{padding:9px 13px}#pbRight .speech strong{font-size:16px}#pbRight .speech small{font-size:10px;margin-top:2px}.pbBeat{padding:6px 3px}.pbBeat b{font-size:16px}.pbActions button,.pbActions a{padding:9px!important;font-size:11px!important}#pbFooter{padding:5px 14px 12px;font-size:9px}#pbStatus{min-height:20px;font-size:10px}}
+
+
+/* WEBBIT MINI LIBRARY — separate reading mode, never covers stage unless opened */
+#libraryOpen{background:linear-gradient(180deg,#fbfdff 0%,#d9e7fd 54%,#b5d0ec 100%)!important;color:#253957!important;border-color:#b3ecff!important;white-space:nowrap}
+#welcomeLibrary{display:inline-block;margin-top:12px;padding:9px 14px;border-radius:14px;border:2px solid #285176;background:linear-gradient(#fff,#c4eefa);color:#193d5b;font:900 12px 'Trebuchet MS',sans-serif;box-shadow:0 4px 0 #285176;cursor:pointer}
+#earLibrary{position:fixed;inset:0;z-index:150;background:rgba(5,13,30,.90);backdrop-filter:blur(18px);display:none;place-items:center;padding:16px;color:#19344b}
+#earLibrary.open{display:grid}
+#libBook{width:min(930px,97vw);height:min(92dvh,860px);display:flex;flex-direction:column;overflow:hidden;border-radius:26px;border:2px solid #e0f9ff;background:linear-gradient(138deg,#f5f9ff,#eaf8fa 42%,#f7e9f2 100%);box-shadow:0 24px 90px #000b,0 0 0 6px #a0f6ff14,inset 0 3px 5px #fff}
+.libHead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:21px 26px 15px;background:linear-gradient(145deg,#fcfeff 0%,#c8eaf1 68%,#c6d0f0 100%);border-bottom:2px solid #a8cbd8;position:relative}
+.libHead:before{content:'WEBBIT READING ROOM .EXE   •   VOL. 001';position:absolute;top:7px;right:84px;color:#69829d;font:900 9px monospace;letter-spacing:.07em}
+.libHead h2{font:italic 1000 clamp(26px,4vw,43px)/1 'Arial Black',Impact,sans-serif;color:#26334f;text-shadow:2px 2px 0 #fbdce9;margin:6px 0}
+.libHead p{font:700 12px/1.45 'Trebuchet MS',sans-serif;color:#4d6482;margin:4px 0 0;max-width:650px}
+#libClose{border:2px solid #708baa;background:linear-gradient(#fff,#d8e9f9);color:#304761;width:42px;height:42px;min-width:42px;font:bold 22px Arial;border-radius:50%;cursor:pointer;box-shadow:0 3px 0 #8caabc}
+.libToolbar{padding:12px 24px 6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.libFilter{border:1px solid #92a9c3;background:#f8fcff;color:#334f71;border-radius:14px;padding:8px 12px;font:900 11px monospace;cursor:pointer;box-shadow:0 3px 0 #d2dfee}
+.libFilter.active{background:#f8c4dc;border-color:#b26e90;color:#492c53}
+#libSearch{min-width:150px;flex:1 1 180px;border:2px solid #a4bfd4;border-radius:12px;background:#fff;padding:9px 12px;color:#33445e;font:700 12px 'Trebuchet MS',sans-serif;outline-offset:2px}
+.libScroll{flex:1;overflow-y:auto;padding:8px 24px 22px;scrollbar-color:#b6d6e1 transparent}
+.libNote{background:#eef7fb;border:1px dashed #a0bbce;border-radius:12px;padding:11px 13px;font:600 12px/1.5 'Trebuchet MS',sans-serif;color:#48637b;margin:4px 0 14px}
+#libItems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.libItem{border:1px solid #b7cce1;border-radius:16px;background:linear-gradient(125deg,#fff 0%,#eef7ff 70%,#f9eaf3 100%);padding:15px 16px;box-shadow:0 4px 0 #dae5ef;display:flex;flex-direction:column;gap:8px;min-width:0}
+.libItem:before{content:'✦';position:absolute;display:none}
+.libMeta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font:900 9px monospace;letter-spacing:.07em;color:#617692;text-transform:uppercase}
+.libCategory{border-radius:9px;background:#d4eef2;padding:3px 7px;color:#32647d}
+.libItem h3{font:900 17px/1.15 'Trebuchet MS',sans-serif;color:#243651;margin:0}
+.libItem p{font:600 12px/1.48 'Trebuchet MS',sans-serif;color:#52657d;margin:0;flex:1}
+.libItem a{display:inline-flex;align-items:center;align-self:flex-start;text-decoration:none;background:#e4f2fa;border:1px solid #92b6d0;border-radius:10px;padding:8px 12px;font:900 11px 'Trebuchet MS',sans-serif;color:#265375}
+.libItem a:hover,.libItem a:focus-visible{background:#ffe5f0}
+#libCount{font:bold 11px monospace;color:#4f6783;padding:0 24px 12px}
+.libBottom{border-top:1px solid #d1e3ef;display:flex;justify-content:space-between;gap:10px;padding:11px 24px;font:700 10px/1.3 monospace;color:#536985;background:#f6fbff}
+.libBottom a{color:#385878;font-weight:900}
+@media(max-width:730px){#topActions{max-width:min(75vw,330px);justify-content:flex-end;flex-wrap:wrap;gap:4px;right:9px;top:9px}#topActions button{font-size:9px;padding:6px 8px}#brand strong{font-size:26px}#brand small{display:none}.libHead{padding:16px 15px 12px}.libHead:before{display:none}.libHead h2{font-size:27px}.libHead p{font-size:11px}.libToolbar{padding:10px 12px 4px;gap:6px}.libFilter{padding:7px 8px;font-size:10px}.libScroll{padding:7px 12px 13px}#libItems{grid-template-columns:1fr;gap:8px}.libItem{padding:12px}.libItem h3{font-size:15px}#libCount{padding:0 12px 8px}.libBottom{padding:10px 12px;font-size:9px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){#earLibrary *{animation:none!important;transition:none!important}}
+
+/* Six-shot portrait layout: same frosted 90s web aesthetic, no webcam preview */
+#pbBody{grid-template-columns:minmax(260px,1fr) minmax(275px,1.05fr)}
+#pbPreviewWrap{width:min(100%,290px)}
+#pbFlash{position:absolute;inset:7px;pointer-events:none;border-radius:8px;background:#fff;opacity:0}
+#pbFlash.fired{animation:pbFlashBang .42s ease-out forwards}
+@keyframes pbFlashBang{0%{opacity:.88}100%{opacity:0}}
+#pbCount{background:rgba(6,14,36,.55);gap:10px}
+#pbCount small{font:900 13px monospace;letter-spacing:.12em;color:#e1f5ff}
+#pbCountNum{font-size:clamp(66px,9vw,118px)}
+.pbGridHint{display:flex;justify-content:space-between;gap:10px;width:min(100%,295px);align-self:center;font:900 10px monospace;color:#496483}
+.pbBeats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.pbBeat{font-size:10px;line-height:1.45;padding:6px 3px}
+.pbBeat b{font-size:21px}
+.pbBeat.done{background:#bdece1;border-color:#6da99f}
+.pbTiming{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 12px;border-radius:15px;background:#fefbffbb;border:1px solid #b9cce2;font:900 11px monospace;color:#384967}
+.pbTimingChoices{display:flex;gap:4px}
+.pbTimingChoices label{cursor:pointer;display:flex;align-items:center;gap:4px;background:#e2f1ff;border:2px solid #9ab7d7;border-radius:9px;padding:6px 9px;white-space:nowrap}
+.pbTimingChoices label:has(input:checked){background:#ffcfe2;border-color:#b97f9f}
+.pbTimingChoices input{accent-color:#a95c9b}
+#pbShootProgress{width:100%;height:7px;background:#d5e7f0;border-radius:20px;overflow:hidden;border:1px solid #aec8de}
+#pbShootProgress i{display:block;width:0;height:100%;background:linear-gradient(90deg,#b2e9f2,#ef9dc5);transition:width .18s}
+#pbCancel[hidden]{display:none}
+@media(max-width:690px){#pbCard{height:min(97dvh,960px)}#pbPreviewWrap{width:min(32vh,185px)}.pbGridHint{width:min(100%,190px);font-size:8px}.pbTiming{padding:6px 9px;font-size:10px}.pbTimingChoices label{padding:5px}.pbBeat{font-size:9px;padding:4px}.pbBeat b{font-size:16px}#pbHeader p{font-size:8px}}
+
+/* Let small devices scroll the entire booth rather than overlap its footer. */
+@media(max-width:690px){
+ #pbCard{display:block;height:auto;max-height:96dvh;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+ #pbBody{display:flex;flex-direction:column;min-height:auto;overflow:visible}
+ #pbRight{flex:none;min-height:auto}
+ #pbPreviewWrap{width:min(27vh,150px)}
+ #pbLeft{gap:7px}
+ #pbFooter{position:static;display:flex;flex-wrap:wrap;margin-top:6px;padding-bottom:17px}
+ .pbActions button{max-width:100%;white-space:normal}
+}
+
+.pbExperimentNote{margin:8px 0;padding:11px 13px;border:1px solid #90bdcc;border-radius:14px;background:linear-gradient(135deg,#f8fbff,#e0f6fa 55%,#fce6f1);font:600 12px/1.45 "Trebuchet MS",sans-serif;color:#334c67}.pbExperimentNote strong{color:#284d73}.pbExperimentNote a{color:#a04470;font-weight:900;text-decoration:underline}
+</style></head>
+<body>
+<section id="welcome" role="dialog" aria-label="Ear calibration" aria-modal="true"><div class="welcome-inner"><div class="eyebrow">A LITTLE BODY / A BIG MAGIC TRICK</div><div class="ear-hero"><svg viewBox="0 0 90 88" aria-hidden="true"><path d="M33 78 Q15 36 22 9 Q35 -5 47 31 Q65 7 76 12 Q89 30 59 78" fill="#f7ead2" stroke="#10152c" stroke-width="5" stroke-linejoin="round"/><path d="M36 66 Q25 38 30 17 Q38 19 45 44 M55 62 Q67 25 74 21" fill="none" stroke="#ea8598" stroke-width="10" stroke-linecap="round"/></svg></div><h1>WEBBIT!</h1><div class="welcome-decor">★ EXPERIMENTAL VISUAL RABBIT EARS CONTROLLED BY HUMAN EAR MOVEMENT ★</div><p>Can you wiggle your ears?</p><p class="welcome-sub">We'll calibrate small <b>eyebrow movements</b> as a playful stand-in for your ear muscles. Then your rabbit's glossy jelly ears—and the silver moon—will react. No video is shown on screen.</p><p class="byline">A playful experiment by <strong>Enchax (Aung Nyein Chan)</strong>, who can wiggle his ears.</p><button id="begin" type="button">✦ START EAR CALIBRATION</button><div><button id="welcomeLibrary" type="button">▤ BROWSE THE EAR LIBRARY</button></div><p class="privacy">★ BIG SCAN GUIDE: RELAX → LEFT → RIGHT<br>Camera video is processed locally, not uploaded by this app. MediaPipe assets download online. Use HTTPS or localhost.</p><div class="welcome-links"><a href="https://creativelyenchanted.com" target="_blank" rel="noopener noreferrer">VISIT THE CREATOR</a><a href="https://buymeacoffee.com/enchax" target="_blank" rel="noopener noreferrer">♥ SUPPORT WEBBIT</a></div></div></section>
+<canvas id="c"></canvas><video id="v" playsinline muted></video><div id="calBackdrop" aria-hidden="true"></div>
+<div id="msg" role="status" aria-live="polite"></div>
+<div id="brand" aria-hidden="true"><strong>WEBBIT!</strong><small>AN ENCHAX<br>EXPERIMENT</small></div><div id="topActions"><button id="sound" type="button" aria-pressed="true" title="Turn cartoon sounds on or off">♫ SOUND ON</button><button id="boothOpen" type="button" title="Open separate photo booth mode">♡ PHOTO BOOTH</button><button id="libraryOpen" type="button">▣ MINI LIBRARY</button><button id="why" type="button">✦ WHY SO RARE?</button></div><div id="badge90">AN ENCHAX RABBIT-EAR EXPERIMENT · 199X</div><section id="stageHud" aria-label="Ear calibration guide"><div class="hudTitle"><span>★ EAR CALIBRATION</span><span class="pill" id="hudBadge">READY!</span></div><div class="steps"><div class="step active" id="step0"><svg viewBox="0 0 80 65" aria-hidden="true"><path d="M21 56 Q10 31 17 8 Q27 -2 37 27 Q49 -1 59 7 Q71 28 49 56" fill="#f7ead2" stroke="#10152c" stroke-width="4"/><path d="M24 46 L23 17 M50 46 L56 18" stroke="#ea8598" stroke-width="8" stroke-linecap="round"/></svg><span class="stepname">01 · REST</span></div><div class="step" id="step1"><svg viewBox="0 0 80 65" aria-hidden="true"><path d="M19 58 Q-3 34 6 12 Q19 0 35 27 Q47 -1 58 7 Q71 28 49 58" fill="#f7ead2" stroke="#10152c" stroke-width="4"/><path d="M22 44 L13 19 M49 45 L57 17" stroke="#ea8598" stroke-width="8" stroke-linecap="round"/><path d="M8 4 l-6 -3 M4 17 L0 15" stroke="#10152c" stroke-width="3"/></svg><span class="stepname">02 · LEFT</span></div><div class="step" id="step2"><svg viewBox="0 0 80 65" aria-hidden="true"><path d="M21 58 Q10 31 17 8 Q27 -2 37 27 Q59 0 72 12 Q82 34 54 58" fill="#f7ead2" stroke="#10152c" stroke-width="4"/><path d="M24 44 L23 17 M50 45 L66 19" stroke="#ea8598" stroke-width="8" stroke-linecap="round"/><path d="M70 3 l7 -3 M75 16 L80 14" stroke="#10152c" stroke-width="3"/></svg><span class="stepname">03 · RIGHT</span></div></div><div class="scanStage" aria-label="Illustrative scan of ear-control motion">
+  <div class="scanCaption"><span id="scanWord">EAR SIGNAL SCANNER · STANDBY</span><span id="scanSeconds">—</span></div>
+  <div class="scanner">
+    <div class="scanEar" id="scanEarL" aria-label="Left illustrated rabbit ear"><svg viewBox="0 0 170 165" aria-hidden="true"><defs><linearGradient id="scanOuterL" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".44" stop-color="#fff9ec"/><stop offset="1" stop-color="#b2dce6"/></linearGradient><linearGradient id="scanInnerL" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffdeeb"/><stop offset=".55" stop-color="#eca2bf"/><stop offset="1" stop-color="#bb8cae"/></linearGradient></defs><path d="M91 155 Q44 131 29 77 Q14 13 38 9 Q71 8 84 91 Q100 115 91 155Z" fill="url(#scanOuterL)" stroke="#183855" stroke-width="5"/><path d="M80 141 Q48 113 38 76 Q29 27 43 23 Q56 28 70 99Z" fill="url(#scanInnerL)"/><path d="M94 153 Q100 96 96 58 Q97 12 121 8 Q149 3 134 72 Q122 113 94 153Z" fill="url(#scanOuterL)" stroke="#183855" stroke-width="5"/><path d="M101 133 Q108 58 112 27 Q128 19 126 50 Q120 102 101 133" fill="url(#scanInnerL)"/><path d="M37 26 Q34 62 51 98" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/></svg><span class="scanline"></span><span class="earLetter">LEFT</span><div class="signalTrack" aria-hidden="true"><i id="signalL"></i></div></div>
+    <div class="scanEar" id="scanEarR" aria-label="Right illustrated rabbit ear"><svg viewBox="0 0 170 165" aria-hidden="true"><defs><linearGradient id="scanOuterR" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".44" stop-color="#fff9ec"/><stop offset="1" stop-color="#b2dce6"/></linearGradient><linearGradient id="scanInnerR" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffdeeb"/><stop offset=".55" stop-color="#eca2bf"/><stop offset="1" stop-color="#bb8cae"/></linearGradient></defs><g transform="translate(170 0) scale(-1 1)"><path d="M91 155 Q44 131 29 77 Q14 13 38 9 Q71 8 84 91 Q100 115 91 155Z" fill="url(#scanOuterR)" stroke="#183855" stroke-width="5"/><path d="M80 141 Q48 113 38 76 Q29 27 43 23 Q56 28 70 99Z" fill="url(#scanInnerR)"/><path d="M94 153 Q100 96 96 58 Q97 12 121 8 Q149 3 134 72 Q122 113 94 153Z" fill="url(#scanOuterR)" stroke="#183855" stroke-width="5"/><path d="M101 133 Q108 58 112 27 Q128 19 126 50 Q120 102 101 133" fill="url(#scanInnerR)"/><path d="M37 26 Q34 62 51 98" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/></g></svg><span class="scanline"></span><span class="earLetter">RIGHT</span><div class="signalTrack" aria-hidden="true"><i id="signalR"></i></div></div>
+  </div>
+  <div class="scanSignal" id="scanSignal" aria-live="off">✦ WATCH THE HIGHLIGHTED EAR — ITS METER READS YOUR EYEBROW SIGNAL</div>
+  <p class="scanHelp" id="scanHelp">✦ ARTISTIC SCAN VISUAL · TRACKS EYEBROW/FACIAL CUES, NOT ACTUAL EAR MUSCLES</p>
+</div>
+<div id="thought" class="thought"><span class="thought-tag">RABBIT SAYS...</span><div id="instruction">Ready for your close-up?</div><p id="subInstruction">Start the camera. We’ll use your eyebrows as an ear-wiggle proxy.</p></div><div id="calProgress"><i id="calFill"></i></div><div id="calStatus" role="status" aria-live="polite">Not calibrated yet.</div><div id="profile"><span id="infoL">LEFT · Waiting</span><span id="infoR">RIGHT · Waiting</span></div><button id="enterScene" type="button">✦ ENTER THE RABBIT STAGE</button></section>
+<section class="cam" id="camL"><div class="iris"><canvas id="cL" width="300" height="300"></canvas></div><h3>Left ear</h3><div class="m" id="mL"></div></section>
+<section class="cam" id="camR"><div class="iris"><canvas id="cR" width="300" height="300"></canvas></div><h3>Right ear</h3><div class="m" id="mR"></div></section>
+<section id="camF"><div class="fw"><canvas id="cF" width="300" height="225"></canvas><span class="live" id="liveBadge">PREVIEW</span></div><h3>Face cam</h3></section>
+<dialog id="dlg"><div class="dh">Webbit</div><div class="db">
+<p>Webbit is an experimental visual rabbit-ear artwork inspired by human ear wiggling. An invisible two-sided rig reads <b>eyebrow signals</b> with MediaPipe and transfers them to a pair of anchored rabbit ears. A silvery rabbit-in-the-moon brightens with their movement.</p>
+<h2>How to play</h2>
+<ol>
+<li>Choose <b>Start ear calibration</b> and allow the camera. Use Chrome or Edge on HTTPS/localhost.</li>
+<li>Sit facing the camera in even light. Tuck hair behind your ears and stay fairly close.</li>
+<li>Calibration begins automatically. Relax your face for 2 seconds, then raise and relax your <b>left eyebrow</b>, followed by your <b>right eyebrow</b>. The big illustrated scanner highlights the current side; it is a visual metaphor for eyebrow-based calibration.</li>
+<li>After calibration, move your eyebrows or naturally wiggle your ears. Increase left/right gain for a larger response, or recalibrate.</li>
+<li>If the wrong ear moves, tick <b>Swap left/right</b>.</li>
+<li>Both ears are rooted at the bottom of the screen. Their bases stay still, while the upper cartilage and tips flex. You can also use the manual sliders.</li>
+<li>Pick a color theme: white &amp; pink, gray &amp; pinkish, or black &amp; yellow.</li>
+</ol>
+<p><b>Behind the trick:</b> MediaPipe does not detect the auricular muscles or directly track your outer ears. This is an expressive <b>proxy rig</b>, not a validated ear-motion sensor. A separate synthetic 3D ear-tip rig is driven by measurements around each eyebrow, and rendered as glossy jelly-like rabbit ears. Nothing is attached to, or follows, your head position. Eyebrow movements can deliberately trigger it. For best results, keep your head fairly still and recalibrate when lighting changes.</p>
+<p><button id="dialogLibrary" type="button">▤ OPEN THE MINI LIBRARY</button></p><h2 id="about">Why is ear wiggling unusual?</h2>
+<div class="big">Most people never learn to move their auricular muscles on command.</div>
+<ul>
+<li><b>Why unusual:</b> humans retain anterior, superior, and posterior auricular muscles around the outer ear. Compared with many mammals, our ears have less need to pivot toward sound; conscious control of these muscles is often weak or unpracticed.</li>
+<li><b>How rare:</b> there is no single well-established global prevalence estimate; control varies between people, and moving one side independently can be particularly difficult.</li>
+<li><b>Surprising leftover:</b> studies show that auricular muscles can show subtle responses linked to auditory attention, even when visible ear movement is minimal.</li>
+<li><b>Learning it:</b> some people gain control with practice or biofeedback, though it doesn’t come naturally to most.</li>
+</ul>
+<section class="about-creator"><h2>THE CREATOR — ENCHAX</h2><p><strong>Aung Nyein Chan</strong>, known as <strong>Enchax</strong>, can voluntarily wiggle his ears—an unusual little ability that inspired WEBBIT! He is building an experimental visual rabbit-ear project inspired by human ear movement, using subtle eyebrow motion as a tracking proxy.</p><p><a href="https://instagram.com/chaxnsee" target="_blank" rel="noopener noreferrer">Instagram · @chaxnsee</a> · <a href="https://creativelyenchanted.com" target="_blank" rel="noopener noreferrer">creativelyenchanted.com</a></p><p><a class="donate" href="https://buymeacoffee.com/enchax" target="_blank" rel="noopener noreferrer">♥ DONATE TO SUPPORT THE EAR-WIGGLING PROJECT ↗</a></p></section><p><a href="https://en.wikipedia.org/wiki/Ear_wiggling" target="_blank" rel="noopener noreferrer">Read more about ear wiggling</a></p>
+<form method="dialog"><button>Let’s go!</button></form>
+</div></dialog>
+<details id="panel"><summary>★ TOON CONTROLS +</summary><div class="in">
+<h4>Rabbit skins · magical + contemporary</h4><div class="row" id="themes"></div><p class="mini">Choose a theme, then fine-tune gloss, jelly glow, and pattern amount.</p>
+<div class="row"><button id="cal">↻ Recalibrate</button><button id="neutral">Reset neutral</button></div>
+<div class="row"><button id="how">How it works</button><button id="facts">Why so rare?</button><button id="go">Start camera</button></div>
+<h4>Left & right response</h4><div class="er h"><span>Make it wiggle</span><span>Left</span><span>Right</span></div>
+<div class="er"><span>Boost</span><input aria-label="Left ear response" type="range" data-gain="L" min=".35" max="10" step=".05" value="3.4"><input aria-label="Right ear response" type="range" data-gain="R" min=".35" max="10" step=".05" value="3.4"></div>
+<div class="row"><button id="twL">↶ Left tip!</button><button id="twR">Right tip! ↷</button></div>
+<div class="row"><label class="k"><input type="checkbox" id="swap">Swap left/right</label><label class="k"><input type="checkbox" id="trk" checked>Tracking</label></div>
+<h4>Silver moon</h4><label class="s">Moon reacts <input id="moonReactive" type="range" min="0" max="2" step=".05" value="1"></label>
+<details class="advanced"><summary>✦ Advanced rig</summary>
+<h4>Cartilage control</h4><div class="er h"><span></span><span>Left</span><span>Right</span></div><div id="mus"></div><div class="row" id="pre"></div>
+<label class="k"><input type="checkbox" id="link">Link left & right</label><div id="gs"></div>
+<h4>Invisible 3D joint control</h4><div class="er"><span>Yaw</span><input aria-label="Left yaw" data-axis="yaw" data-side="L" type="range" min="-1" max="1" value="0" step=".01"><input aria-label="Right yaw" data-axis="yaw" data-side="R" type="range" min="-1" max="1" value="0" step=".01"></div>
+<div class="er"><span>Pitch</span><input aria-label="Left pitch" data-axis="pitch" data-side="L" type="range" min="-1" max="1" value="0" step=".01"><input aria-label="Right pitch" data-axis="pitch" data-side="R" type="range" min="-1" max="1" value="0" step=".01"></div>
+<div class="er"><span>Roll</span><input aria-label="Left roll" data-axis="roll" data-side="L" type="range" min="-1" max="1" value="0" step=".01"><input aria-label="Right roll" data-axis="roll" data-side="R" type="range" min="-1" max="1" value="0" step=".01"></div>
+<div class="row"><button id="reset3d">Reset axes</button></div>
+<div class="row"><label class="k"><input type="checkbox" id="rig">Show bones</label><label class="k"><input type="checkbox" id="blink">Blink twitch</label><label class="k"><input type="checkbox" id="idle">Idle twitch</label><label class="k"><input type="checkbox" id="demo">Auto-demo</label></div>
+<div class="er"><span>Dead zone</span><input type="range" data-dead="L" aria-label="Left dead zone" min="0" max=".25" step=".01" value=".005"><input type="range" data-dead="R" aria-label="Right dead zone" min="0" max=".25" step=".01" value=".005"></div></details>
+<p class="mini-explain">Your eyebrow motion is a creative stand-in for ear wiggling. This tracks facial cues, not the actual ear muscles. The cartoon ear roots remain fixed.</p><div class="creator-panel"><strong>★ MADE BY ENCHAX</strong><span>Aung Nyein Chan · <a href="https://instagram.com/chaxnsee" target="_blank" rel="noopener noreferrer">@chaxnsee</a></span><p>I can voluntarily wiggle my ears. Now I’m building something playful with that unusual ability.</p><div class="creator-links"><a href="https://creativelyenchanted.com" target="_blank" rel="noopener noreferrer">WEBSITE ↗</a><a href="https://buymeacoffee.com/enchax" target="_blank" rel="noopener noreferrer">♥ DONATE / SUPPORT ↗</a></div></div></div></details>
+<div id="photoBooth" role="dialog" aria-modal="true" aria-label="WEBBIT six-shot ear photo booth" aria-hidden="true">
+ <div id="pbCard">
+  <div id="pbHeader"><div><h2>♡ WEBBIT EAR BOOTH .EXE</h2><p>THE RABBIT SOCIETY • LIVE AR CAMERA + SIX-SHOT ART MODE</p></div><button id="pbClose" type="button" aria-label="Close photo booth">×</button></div>
+  <div id="pbBody">
+   <div id="pbLeft"><div id="pbPreviewWrap">
+    <canvas id="pbPreview" width="270" height="480" aria-label="Six-frame ear-only Story preview"></canvas>
+    <div id="pbFlash" aria-hidden="true"></div>
+    <div id="pbCount" aria-live="assertive"><span id="pbCountNum">3</span><span id="pbCountLabel">GET READY!</span><small id="pbCountSub">PHOTO 1 OF 6</small></div>
+   </div><div class="pbGridHint"><span>♡ LEFT STRIP × 3</span><span>RIGHT STRIP × 3 ♡</span></div></div>
+   <div id="pbRight">
+    <div class="speech"><strong>I CAN WIGGLE MY EARS! &lt;3</strong><small>Six portraits of animated virtual rabbit ears: LEFT × 3 and RIGHT × 3. No real ear zoom, no faces, and no webcam pixels ♡</small></div>
+<section id="arBoothBox" aria-label="Live augmented reality camera booth">
+  <div class="arTop"><b>✧ LIVE AR PHOTO BOOTH · MAIN RABBIT RIG</b><small>THE RABBIT SOCIETY · LIVE CAMERA + SELECTED SKIN</small></div>
+  <div class="arModeChoices"><button type="button" id="arModeLive" class="arSelected">◉ LIVE FACE + EARS</button><button type="button" id="arModeStrip">▦ SIX-SHOT STRIP</button></div>
+  <div class="arLiveArea" id="arLiveArea">
+    <canvas id="arLiveCanvas" width="540" height="960" aria-label="Live camera feed with virtual rabbit ears"></canvas>
+    <div class="arButtons"><button id="arStart" type="button">◉ ENABLE CAMERA</button><button id="arPhoto" type="button">📷 SAVE PHOTO</button><button id="arRecord" type="button">● RECORD VIDEO</button><button id="arSaveVideo" type="button" disabled>↓ SAVE VIDEO</button></div>
+    <p id="arMessage" role="status">Enable your camera to try the selected rabbit skin. The face and video stay on your device unless you save or share them.</p>
+    <p class="arCaveat">EXPERIMENTAL AR PROTOTYPE · The ears follow facial landmarks, while motion uses eyebrow/forehead proxy signals. This is not direct auricular-muscle or ear tracking. <a href="https://buymeacoffee.com/enchax" target="_blank" rel="noopener noreferrer">Support the creator ↗</a></p>
+  </div>
+</section>
+    <div class="pbBeats" aria-label="Six-shot sequence">
+     <div class="pbBeat" id="pbBeat0"><b>01</b>LEFT<br>still</div><div class="pbBeat" id="pbBeat1"><b>02</b>RIGHT<br>still</div>
+     <div class="pbBeat" id="pbBeat2"><b>03</b>LEFT<br>up!</div><div class="pbBeat" id="pbBeat3"><b>04</b>RIGHT<br>up!</div>
+     <div class="pbBeat" id="pbBeat4"><b>05</b>LEFT<br>down</div><div class="pbBeat" id="pbBeat5"><b>06</b>RIGHT<br>down</div>
+    </div>
+    <div class="pbTiming"><span>♡ TIME BETWEEN SHOTS</span><div class="pbTimingChoices"><label><input type="radio" name="pbDelay" value="3" checked> 3 SEC</label><label><input type="radio" name="pbDelay" value="5"> 5 SEC</label></div></div>
+    <div id="pbStatus" role="status" aria-live="polite">Six virtual-ear poses • no close-ups of your real ears • experimental prototype ♡</div>
+    <div id="pbShootProgress" aria-label="Capture progress"><i></i></div>
+    <div class="pbActions"><button id="pbShoot" class="primary" type="button">✦ START SIX-SHOT BOOTH</button><button id="pbRetake" type="button" disabled>↻ RETAKE</button><button id="pbCancel" type="button" hidden>× CANCEL</button></div>
+    <div class="pbActions"><button id="pbPNG" type="button" disabled>↓ SAVE 6-PHOTO STRIP</button><button id="pbGIF" type="button" disabled>↓ SAVE ECHO GIF</button><button id="pbShare" type="button" disabled>♡ SHARE TO STORY</button></div>
+    <p class="pbExperimentNote"><strong>STILL EXPERIMENTAL ♡</strong> This booth captures the <em>animated rabbit-ear artwork</em>, not your physical ears. The movement is inferred from eyebrow signals. <a href="https://buymeacoffee.com/enchax" target="_blank" rel="noopener noreferrer">Please support the creator, Enchax ↗</a></p>
+    <div id="pbShareNote">WEBBIT! is still an experimental artwork, not true ear tracking: MediaPipe reads eyebrow and nearby facial signals as a proxy. Only animated rabbit ears are exported—no real-ear zoom, face or camera pixels. Want to help the creator keep building? Support Enchax below. @chaxnsee is printed on exports; Instagram posting depends on your device.</div>
+   </div>
+  </div>
+  <div id="pbFooter"><span>✿ EAR WIGGLING COMMUNITY ✿ #TheRabbitSociety</span><span><a href="https://instagram.com/chaxnsee" target="_blank" rel="noopener noreferrer">@chaxnsee</a> · <a href="https://buymeacoffee.com/enchax" target="_blank" rel="noopener noreferrer">♥ PLEASE SUPPORT THE CREATOR ↗</a></span></div>
+ </div>
+</div>
+
+<section id="earLibrary" role="dialog" aria-label="WEBBIT mini library about ear wiggling" aria-modal="true" aria-hidden="true">
+ <div id="libBook">
+  <header class="libHead"><div><h2>✿ THE EAR LIBRARY</h2><p>A mini internet zine about the very tiny muscles that once moved our ears. Science, press cuttings, anatomy and the weird history behind WEBBIT! <span aria-hidden="true">♡</span></p></div><button id="libClose" type="button" aria-label="Close mini library">×</button></header>
+  <nav class="libToolbar" aria-label="Library categories"><button class="libFilter active" data-libcat="all" type="button">ALL SHELVES</button><button class="libFilter" data-libcat="science" type="button">01 LAB NOTES</button><button class="libFilter" data-libcat="press" type="button">02 PRESS</button><button class="libFilter" data-libcat="wiki" type="button">03 WIKI + ANATOMY</button><button class="libFilter" data-libcat="creator" type="button">04 CREATOR</button><input id="libSearch" type="search" placeholder="Search ear stuff..." aria-label="Search the mini library" autocomplete="off"></nav>
+  <div class="libScroll"><p class="libNote"><strong>WHY SO RARE?</strong> Most people retain auricular muscles but have very limited deliberate control over them. Different studies test different abilities, so there isn't one definitive worldwide rarity percentage. WEBBIT visualizes eyebrow-related signals as an artistic ear-control proxy — it does not measure ear-muscle contractions.</p><div id="libItems" aria-live="polite"></div></div>
+  <div id="libCount" aria-live="polite"></div>
+  <footer class="libBottom"><span>✿ CURATED BY ENCHAX · ABOUT EAR WIGGLING, NOT PRESS COVERAGE OF THIS ARTWORK</span><span><a href="https://creativelyenchanted.com" target="_blank" rel="noopener noreferrer">CREATOR ↗</a> · <a href="https://instagram.com/chaxnsee" target="_blank" rel="noopener noreferrer">@CHAXNSEE ↗</a></span></footer>
+ </div>
+</section>
+
+<style>
+#arBoothBox{border:2px solid #8faece;border-radius:15px;padding:11px;background:linear-gradient(145deg,#effcff,#fcecf6);margin:6px 0;color:#263651}
+.arTop{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.arTop b{font-size:15px}.arTop small{font-size:9px}
+.arModeChoices,.arButtons{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+#arBoothBox button{font-size:10px!important;border:2px solid #a0bed4!important;border-radius:9px!important;padding:8px 10px!important;background:#fff!important;color:#1b3553!important;font-weight:800!important;cursor:pointer}
+#arBoothBox button.arSelected,#arBoothBox #arRecord.recording{background:#354b87!important;color:white!important}
+#arLiveCanvas{display:block;max-width:390px;width:100%;height:auto;aspect-ratio:9/16;margin:8px auto;border:5px solid white;border-radius:11px;box-shadow:0 7px 23px #3e5b7766;background:#18233a}
+#arMessage{font-size:11px;margin:6px 0;line-height:1.4}.arCaveat{font-size:9px;line-height:1.4;color:#475b76}
+#arLiveArea[hidden],#arBoothBox .arModeChoices~[hidden]{display:none!important}
+#photoBooth.ar-live-mode .pbBeats,#photoBooth.ar-live-mode .pbTiming,#photoBooth.ar-live-mode #pbShootProgress,#photoBooth.ar-live-mode .pbGridHint,#photoBooth.ar-live-mode #pbPreviewWrap,#photoBooth.ar-live-mode .pbActions,#photoBooth.ar-live-mode #pbShareNote{display:none!important}
+#photoBooth.ar-live-mode #pbLeft{display:none!important}
+#photoBooth.ar-live-mode #pbRight{width:100%;max-width:620px;margin:auto}
+#photoBooth.ar-live-mode #pbCard{width:min(700px,98vw)}
+#photoBooth:not(.ar-live-mode) #arLiveArea{display:none!important}
+</style>
+<script type="module">
+// Original, self-contained synthesizer: short 90s-cartoon plips, no audio downloads.
+let audioContext=null,soundEnabled=true,lastWiggle={L:0,R:0},wasAbove={L:false,R:false};
+function tone(kind='plip',side='L'){
+ if(!soundEnabled)return;
+ try{
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  audioContext??=new AC();
+  if(audioContext.state==='suspended')audioContext.resume().catch(()=>{});
+  const now=audioContext.currentTime;
+  const osc=audioContext.createOscillator(),amp=audioContext.createGain();
+  osc.type=kind==='success'?'triangle':'sine';
+  const low=kind==='success'?480:side==='L'?350:415;
+  osc.frequency.setValueAtTime(low,now);
+  osc.frequency.exponentialRampToValueAtTime(kind==='success'?810:low*1.55,now+.11);
+  amp.gain.setValueAtTime(.0001,now);
+  amp.gain.exponentialRampToValueAtTime(kind==='success'?.12:.075,now+.014);
+  amp.gain.exponentialRampToValueAtTime(.0001,now+.18);
+  osc.connect(amp).connect(audioContext.destination);osc.start(now);osc.stop(now+.20);
+ }catch(e){}
+}
+function wiggleSound(now){
+ if(!camOn||C.step>=0||!soundEnabled)return;
+ for(const k of ['L','R']){
+  const value=Math.abs(E[k].tgt),above=value>.21;
+  if(above&&!wasAbove[k]&&now-lastWiggle[k]>250){tone('plip',k);lastWiggle[k]=now;}
+  wasAbove[k]=value>.12;
+ }
+}
+const $=s=>document.querySelector(s),clamp=(x,a=-1,b=1)=>Math.max(a,Math.min(b,x)),avg=a=>a.reduce((s,x)=>s+x,0)/a.length,lerp=(a,b,t)=>a+(b-a)*t;
+const cv=$('#c'),vid=$('#v'),msgEl=$('#msg'),say=t=>msgEl.textContent=t;let ctx=cv.getContext('2d');
+addEventListener('error',e=>say('Something broke: '+e.message));
+addEventListener('unhandledrejection',e=>say('Something broke: '+(e.reason&&e.reason.message||e.reason)));
+
+const THEMES=[
+ {n:'Pearl jelly',o:'#f8f4ff',i:'#f4abc8',hl:'#ffffff',rim:'#d4dff5',shine:'#ffffff',shadow:'#a78fb8',jelly:'rgba(255,255,255,.33)',style:'plain',pattern:'#ffffff'},
+ {n:'Lavender jelly',o:'#d5d8ef',i:'#f0a4bf',hl:'#fff8ff',rim:'#a6b4da',shine:'#ffffff',shadow:'#7d719a',jelly:'rgba(224,236,255,.24)',style:'plain',pattern:'#f8f3ff'},
+ {n:'Ink jelly',o:'#303752',i:'#f6d56a',hl:'#f8f1af',rim:'#57638d',shine:'#fff6c8',shadow:'#1c2031',jelly:'rgba(244,217,114,.14)',style:'plain',pattern:'#9f8ae0'},
+ {n:'Robot rabbit',o:'#dbe4ef',i:'#94d8ff',hl:'#ffffff',rim:'#9cb2c9',shine:'#ffffff',shadow:'#64748e',jelly:'rgba(210,240,255,.17)',style:'robot',pattern:'#5ae0ff',pattern2:'#ffffff'},
+ {n:'Monster rabbit',o:'#9be062',i:'#dc66ae',hl:'#f7ffd1',rim:'#4f8c34',shine:'#ffffff',shadow:'#335324',jelly:'rgba(219,255,146,.18)',style:'monster',pattern:'#5b2b78',pattern2:'#eaff93'},
+ {n:'Stripe rabbit',o:'#ffffff',i:'#ffffff',hl:'#ffffff',rim:'#222222',shine:'#ffffff',shadow:'#8a8a8a',jelly:'rgba(255,255,255,.10)',style:'stripe',pattern:'#000000',pattern2:'#ffffff'},
+ {n:'Arcane moon',o:'#332a70',i:'#bf93ff',hl:'#f8e7ff',rim:'#9c75ff',shine:'#ffffff',shadow:'#130c3f',jelly:'rgba(171,126,255,.25)',style:'arcane',pattern:'#e3c3ff'},
+ {n:'Fairy dust',o:'#baf0df',i:'#ffd1ea',hl:'#ffffff',rim:'#77c9ca',shine:'#ffffff',shadow:'#5a9ab1',jelly:'rgba(248,220,255,.25)',style:'fairy',pattern:'#ffe89b'},
+ {n:'Chrome noir',o:'#c8d5e0',i:'#262c38',hl:'#ffffff',rim:'#8694a4',shine:'#ffffff',shadow:'#263340',jelly:'rgba(225,244,255,.14)',style:'chrome',pattern:'#4ad9ea'},
+ {n:'Gallery minimal',o:'#eeeae1',i:'#b6ac9a',hl:'#ffffff',rim:'#b0aaa0',shine:'#ffffff',shadow:'#77756e',jelly:'rgba(255,255,255,.12)',style:'gallery',pattern:'#3e3732'},
+ {n:'Red & gold',o:'#b21f35',i:'#f6c54e',hl:'#fff2d0',rim:'#f0a93d',shine:'#fff7d8',shadow:'#67111f',jelly:'rgba(255,216,104,.10)',style:'royal',pattern:'#ffd76b',pattern2:'#7f1022'}];
+const S={moon:1,theme:0,size:1,wid:1.08,gap:1,lift:.05,k:1.05,z:.64,sens:2.4,wEar:.4,wBrow:1.6,wFore:.7,wBlend:.9,wSmile:.15,gloss:1,jellyAmt:1,patternAmt:1,link:false,trk:true,swap:false,rig:false,blink:false,idle:false,demo:false};
+const SIDE={L:{gain:3.4,dead:.005,yaw:0,pitch:0,roll:0},R:{gain:3.4,dead:.005,yaw:0,pitch:0,roll:0}};
+const M={L:{sup:0,ant:0,post:0,curl:0,flop:0},R:{sup:0,ant:0,post:0,curl:0,flop:0}};
+const MR=[['sup','Raise (above)',0,1],['ant','Forward',0,1],['post','Back (behind)',0,1],['curl','Tip curl',-1,1],['flop','Flop',0,1]];
+const GS=[['size','Ear size',.4,1.6],['wid','Ear width',.6,1.6],['gap','Ear spacing',.4,1.6],['lift','Ear height',-.3,.5],['gloss','Gloss amount',0,1.8],['jellyAmt','Jelly glow',0,1.8],['patternAmt','Pattern amount',0,1.6],['k','Spring stiffness',.4,2.2],['z','Damping',.12,1],['sens','Sensitivity',.2,6],['wEar','Temple proxy mix',0,2],['wBrow','Eyebrow mix · PRIMARY',0,5],['wFore','Forehead mix',0,2],['wBlend','Expression mix',0,2],['wSmile','Smile → forward',0,1]];
+$('#moonReactive').oninput=e=>S.moon=+e.target.value;
+$('#mus').innerHTML=MR.map(([p,l,a,b])=>`<div class="er"><span>${l}</span>${['L','R'].map(e=>`<input type="range" data-e="${e}" data-p="${p}" min="${a}" max="${b}" step=".01" value="0" aria-label="${e==='L'?'Left':'Right'} ${l}">`).join('')}</div>`).join('');
+$('#gs').innerHTML=GS.map(([k,l,a,b])=>`<label class="s">${l}<input type="range" data-k="${k}" min="${a}" max="${b}" step=".01" value="${S[k]}"></label>`).join('');
+const syncUI=()=>document.querySelectorAll('input[data-e]').forEach(r=>r.value=M[r.dataset.e][r.dataset.p]);
+document.querySelectorAll('input[data-e]').forEach(r=>r.oninput=()=>{const e=r.dataset.e,p=r.dataset.p,v=+r.value;M[e][p]=v;if(S.link){const o=e==='L'?'R':'L';M[o][p]=v;$(`input[data-e=${o}][data-p=${p}]`).value=v}});
+document.querySelectorAll('input[data-k]').forEach(r=>r.oninput=()=>S[r.dataset.k]=+r.value);
+['link','trk','swap','rig','blink','idle','demo'].forEach(k=>$('#'+k).onchange=e=>S[k]=e.target.checked);
+document.querySelectorAll('[data-gain]').forEach(x=>x.oninput=()=>SIDE[x.dataset.gain].gain=+x.value);
+document.querySelectorAll('[data-dead]').forEach(x=>x.oninput=()=>SIDE[x.dataset.dead].dead=+x.value);
+document.querySelectorAll('[data-axis]').forEach(x=>x.oninput=()=>SIDE[x.dataset.side][x.dataset.axis]=+x.value);
+$('#reset3d').onclick=()=>{for(const k of ['L','R'])for(const a of ['yaw','pitch','roll'])SIDE[k][a]=0;document.querySelectorAll('[data-axis]').forEach(x=>x.value=0)};
+const PRE={Perk:{sup:.85,ant:.1,post:0,curl:-.1,flop:0},Relax:{sup:0,ant:0,post:.1,curl:.3,flop:.7},Alert:{sup:.6,ant:.6,post:0,curl:-.3,flop:0},'Pinned back':{sup:0,ant:0,post:.9,curl:.2,flop:.2}};
+$('#pre').innerHTML=Object.keys(PRE).map(n=>`<button data-pre="${n}">${n}</button>`).join('');
+document.querySelectorAll('[data-pre]').forEach(b=>b.onclick=()=>{for(const k of['L','R'])Object.assign(M[k],PRE[b.dataset.pre]);syncUI()});
+$('#themes').innerHTML=THEMES.map((t,i)=>`<button data-t="${i}">${t.n}</button>`).join('');
+const setTheme=i=>{S.theme=i;document.querySelectorAll('[data-t]').forEach(b=>b.classList.toggle('on',+b.dataset.t===i))};
+document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>setTheme(+b.dataset.t));setTheme(0);
+const SIG=[['ear','Temple',0],['brow','Eyebrow',0],['fore','Forehead',0],['proxy','Proxy',1],['sup','Raise',1],['ant','Forward',1],['post','Back',1]];
+['L','R'].forEach(s=>{$('#m'+s).innerHTML=SIG.map(([k,l,u])=>`<span>${l}</span><div class="t ${u?'u':''}"><i id="b${s}${k}"></i></div><b id="v${s}${k}">0</b>`).join('')});
+const bar=(id,v,u)=>{const e=$('#'+id),n=$('#v'+id.slice(1));n.textContent=(v>=0?'+':'')+v.toFixed(2);if(u){e.style.left='0';e.style.width=clamp(v,0,1)*100+'%'}else{e.style.left=(v>=0?50:50+v*50)+'%';e.style.width=Math.abs(clamp(v))*50+'%'}};
+
+// ---------- 2D space: gradient sky, nebula washes, stars, flat moon ----------
+let w=0,h=0,dpr=1,STARS=[];const bgc=document.createElement('canvas');
+const rng=s=>()=>(s=(s*16807)%2147483647)/2147483647;
+function paintSpace(){
+ bgc.width=Math.max(1,Math.round(w*dpr));bgc.height=Math.max(1,Math.round(h*dpr));
+ const b=bgc.getContext('2d');b.setTransform(dpr,0,0,dpr,0,0);
+ b.fillStyle='#10152c';b.fillRect(0,0,w,h);
+ const grd=b.createLinearGradient(0,0,0,h);grd.addColorStop(0,'#08132b');grd.addColorStop(.55,'#102a45');grd.addColorStop(1,'#19223c');b.fillStyle=grd;b.fillRect(0,0,w,h);
+ // Small glass-like atmospheric bloom, still a flat painted 2D sky.
+ const haze=b.createRadialGradient(w*.49,h*.35,0,w*.49,h*.35,Math.max(w,h)*.54);haze.addColorStop(0,'#83cee11c');haze.addColorStop(.55,'#1f587425');haze.addColorStop(1,'#00000000');b.fillStyle=haze;b.fillRect(0,0,w,h);
+ // sparse animation-cel stars and no photo textures
+ const stars=[[.13,.19,2.8],[.28,.12,1.7],[.76,.22,2],[.84,.12,3],[.06,.42,1.8],[.92,.42,1.6],[.64,.10,1.2],[.42,.23,1.6],[.16,.61,1.1],[.87,.60,1.3]];
+ for(const [x,y,r] of stars){const X=x*w,Y=y*h;b.fillStyle='#f3cd73';b.beginPath();b.moveTo(X,Y-r*3);b.lineTo(X+r,Y-r);b.lineTo(X+r*3,Y);b.lineTo(X+r,Y+r);b.lineTo(X,Y+r*3);b.lineTo(X-r,Y+r);b.lineTo(X-r*3,Y);b.lineTo(X-r,Y-r);b.closePath();b.fill()}
+}
+function rs(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);paintSpace();setMoonHome()}
+addEventListener('resize',rs);
+let moonLevel=0,moonPulse=0;
+// A silver Frutiger Aero moon in normal mode, transformed into a smaller
+// silver pinball only after the hidden interaction. No onscreen discovery hint.
+const MOON={x:0,y:0,w:0,h:0,homeX:0,homeY:0,homeR:0,displayR:0};
+const EARZOOM={value:1,target:1};
+const GAME={active:false,score:0,best:0,combo:0,shrink:0,flash:0,cool:0,drain:0,
+ ball:{x:0,y:0,vx:0,vy:0,r:20,spin:0,launched:false,trail:[]}};
+function setMoonHome(){
+ MOON.homeR=Math.max(26,Math.min(w*.145,h*.175,138));
+ MOON.homeX=w*.5; MOON.homeY=h*(w<760?.44:.35);
+ if(!GAME.active){ MOON.x=MOON.homeX; MOON.y=MOON.homeY; MOON.displayR=MOON.homeR; }
+}
+function startMoonGame(){
+ GAME.active=true; GAME.combo=0; GAME.flash=1; GAME.cool=.18; GAME.shrink=.42;
+ EARZOOM.target=1.13;
+ const b=GAME.ball; b.r=Math.max(14,Math.min(21,Math.min(w,h)*.029));
+ b.x=MOON.homeX;b.y=MOON.homeY;b.vx=(Math.random()>.5?1:-1)*(80+Math.random()*60);b.vy=35;b.spin=0;
+ b.launched=false;b.trail=[]; MOON.x=b.x; MOON.y=b.y; MOON.displayR=MOON.homeR;
+ tone('success');note('SECRET MODE ACTIVATED!',1600);
+}
+function stopMoonGame(){
+ GAME.active=false; GAME.shrink=0; GAME.combo=0; GAME.ball.launched=false; GAME.ball.trail=[];
+ EARZOOM.target=1;MOON.x=MOON.homeX;MOON.y=MOON.homeY;
+}
+function nearestOnSeg(px,py,ax,ay,bx,by){
+ const dx=bx-ax,dy=by-ay,l=dx*dx+dy*dy||1,t=Math.max(0,Math.min(1,((px-ax)*dx+(py-ay)*dy)/l));
+ return [ax+dx*t,ay+dy*t,t];
+}
+function collideBallSegment(ball,a,b,pad,boostX=0,boostY=0){
+ const n=nearestOnSeg(ball.x,ball.y,a[0],a[1],b[0],b[1]);
+ const dx=ball.x-n[0],dy=ball.y-n[1],dist=Math.hypot(dx,dy)||.0001,minD=ball.r+pad;
+ if(dist>=minD)return false;
+ const ux=dx/dist,uy=dy/dist,rv=ball.vx*ux+ball.vy*uy;
+ ball.x=n[0]+ux*(minD+.75);ball.y=n[1]+uy*(minD+.75);
+ if(rv>=0)return false;
+ ball.vx-=1.91*rv*ux;ball.vy-=1.91*rv*uy;
+ ball.vx=clamp(ball.vx+boostX,-900,900);ball.vy=clamp(ball.vy+boostY-50,-950,950);
+ ball.spin+=boostX*.0017;
+ return true;
+}
+function updateMoonGame(dt){
+ EARZOOM.target=GAME.active?1.13:1;
+ EARZOOM.value+=(EARZOOM.target-EARZOOM.value)*(1-Math.exp(-dt*8.5));
+ if(!GAME.active)return;
+ GAME.flash=Math.max(0,GAME.flash-dt*1.6);GAME.cool=Math.max(0,GAME.cool-dt);
+ if(GAME.shrink>0){
+   GAME.shrink=Math.max(0,GAME.shrink-dt);
+   const progress=1-GAME.shrink/.42,eased=1-Math.pow(1-progress,3);
+   MOON.displayR=MOON.homeR+(GAME.ball.r-MOON.homeR)*eased;
+   if(GAME.shrink===0){GAME.ball.launched=true;MOON.displayR=GAME.ball.r;}
+   return;
+ }
+ const b=GAME.ball;if(!b.launched)return;
+ b.vy+=920*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;b.spin+=b.vx*.00035;
+ b.trail.unshift([b.x,b.y]);if(b.trail.length>10)b.trail.pop();
+ const left=b.r+8,right=w-b.r-8,top=b.r+8;
+ if(b.x<left){b.x=left;b.vx=Math.abs(b.vx)*.96;tone('plip');}
+ if(b.x>right){b.x=right;b.vx=-Math.abs(b.vx)*.96;tone('plip');}
+ if(b.y<top){b.y=top;b.vy=Math.abs(b.vy)*.96;tone('plip');}
+ // Hidden rabbit-head bumper, centered below the fixed ear roots.
+ const rw=Math.min(w*.30,310),cx=w/2,cy=h+Math.min(h*.06,40),rx=rw*.72,ry=rw*.52;
+ const ex=(b.x-cx)/rx,ey=(b.y-cy)/ry;
+ if(ey<0&&ex*ex+ey*ey<1.02){
+  const nx=(b.x-cx)/(rx*rx),ny=(b.y-cy)/(ry*ry),mag=Math.hypot(nx,ny)||1,ux=nx/mag,uy=ny/mag,rv=b.vx*ux+b.vy*uy;
+  b.x+=ux*(b.r+4);b.y+=uy*(b.r+4);
+  if(rv<0){b.vx-=1.7*rv*ux;b.vy-=1.7*rv*uy;} b.vy-=100;GAME.flash=.55;
+ }
+ if(GAME.cool<=0){
+  outer:for(const k of ['L','R']){
+    const e=E[k];if(!e.P||e.P.length<5)continue;
+    const tv=e.tipVel||[0,0];
+    for(let i=0;i<e.P.length-1;i++){
+      const pad=Math.max(8,e.W*(i===0?1:i===1?.82:i===2?.58:.40));
+      if(collideBallSegment(b,e.P[i],e.P[i+1],pad,tv[0]*.035+e.sgn*11,tv[1]*.025-40*Math.abs(e.proxyOut))){
+        GAME.score+=10;GAME.combo++;GAME.best=Math.max(GAME.best,GAME.score);
+        GAME.flash=1;GAME.cool=.105;tone('hit');
+        b.vy=Math.min(b.vy,-Math.abs(b.vy)*.75-120);
+        break outer;
+      }
+    }
+  }
+ }
+ MOON.x=b.x;MOON.y=b.y;MOON.displayR=b.r;
+ if(b.y>h+b.r*4){stopMoonGame();note('GAME OVER',2000);tone('drain');}
+}
+function drawSilverMoon(cx,cy,r,reactivity=0,mini=false){
+ const halo=ctx.createRadialGradient(cx,cy,r*.32,cx,cy,r*(mini?3.0:2.8+reactivity*.9));
+ halo.addColorStop(0,`rgba(255,255,255,${mini?.32:.23+.20*reactivity})`);
+ halo.addColorStop(.43,`rgba(217,230,255,${mini?.18:.15+.22*reactivity})`);
+ halo.addColorStop(.76,`rgba(172,202,237,${mini?.05:.04+.11*reactivity})`);
+ halo.addColorStop(1,'rgba(172,202,237,0)');
+ ctx.fillStyle=halo;ctx.fillRect(cx-r*5,cy-r*5,r*10,r*10);
+ ctx.save();ctx.translate(cx,cy);
+ if(!mini){
+  ctx.strokeStyle=`rgba(232,243,255,${.18+reactivity*.60})`;
+  ctx.lineWidth=Math.max(1.5,r*.018);
+  for(let i=0;i<10;i++){
+   const a=i*Math.PI/5+Math.PI/10,inside=r*1.35,out=inside+r*(.10+reactivity*.26);
+   ctx.beginPath();ctx.moveTo(Math.cos(a)*inside,Math.sin(a)*inside);
+   ctx.lineTo(Math.cos(a)*out,Math.sin(a)*out);ctx.stroke();
+  }
+  ctx.beginPath();ctx.arc(0,0,r*1.13,0,Math.PI*2);
+  ctx.strokeStyle=`rgba(225,241,255,${.20+.45*reactivity})`;ctx.lineWidth=2;ctx.stroke();
+ }
+ const fill=ctx.createRadialGradient(-r*.40,-r*.48,r*.03,0,0,r*1.30);
+ fill.addColorStop(0,'#ffffff');fill.addColorStop(.38,'#f4f7ff');fill.addColorStop(.72,'#d5dfef');fill.addColorStop(1,'#879ab8');
+ ctx.beginPath();ctx.arc(0,0,r,0,Math.PI*2);ctx.fillStyle=fill;ctx.fill();
+ ctx.strokeStyle='rgba(241,251,255,.85)';ctx.lineWidth=Math.max(1.5,r*.022);ctx.stroke();
+ ctx.save();ctx.beginPath();ctx.arc(0,0,r*.96,0,Math.PI*2);ctx.clip();
+ ctx.fillStyle='rgba(148,164,193,.28)';
+ for(const [x,y,cr] of [[-.38,-.22,.15],[.30,.09,.13],[-.17,.43,.10],[.33,-.40,.09]]){
+  ctx.beginPath();ctx.arc(x*r,y*r,cr*r,0,Math.PI*2);ctx.fill();
+ }
+ // Bunny-shaped craters embedded gently into the silver surface.
+ ctx.save();ctx.translate(r*.02,r*.08);ctx.rotate(-.22);ctx.fillStyle='rgba(129,149,181,.56)';
+ ctx.beginPath();ctx.ellipse(-r*.22,-r*.23,r*.078,r*.28,-.17,0,Math.PI*2);ctx.fill();
+ ctx.beginPath();ctx.ellipse(-r*.045,-r*.28,r*.075,r*.27,.13,0,Math.PI*2);ctx.fill();
+ ctx.beginPath();ctx.ellipse(-r*.10,r*.07,r*.22,r*.20,0,0,Math.PI*2);ctx.fill();
+ ctx.beginPath();ctx.ellipse(r*.075,r*.22,r*.26,r*.17,-.38,0,Math.PI*2);ctx.fill();
+ ctx.beginPath();ctx.arc(r*.27,r*.30,r*.07,0,Math.PI*2);ctx.fill();
+ ctx.restore();
+ ctx.strokeStyle='rgba(255,255,255,.77)';ctx.lineWidth=Math.max(1,r*.022);
+ ctx.beginPath();ctx.arc(-r*.32,-r*.31,r*.22,Math.PI*.89,Math.PI*1.65);ctx.stroke();
+ ctx.restore();ctx.restore();
+}
+function drawSky(t=0,dt=.016){
+ ctx.drawImage(bgc,0,0,w,h);
+ const a=Math.max(Math.abs(E.L.tgt),Math.abs(E.R.tgt),
+  Math.min(1,Math.abs(E.L.v[3])/3.5),Math.min(1,Math.abs(E.R.v[3])/3.5),
+  Math.abs(M.L.curl)*.65,Math.abs(M.R.curl)*.65);
+ const target=Math.min(1,a*1.12)*S.moon;
+ moonLevel+=(target-moonLevel)*(1-Math.exp(-dt*(target>moonLevel?18:3.1)));
+ const b=GAME.ball;
+ if(GAME.active&&b.launched){
+  for(let i=b.trail.length-1;i>=0;i--){
+   const p=b.trail[i],alpha=(b.trail.length-i)/(b.trail.length*5);
+   ctx.save();ctx.globalAlpha=alpha;drawSilverMoon(p[0],p[1],b.r*.75,0,true);ctx.restore();
+  }
+  drawSilverMoon(b.x,b.y,b.r,Math.max(moonLevel,GAME.flash*.75),true);
+ }else if(GAME.active){
+  drawSilverMoon(MOON.homeX,MOON.homeY,MOON.displayR,moonLevel+GAME.flash*.5,MOON.displayR<38);
+ }else{
+  MOON.x=MOON.homeX;MOON.y=MOON.homeY;MOON.displayR=MOON.homeR;
+  drawSilverMoon(MOON.homeX,MOON.homeY,MOON.homeR,moonLevel,false);
+ }
+}
+function drawArcadeHud(){
+ // No hint or instruction is visible until secret mode is opened.
+ if(!GAME.active)return;
+ ctx.save();const boxW=Math.min(275,w-28);
+ ctx.fillStyle='rgba(8,13,30,.75)';ctx.strokeStyle='#d8eeff';ctx.lineWidth=2;
+ ctx.beginPath();ctx.roundRect(14,h-78,boxW,62,14);ctx.fill();ctx.stroke();
+ ctx.fillStyle='#f7fbff';ctx.font='900 15px Trebuchet MS, sans-serif';ctx.fillText('SECRET EARCADE MODE',28,h-53);
+ ctx.fillStyle='#bfe9ff';ctx.font='900 12px Trebuchet MS, sans-serif';ctx.fillText(`SCORE ${GAME.score}   BEST ${GAME.best}`,28,h-33);
+ ctx.fillStyle='#ffeb9a';ctx.font='900 11px Trebuchet MS, sans-serif';ctx.fillText('BOUNCE!',28,h-19);
+ ctx.restore();
+}
+
+// The body is only a barely visible suggestion of a rabbit: the EARS do the acting.
+function drawRabbitHead(){
+ const rw=Math.min(w*.30,310),y=h+Math.min(h*.06,40);
+ ctx.save();ctx.fillStyle='#26233f';ctx.strokeStyle='#10152c';ctx.lineWidth=6;
+ ctx.beginPath();ctx.ellipse(w/2,y,rw*.72,rw*.52,0,Math.PI,2*Math.PI);ctx.fill();ctx.stroke();
+ ctx.strokeStyle='#7b79a6';ctx.lineWidth=2;ctx.beginPath();ctx.arc(w/2,y,rw*.55,Math.PI*1.08,Math.PI*1.92);ctx.stroke();ctx.restore();
+}
+// ---------- ear skeleton: 4 bones, 3 auricular muscles, spring joints ----------
+const FEATS=['brow','blend','fore'];
+const SCALE={brow:.018,fore:.04,ear:.055,blend:.13};
+const DEFAULT_WEIGHT={brow:.60,fore:.08,blend:.32};
+const mk=sgn=>({sgn,a:[0,0,0,0],v:[0,0,0,0],act:{sup:0,ant:0,post:0},init:0,P:[],W:10,
+ base:null,noise:{},model:null,raw:null,proxyOut:0,filtered:0,
+ sig:{ear:0,brow:0,fore:0,blend:0,smile:0},
+ ghost:{yaw:0,pitch:0,roll:0,vel:[0,0,0],points:[],depth:[]},
+ bl:false,nx:1+Math.random()*3,tgt:0,drag:null});
+const E={L:mk(-1),R:mk(1)};
+const GR={L:{ear:[356,454,323],eye:263,brow:[300,293,334,296,336],fore:[332,297,338],nm:'Left'},R:{ear:[127,234,93],eye:33,brow:[70,63,105,66,107],fore:[103,67,109],nm:'Right'}};
+const RL=[.24,.30,.28,.18],KB=[320,200,130,90];
+const kick=e=>{e.v[3]+=e.sgn*14;e.v[2]+=e.sgn*8;e.v[1]+=e.sgn*3};
+$('#twL').onclick=()=>{kick(E.L);tone('plip','L')};$('#twR').onclick=()=>{kick(E.R);tone('plip','R')};
+function drive(e,k,dt,face,t){
+ const signal=S.swap?E[k==='L'?'R':'L']:e,active=S.trk&&face&&C.step<0;
+ let tg=active?signal.proxyOut*SIDE[k].gain*S.sens:0;
+ // No random movements during a live session. No head movement or root translation.
+ if(S.demo&&!camOn)tg=.24*Math.sin(t*2.5+(k==='L'?0:2));
+ tg=clamp(tg,-1,1);e.tgt=tg;
+ const m=M[k];
+ const T={sup:clamp(m.sup+Math.max(0,tg),0,1),post:clamp(m.post+Math.max(0,-tg),0,1),ant:clamp(m.ant,0,1)};
+ for(const p in T){const tau=T[p]>e.act[p]?.02:.07;e.act[p]+=(T[p]-e.act[p])*(1-Math.exp(-dt/tau))}
+ const gg=e.ghost, s=e.sgn;
+ // The invisible 3D rotations affect the UPPER TWO joints only.
+ const goals=[SIDE[k].yaw*.33+s*tg*.21,SIDE[k].pitch*.30+tg*.19,SIDE[k].roll*.24+s*tg*.10];
+ for(let i=0;i<3;i++){
+  const ax=['yaw','pitch','roll'][i];const damp=2*.8*Math.sqrt(110);
+  gg.vel[i]+=(110*(goals[i]-gg[ax])-damp*gg.vel[i])*dt;
+  gg[ax]+=gg.vel[i]*dt;
+ }
+}
+function pose(e,k,dt){
+ const s=e.sgn,mm=M[k];
+ const len=Math.min(h*.72,Math.max(350,w*.39),490)*S.size*EARZOOM.value;
+ const basex=w/2+s*Math.min(w*.16,120)*S.gap;
+ const basey=h+Math.min(34,h*.04);
+ const root=[basex,basey];
+ e.W=len*.115*S.wid;
+ // First 50% of each ear never moves. Upper cartilage responds to tiny input.
+ const base=-Math.PI/2+s*.12;
+ const a0=base,a1=base+s*.045;
+ const signal=e.tgt;
+ const tipGoal=a1+s*.04+s*.78*signal+s*(mm.curl*.36)+s*(mm.flop*.26)+s*(mm.post*.12-mm.sup*.13);
+ const upperGoal=lerp(a1,tipGoal,.43);
+ const jointTarget=[a0,a1,upperGoal,tipGoal];
+ if(!e.init){e.a=[...jointTarget];e.init=1}
+ e.a[0]=a0;e.a[1]=a1;e.v[0]=0;e.v[1]=0;
+ const step=dt/4;
+ for(let q=0;q<4;q++)for(let i=2;i<4;i++){
+  const kst=(i===2?130:86)*S.k,drag=2*S.z*Math.sqrt(kst);
+  e.v[i]+=(kst*(jointTarget[i]-e.a[i])-drag*e.v[i])*step;
+  e.a[i]+=e.v[i]*step;
+ }
+ // Fake 3D perspective only starts near the upper third of each ear.
+ const gg=e.ghost,rot=gg.yaw,tilt=gg.pitch,roll=gg.roll;
+ let x=0,y=0,z=0;e.P=[root];gg.points=[[0,0,0]];
+ for(let i=0;i<4;i++){
+  const length=[.23,.27,.27,.23][i]*len;
+  let angle=e.a[i];
+  if(i>=2)angle+=roll*(i===2?.45:.95);
+  let dx=Math.cos(angle)*length,dy=Math.sin(angle)*length;
+  if(i>=2){const theta=rot*(i===2?.3:.7);z-=dx*Math.sin(theta);dx*=Math.cos(theta);dy*=1-.07*Math.abs(tilt)}
+  x+=dx;y+=dy;
+  gg.points.push([x,y,z]);
+  e.P.push([root[0]+x,root[1]+y]);
+ }
+}
+// Optional drag adjusts only the tip curl, without moving the roots.
+let dragK=null;
+cv.addEventListener('pointerdown',ev=>{
+ const p=[ev.clientX,ev.clientY];
+ const moonCx=GAME.active&&GAME.ball.launched?GAME.ball.x:MOON.homeX;
+ const moonCy=GAME.active&&GAME.ball.launched?GAME.ball.y:MOON.homeY;
+ const radius=GAME.active&&GAME.ball.launched?GAME.ball.r:MOON.displayR;
+ if(Math.hypot(p[0]-moonCx,p[1]-moonCy)<radius*1.12){
+   if(!GAME.active)startMoonGame();else {stopMoonGame();note('The moon returns to the sky.',1200)}
+   return;
+ }
+ let found=null,dist=1e6;
+ for(const k of ['L','R']){
+  const e=E[k],q=e.P[4];if(!q)continue;
+  const d=Math.hypot(q[0]-p[0],q[1]-p[1]);
+  if(d<Math.max(55,e.W*2.5)&&d<dist){dist=d;found=k}
+ }
+ if(found){dragK=found;cv.setPointerCapture(ev.pointerId);cv.style.cursor='grabbing'}
+});
+cv.addEventListener('pointermove',ev=>{if(!dragK)return;
+ const e=E[dragK],p=e.P[2];if(!p)return;
+ M[dragK].curl=clamp(Math.atan2(ev.clientY-p[1],ev.clientX-p[0])-e.a[1],-1,1);
+ const ctl=document.querySelector(`[data-e="${dragK}"][data-p="curl"]`);if(ctl)ctl.value=M[dragK].curl;
+});
+const drop=()=>{dragK=null;cv.style.cursor='default'};
+cv.addEventListener('pointerup',drop);cv.addEventListener('pointercancel',drop);
+
+// ---------- drawing ----------
+function spl(P,u){
+ const n=P.length-1,f=Math.min(u,.9999)*n,i=Math.floor(f),t=f-i,p0=P[Math.max(i-1,0)],p1=P[i],p2=P[i+1],p3=P[Math.min(i+2,n)],t2=t*t,t3=t2*t;
+ const c=j=>{const A=-p0[j]+p2[j],B=2*p0[j]-5*p1[j]+4*p2[j]-p3[j],C=-p0[j]+3*p1[j]-3*p2[j]+p3[j];return[.5*(2*p1[j]+A*t+B*t2+C*t3),.5*(A+2*B*t+3*C*t2)]};
+ const X=c(0),Y=c(1);return[X[0],Y[0],X[1],Y[1]];
+}
+function band(P,t0,t1,wf,W){
+ const N=56,L=[],R=[];
+ for(let i=0;i<=N;i++){const u=i/N,[x,y,dx,dy]=spl(P,t0+(t1-t0)*u),m=Math.hypot(dx,dy)||1,ww=W*wf*Math.max(Math.pow(Math.sin(Math.PI*Math.pow(u,.72)),.55),.34*clamp(1-u*3,0,1));L.push([x-dy/m*ww,y+dx/m*ww]);R.push([x+dy/m*ww,y-dx/m*ww])}
+ ctx.beginPath();ctx.moveTo(L[0][0],L[0][1]);
+ for(const p of L)ctx.lineTo(p[0],p[1]);
+ for(let i=N;i>=0;i--)ctx.lineTo(R[i][0],R[i][1]);
+ ctx.closePath();
+}
+const hx=c=>[1,3,5].map(i=>parseInt(c.slice(i,i+2),16)),mix=(a,b,t)=>{const A=hx(a),B=hx(b);return'#'+A.map((v,i)=>Math.round(lerp(v,B[i],clamp(t,0,1))).toString(16).padStart(2,'0')).join('')};
+function blob(x,y,r,col){const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,col);g.addColorStop(1,'rgba(220,235,255,0)');ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2)}
+function clipEarBand(P,W,t0=0,t1=1,wf=1){band(P,t0,t1,wf,W);ctx.clip();}
+function drawThemePattern(T,P,W,t,pMid,e){
+ const amt=S.patternAmt; if(amt<=0||!T.style||T.style==='plain')return;
+ ctx.save(); clipEarBand(P,W,.02,.98,.97);
+ if(T.style==='stripe'){
+  // Alternating bold BLACK and WHITE bands follow the curved ear, not a pink center.
+  ctx.globalAlpha=Math.min(1,.28+.72*amt);ctx.strokeStyle='#000000';
+  ctx.lineWidth=Math.max(5,W*.19);ctx.lineCap='butt';
+  for(const u of [.12,.27,.42,.57,.72,.87]){
+   const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m;
+   ctx.beginPath();ctx.moveTo(q[0]-nx*W*1.35,q[1]-ny*W*1.35);
+   ctx.lineTo(q[0]+nx*W*1.35,q[1]+ny*W*1.35);ctx.stroke();
+  }
+ }
+ if(T.style==='robot'){
+  ctx.strokeStyle=T.pattern; ctx.globalAlpha=.22+.42*amt; ctx.lineWidth=Math.max(2,W*.05);
+  for(const u of [.18,.34,.52,.71,.87]){const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m; ctx.beginPath(); ctx.moveTo(q[0]-nx*W*.52,q[1]-ny*W*.52); ctx.lineTo(q[0]+nx*W*.52,q[1]+ny*W*.52); ctx.stroke();}
+  ctx.fillStyle=T.pattern2||'#fff'; ctx.globalAlpha=.55*amt;
+  for(const u of [.22,.48,.76]){const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m; ctx.beginPath(); ctx.arc(q[0]-nx*W*.38,q[1]-ny*W*.38,Math.max(2,W*.06),0,7); ctx.fill();}
+ }
+ if(T.style==='monster'){
+  ctx.fillStyle=T.pattern; ctx.globalAlpha=.18+.38*amt;
+  for(const u of [.2,.33,.47,.63,.79]){const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m,r=Math.max(5,W*(.09+.02*Math.sin(u*10+t*2))); ctx.beginPath(); ctx.ellipse(q[0]-nx*W*(.18+.08*Math.sin(u*20)),q[1]-ny*W*.16,r*1.15,r*.75,u*6,0,7); ctx.fill();}
+  ctx.strokeStyle=T.pattern2||'#fff'; ctx.globalAlpha=.35*amt; ctx.lineWidth=Math.max(2,W*.04); ctx.beginPath();
+  for(let i=0;i<=20;i++){const u=.11+.72*i/20,q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m,j=W*(.48+.06*Math.sin(i+t*10)); const x=q[0]+nx*j,y=q[1]+ny*j; i?ctx.lineTo(x,y):ctx.moveTo(x,y);} ctx.stroke();
+ }
+ if(T.style==='arcane'||T.style==='fairy'){
+  ctx.fillStyle=T.pattern;ctx.strokeStyle=T.pattern;ctx.globalAlpha=Math.min(.95,.35+.35*amt);
+  for(const u of [.18,.35,.52,.71,.87]){
+   const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m,px=q[0]+nx*W*.1,py=q[1]+ny*W*.1,r=W*(T.style==='fairy'?.07:.11);
+   ctx.beginPath();ctx.moveTo(px,py-r*2);ctx.lineTo(px+r*.45,py-r*.4);ctx.lineTo(px+r*2,py);ctx.lineTo(px+r*.45,py+r*.4);ctx.lineTo(px,py+r*2);ctx.lineTo(px-r*.45,py+r*.4);ctx.lineTo(px-r*2,py);ctx.lineTo(px-r*.45,py-r*.4);ctx.closePath();ctx.fill();
+  }
+ }
+ if(T.style==='chrome'){
+  ctx.strokeStyle=T.pattern;ctx.globalAlpha=.22+.36*amt;ctx.lineWidth=Math.max(2,W*.085);
+  for(const u of [.22,.49,.77]){const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m;ctx.beginPath();ctx.moveTo(q[0]-nx*W*.45,q[1]-ny*W*.45);ctx.lineTo(q[0]+nx*W*.45,q[1]+ny*W*.45);ctx.stroke();}
+ }
+ if(T.style==='gallery'){
+  ctx.strokeStyle=T.pattern;ctx.globalAlpha=.18+.28*amt;ctx.lineWidth=Math.max(2,W*.045);
+  for(const u of [.25,.54,.81]){const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m;ctx.beginPath();ctx.arc(q[0]+nx*W*.1,q[1]+ny*W*.1,W*.12,0,7);ctx.stroke();}
+ }
+ if(T.style==='royal'){
+  ctx.strokeStyle=T.pattern; ctx.globalAlpha=.28+.48*amt; ctx.lineWidth=Math.max(3,W*.09);
+  for(const u of [.22,.48,.74]){const q=spl(P,u),m=Math.hypot(q[2],q[3])||1,nx=-q[3]/m,ny=q[2]/m; ctx.beginPath(); ctx.moveTo(q[0]-nx*W*.54,q[1]-ny*W*.54); ctx.lineTo(q[0]+nx*W*.54,q[1]+ny*W*.54); ctx.stroke();}
+ }
+ ctx.restore();
+}
+function drawEar(e,t){
+ if(e.P.length<5)return;
+ const T=THEMES[S.theme],P=e.P,W=e.W;
+ const pMid=spl(P,.38),pHi=spl(P,.64),m1=Math.hypot(pMid[2],pMid[3])||1,m2=Math.hypot(pHi[2],pHi[3])||1;
+ const n1=[-pMid[3]/m1,pMid[2]/m1],n2=[-pHi[3]/m2,pHi[2]/m2];
+ const bodyGrad=ctx.createLinearGradient(pMid[0]-n1[0]*W*1.2,pMid[1]-n1[1]*W*1.2,pMid[0]+n1[0]*W*1.5,pMid[1]+n1[1]*W*1.5);
+ bodyGrad.addColorStop(0,mix(T.o,'#ffffff',.48+.10*S.gloss));
+ bodyGrad.addColorStop(.22,T.o);
+ bodyGrad.addColorStop(.64,mix(T.o,T.shadow,.18));
+ bodyGrad.addColorStop(1,mix(T.o,T.shadow,.48));
+ const innerGrad=ctx.createLinearGradient(pHi[0]-n2[0]*W*.95,pHi[1]-n2[1]*W*.95,pHi[0]+n2[0]*W,pHi[1]+n2[1]*W);
+ innerGrad.addColorStop(0,mix(T.i,'#ffffff',.38+.14*S.gloss));
+ innerGrad.addColorStop(.55,T.i);
+ innerGrad.addColorStop(1,mix(T.i,T.shadow,.24));
+ ctx.save();ctx.lineCap='round';ctx.lineJoin='round';
+ ctx.save();ctx.globalAlpha=.24;ctx.filter=`blur(${Math.max(6,W*.17)}px)`;ctx.translate(W*.08,W*.18);
+ band(P,0,1,1.02,W);ctx.fillStyle='rgba(9,12,23,.48)';ctx.fill();ctx.restore();
+ band(P,0,1,1,W);ctx.fillStyle=bodyGrad;ctx.fill();
+ ctx.lineWidth=Math.max(3.5,W*.13);ctx.strokeStyle=T.rim;ctx.globalAlpha=.95;ctx.stroke();
+ ctx.lineWidth=Math.max(2.2,W*.08);ctx.strokeStyle='#10152c';ctx.globalAlpha=1;ctx.stroke();
+ ctx.save();ctx.globalAlpha=(.35+.40*S.jellyAmt);ctx.filter=`blur(${Math.max(4,W*.12)}px)`;
+ band(P,.03,.98,.95,W);ctx.fillStyle=T.jelly;ctx.fill();ctx.restore();
+ band(P,.10,.94,.58,W);ctx.fillStyle=innerGrad;ctx.fill();
+ drawThemePattern(T,P,W,t,pMid,e);
+ ctx.beginPath();
+ for(let i=0;i<=24;i++){
+  const u=.17+.58*i/24,q=spl(P,u),m=Math.hypot(q[2],q[3])||1,off=W*(.42*Math.pow(Math.sin(Math.PI*u),.72)+.05),x=q[0]-q[3]/m*off,y=q[1]+q[2]/m*off;
+  i?ctx.lineTo(x,y):ctx.moveTo(x,y)
+ }
+ ctx.strokeStyle=T.shine;ctx.globalAlpha=.52+.40*S.gloss;ctx.lineWidth=Math.max(2,W*.06);ctx.stroke();
+ const gloss=ctx.createRadialGradient(pMid[0]-n1[0]*W*.38,pMid[1]-n1[1]*W*.38,0,pMid[0]-n1[0]*W*.38,pMid[1]-n1[1]*W*.38,W*(.45+.27*S.gloss));
+ gloss.addColorStop(0,'rgba(255,255,255,.92)');gloss.addColorStop(.25,'rgba(255,255,255,.55)');gloss.addColorStop(1,'rgba(255,255,255,0)');
+ ctx.globalCompositeOperation='screen';ctx.fillStyle=gloss;ctx.beginPath();ctx.arc(pMid[0]-n1[0]*W*.18,pMid[1]-n1[1]*W*.18,W*(.30+.32*S.gloss),0,Math.PI*2);ctx.fill();
+ ctx.beginPath();ctx.arc(pHi[0]-n2[0]*W*.15,pHi[1]-n2[1]*W*.15,Math.max(1.8,W*(.04+.04*S.gloss)),0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,.95)';ctx.fill();
+ ctx.beginPath();ctx.moveTo(pHi[0]-n2[0]*W*.3,pHi[1]-n2[1]*W*.15);ctx.lineTo(pHi[0]-n2[0]*W*.06,pHi[1]-n2[1]*W*.15);ctx.moveTo(pHi[0]-n2[0]*W*.18,pHi[1]-n2[1]*W*.28);ctx.lineTo(pHi[0]-n2[0]*W*.18,pHi[1]-n2[1]*W*.02);
+ ctx.strokeStyle='rgba(255,255,255,.85)';ctx.lineWidth=Math.max(1.2,W*.025);ctx.stroke();
+ ctx.globalCompositeOperation='source-over';ctx.beginPath();
+ for(let i=0;i<=22;i++){
+  const u=.22+.62*i/22,q=spl(P,u),m=Math.hypot(q[2],q[3])||1,off=W*(.12+.1*Math.pow(Math.sin(Math.PI*u),.7)),x=q[0]+q[3]/m*off,y=q[1]-q[2]/m*off;
+  i?ctx.lineTo(x,y):ctx.moveTo(x,y)
+ }
+ ctx.strokeStyle='rgba(70,60,92,.24)';ctx.lineWidth=Math.max(1.5,W*.04);ctx.stroke();
+ ctx.restore();
+}
+// Optional visible wireframe for the otherwise invisible 3D proxy skeleton.
+function drawProxy(e){
+ if(!S.rig||e.P.length<5)return;
+ const g=e.ghost,origin=e.P[0];ctx.save();ctx.globalAlpha=.9;ctx.lineCap='round';
+ ctx.strokeStyle='#91ffd3';ctx.fillStyle='#91ffd3';ctx.lineWidth=2.3;ctx.setLineDash([6,5]);
+ ctx.beginPath();e.P.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.stroke();ctx.setLineDash([]);
+ for(let i=0;i<e.P.length;i++){const p=e.P[i];ctx.beginPath();ctx.arc(p[0],p[1],i===0?5:3.2,0,7);ctx.fill()}
+ const sc=Math.max(18,e.W*2.3);ctx.lineWidth=2;
+ const axes=[[sc,0,'#ff7979'],[0,-sc,'#91ffd3'],[sc*Math.sin(g.yaw),sc*Math.sin(g.pitch),'#a8aeff']];
+ for(const [dx,dy,c] of axes){ctx.strokeStyle=c;ctx.beginPath();ctx.moveTo(origin[0],origin[1]);ctx.lineTo(origin[0]+dx,origin[1]+dy);ctx.stroke()}
+ ctx.font='bold 12px sans-serif';ctx.fillStyle='#91ffd3';ctx.fillText((e.sgn<0?'L':'R')+' · 3D PROXY',origin[0]-25,origin[1]+25);ctx.restore();
+}
+
+// ---------- tracking ----------
+let landmarker=null,lm=null,bs={},lastVT=-1,faceT=0,camOn=false,vw=1,vh=1;
+const C={step:-1,until:0,data:[{L:[],R:[]},{L:[],R:[]},{L:[],R:[]}],message:''};
+const STEPS=[{label:'01 · REST — Hold your face still',time:2600},
+             {label:'02 · LEFT EAR — Lift and relax your left eyebrow',time:4100},
+             {label:'03 · RIGHT EAR — Lift and relax your right eyebrow',time:4100}];
+const note=(s,ms=0)=>{say(s);note.until=performance.now()+ms};note.until=0;
+const sign=v=>v<0?-1:1;
+const mean=arr=>arr.length?avg(arr):0;
+const sd=arr=>{const m=mean(arr);return Math.sqrt(mean(arr.map(v=>(v-m)*(v-m))))};
+const INSTRUCT=[
+ ['HOLD STILL!','REST SCAN · Keep your face and eyebrows relaxed. We learn your natural resting signals.'],
+ ['SCAN YOUR LEFT EAR!','LEFT CONTROL · Lift and lower your LEFT eyebrow 3–4 times. The glowing left ear shows the scan.'],
+ ['NOW, YOUR RIGHT EAR!','RIGHT CONTROL · Lift and lower your RIGHT eyebrow 3–4 times. The glowing right ear shows the scan.']
+];
+// Handmade pixel-art sprites: square-pixel bunny, moon and left/right cue icons.
+const PIX={
+ rabbit:["....PP....PP....","...PWWP..PWWP...","...PWWP..PWWP...","...PWWP..PWWP...","....WWWWWWWW....","..WWWWWWWWWWWW..",".WWWWWWWWWWWWWW.",".WWKWWWWWWKWWW.",".WWWWWWRWWWWWWW.","..WWWWWWWWWWWW..","....WWWWWWWW....","......WWWW......"],
+ rest:["....P......P....","...PWP....PWP...","...PWP....PWP...","...PWP....PWP...","...WWW....WWW...","..WWWWWWWWWWWW..",".WWWWWWWWWWWWWW.",".WWKWWWWWWKWWW.","..WWWWWRWWWWWW..","....WWWWWWWW....","......WWWW......"],
+ left:["....P......P....","..PPWP....PWP...",".PWWWP....PWP...","...WWP....PWP...","...WWW....WWW...","..WWWWWWWWWWWW..",".WWWWWWWWWWWWWW.",".WWKWWWWWWKWWW.","..WWWWWRWWWWWW..","....WWWWWWWW....","......WWWW......"],
+ right:["....P......P....","...PWP....PWPP..","...PWP....PWWWP.","...PWP....PWW...","...WWW....WWW...","..WWWWWWWWWWWW..",".WWWWWWWWWWWWWW.",".WWKWWWWWWKWWW.","..WWWWWRWWWWWW..","....WWWWWWWW....","......WWWW......"],
+ moon:["......SSSSSS......","....SSSSSSSSSS....","...SSSSBSSBSSSS...","..SSSSSSSSSSSSSS..","..SSSBSSSSSSBSS..",".SSSSSSSSSSSSSSSS.",".SSSSBSSSSBSSSSS.",".SSSSSSSSSSSSSSS.","..SSSSSSCCSSSSS..","..SSSSSCCCCSSSS..","...SSSSCCCCSSS...","....SSSCCCSSS....","......SSSSSS......"]
+};
+const PIXCOLOR={P:'#ea8598',W:'#f7ead2',K:'#10152c',R:'#ea8598',S:'#edf2ff',C:'#b7c4da',B:'#dbe6fb'};
+function pixelIcon(type,size=54){let rows=PIX[type]||PIX.rabbit,cols=Math.max(...rows.map(x=>x.length));let rects='';for(let y=0;y<rows.length;y++)for(let x=0;x<rows[y].length;x++){const c=PIXCOLOR[rows[y][x]];if(c)rects+=`<rect x="${x}" y="${y}" width="1" height="1" fill="${c}"/>`;}return `<svg class="pixel-icon" width="${size}" height="${size}" viewBox="0 0 ${cols} ${rows.length}" preserveAspectRatio="xMidYMid meet" shape-rendering="crispEdges" aria-hidden="true">${rects}</svg>`;}
+function drawPixelSprite(type,x,y,scale=6,alpha=1){
+ const rows=PIX[type]; if(!rows)return {w:0,h:0};
+ const h=rows.length,w=Math.max(...rows.map(r=>r.length));
+ ctx.save(); ctx.globalAlpha=alpha;
+ for(let yy=0;yy<h;yy++) for(let xx=0;xx<rows[yy].length;xx++){
+   const col=PIXCOLOR[rows[yy][xx]]; if(!col) continue;
+   ctx.fillStyle=col; ctx.fillRect(x+xx*scale,y+yy*scale,scale,scale);
+ }
+ ctx.restore();
+ return {w:w*scale,h:h*scale};
+}
+function moonMetrics(scale){ const rows=PIX.moon; return {w:Math.max(...rows.map(r=>r.length))*scale,h:rows.length*scale}; }
+
+for(const [i,name] of ['rest','left','right'].entries()){const holder=$('#step'+i);if(holder){const vector=holder.querySelector('svg');if(vector)vector.outerHTML=pixelIcon(name,52);}}
+const hero=$('.ear-hero');if(hero){hero.innerHTML=pixelIcon('rabbit',96)+pixelIcon('moon',77);}
+function setGuide(stage){
+ const hud=$('#stageHud');hud.dataset.phase=String(stage);
+ for(let i=0;i<3;i++){const node=$('#step'+i);node.classList.toggle('active',i===stage);node.classList.toggle('done',i<stage)}
+ $('#scanEarL').classList.toggle('focus',stage===0||stage===1);
+ $('#scanEarR').classList.toggle('focus',stage===0||stage===2);
+ const scanNames=['SCANNING RESTING SIGNAL','SCANNING LEFT EAR CONTROL','SCANNING RIGHT EAR CONTROL','CALIBRATION COMPLETE'];
+ $('#scanWord').textContent=scanNames[stage]||'EAR CONTROL SCANNER';
+ if(stage===3)$('#scanSignal').textContent='✓ LEFT + RIGHT CONTROL SIGNALS LEARNED';
+ if(stage>=0&&stage<3){$('#instruction').textContent=INSTRUCT[stage][0];$('#subInstruction').textContent=INSTRUCT[stage][1];$('#hudBadge').textContent='STEP '+(stage+1)+'/3'}
+ else if(stage===3){$('#instruction').textContent='TA-DA! EARS ACTIVATED!';$('#subInstruction').textContent='Your eyebrow signals now drive the rabbit-ear tips. Press ENTER to try it — the moon responds too!';$('#hudBadge').textContent='READY TO PLAY!';$('#scanSeconds').textContent='✓'}
+ else{$('#instruction').textContent='Ready to calibrate?';$('#subInstruction').textContent='Start camera to train eyebrow signals for each rabbit ear.';$('#hudBadge').textContent='READY!'}
+}
+function startCal(){
+ if(!camOn){note('Start the camera first.',2800);return}
+ C.step=0;$('#stageHud').classList.remove('cal-done');$('#stageHud').classList.add('cal-active');document.body.classList.add('is-calibrating');setGuide(0);C.until=performance.now()+STEPS[0].time;C.data=[{L:[],R:[]},{L:[],R:[]},{L:[],R:[]}];
+ for(const k of ['L','R']){const e=E[k];e.model=null;e.filtered=0;e.proxyOut=0}
+ $('#cal').disabled=true;$('#calFill').style.width='0%';$('#calStatus').textContent=STEPS[0].label;
+ note('EAR SCANNER STARTED · LOOK AT THE BIG GUIDE.',2200);
+}
+function calibrateStep(now,face,dt){
+ if(C.step<0)return;
+ if(!face){C.until+=dt*1000;$('#scanSeconds').textContent='PAUSED';$('#calStatus').textContent='FACE NOT FOUND · Face camera to resume the scan';return}
+ const stage=STEPS[C.step],fraction=clamp(1-(C.until-now)/stage.time,0,1);$('#scanSeconds').textContent=Math.ceil(Math.max(0,C.until-now)/1000)+'s';
+ $('#calFill').style.width=((C.step+fraction)/3*100).toFixed(1)+'%';
+ $('#calStatus').textContent=stage.label+' · '+Math.ceil(Math.max(0,C.until-now)/1000)+'s';
+ if(now<C.until)return;
+ if(C.step===0){
+  for(const k of ['L','R']){
+   const e=E[k],samples=C.data[0][k];
+   if(samples.length<4)continue;
+   e.base={};e.noise={};
+   for(const f of FEATS){e.base[f]=mean(samples.map(v=>v[f]));e.noise[f]=sd(samples.map(v=>v[f]));}
+  }
+ }
+ C.step++;
+ if(C.step<STEPS.length){C.until=now+STEPS[C.step].time;setGuide(C.step);tone('plip',C.step===1?'L':'R');note(STEPS[C.step].label,1900)}
+ else{
+  C.step=-1;$('#stageHud').classList.remove('cal-active');$('#stageHud').classList.add('cal-done');setGuide(3);tone('success');$('#cal').disabled=false;$('#calFill').style.width='100%';
+  for(const k of ['L','R'])trainEar(k);
+  const ok=['L','R'].map(k=>E[k].model?.quality==='trained');
+  $('#calStatus').textContent=ok.every(Boolean)?'Calibrated · Two independent proxy rigs ready.':
+   'Calibration complete · Weak signals on '+(ok[0]?'right':'left')+' side(s): increase gain or try again.';
+  note('Calibration complete · Try wiggling each ear!',2600);
+ }
+}
+function trainEar(k){
+ const e=E[k];if(!e.base)return;
+ const samples=C.data[k==='L'?1:2][k];
+ const scored=FEATS.map(f=>{
+  let peak=0;
+  for(const s of samples){const x=(s[f]-e.base[f])/SCALE[f];if(Math.abs(x)>Math.abs(peak))peak=x}
+  const noise=(e.noise[f]||0)/SCALE[f];
+  const strength=Math.max(0,Math.abs(peak)-noise*1.5);
+  const bias={brow:1.7,fore:.90,ear:.80,blend:1.15}[f];
+  return{f,peak,strength:strength*bias};
+ });
+ scored.sort((a,b)=>b.strength-a.strength);
+ const quality=scored[0]?.strength>.030?'trained':'weak';
+ const chosen=scored.filter(v=>v.strength>Math.max(.018,(scored[0]?.strength||0)*.22)).slice(0,3);
+ const weights={...DEFAULT_WEIGHT},polarity={brow:1,fore:1,ear:1,blend:1};
+ if(quality==='trained'&&chosen.length){
+  for(const f of FEATS)weights[f]=0;
+  for(const v of chosen){weights[v.f]=v.strength;polarity[v.f]=sign(v.peak)}
+  let sum=FEATS.reduce((z,f)=>z+weights[f],0)||1;
+  for(const f of FEATS)weights[f]/=sum;
+ }
+ const peak=quality==='trained'?chosen.reduce((z,v)=>z+weights[v.f]*Math.abs(v.peak),0):.24;
+ e.model={quality,weights,polarity,gain:clamp(1.25/Math.max(.03,peak),2.0,20),best:scored[0]?.f||'brow'};
+ $('#info'+k).textContent=k==='L'?'LEFT · ':'RIGHT · ';
+ $('#info'+k).textContent+=(quality==='trained'?'Learned ':'Weak cue · fallback ')+e.model.best+' · '+e.model.gain.toFixed(1)+'×';
+}
+function getRaw(k){
+ // Normalized in each person's face coordinate frame to reduce head tilt and zoom artifacts.
+ const p=i=>[lm[i].x*vw,lm[i].y*vh];
+ const top=p(10),chin=p(152),eyeL=p(33),eyeR=p(263);
+ const d=Math.hypot(eyeL[0]-eyeR[0],eyeL[1]-eyeR[1])||1;
+ const ux=(top[0]-chin[0])/(Math.hypot(top[0]-chin[0],top[1]-chin[1])||1);
+ const uy=(top[1]-chin[1])/(Math.hypot(top[0]-chin[0],top[1]-chin[1])||1);
+ const g=GR[k],ref=p(g.eye);
+ const rel=i=>{const v=p(i);return((v[0]-ref[0])*ux+(v[1]-ref[1])*uy)/d};
+ const blend=bs['browOuterUp'+g.nm]||0,down=bs['browDown'+g.nm]||0;
+ return{
+  brow:mean(g.brow.map(rel)),
+  fore:mean(g.fore.map(rel)),
+  ear:mean(g.ear.map(rel)),
+  blend:blend-.7*down+.18*(bs.browInnerUp||0),
+  smile:((bs.mouthSmileLeft||0)+(bs.mouthSmileRight||0))/2,
+  blink:(bs['eyeBlink'+g.nm]||0)>.7
+ };
+}
+function sense(){
+ for(const k of ['L','R']){
+  const e=E[k],raw=getRaw(k);e.raw=raw;
+  if(!e.base){e.base={};e.noise={};for(const f of FEATS){e.base[f]=raw[f];e.noise[f]=0}}
+  if(C.step>=0)C.data[C.step][k].push({...raw});
+  if(C.step>=0){
+    // Movement meter = brow displacement relative to the user's resting baseline.
+    // This is a proxy display, not a direct measurement of the auricular muscles.
+    const browMove=Math.abs((raw.brow-e.base.brow)/SCALE.brow);
+    const expressionMove=Math.abs((raw.blend-e.base.blend)/SCALE.blend);
+    const intensity=C.step===0?.06:clamp((browMove*.7+expressionMove*.3)*.85,0,1);
+    $('#signal'+k).style.width=(3+intensity*97).toFixed(1)+'%';
+    if(C.step===1&&k==='L'||C.step===2&&k==='R'){
+      $('#scanSignal').textContent=(k==='L'?'LEFT':'RIGHT')+' EYEBROW SIGNAL  '+Math.round(intensity*100)+'%  ·  LIFT / RELEASE';
+    }
+    if(C.step===0&&k==='R')$('#scanSignal').textContent='REST SCAN · KEEP BOTH EYEBROWS RELAXED';
+  }
+  const model=e.model||{weights:DEFAULT_WEIGHT,polarity:{brow:1,fore:1,ear:1,blend:1},gain:4.3};
+  const mix={brow:S.wBrow,fore:S.wFore,ear:S.wEar,blend:S.wBlend};
+  let v=0,wt=0;
+  for(const f of FEATS){
+   let delta=clamp((raw[f]-e.base[f])/SCALE[f],-2,2),out=delta*(model.polarity[f]||1);
+   e.sig[f]=clamp(delta);
+   const weight=(model.weights[f]||0)*mix[f];
+   v+=weight*out;wt+=weight;
+  }
+  const dead=SIDE[k].dead;
+  let desired=clamp((v/(wt||1))*model.gain,-2,2);
+  desired=Math.sign(desired)*Math.max(0,Math.abs(desired)-dead)/(1-dead);
+  // Smooth micro-movements but keep quick ear wiggles responsive.
+  e.filtered=lerp(e.filtered,clamp(desired),.72);
+  e.proxyOut=Math.abs(e.filtered)<.006?0:e.filtered;
+  e.sig.smile=raw.smile;
+  // Very slow neutral drift, ONLY when completely still and NOT in calibration.
+  if(C.step<0&&Math.abs(desired)<.045){for(const f of FEATS)e.base[f]=lerp(e.base[f],raw[f],.0008)}
+  if(raw.blink&&!e.bl&&S.blink){e.v[2]+=e.sgn*6;e.v[3]+=e.sgn*11}
+  e.bl=raw.blink;
+ }
+}
+$('#enterScene').onclick=()=>{document.body.classList.remove('is-calibrating');$('#stageHud').classList.remove('cal-active','cal-done');$('#scanSeconds').textContent='—';tone('plip');};
+$('#cal').onclick=startCal;
+$('#neutral').onclick=()=>{
+ if(!camOn){note('Start your camera first.',2000);return}
+ C.step=-1;setGuide(-1);$('#cal').disabled=false;$('#calFill').style.width='0%';
+ for(const k of ['L','R']){E[k].base=null;E[k].model=null;E[k].filtered=0;E[k].proxyOut=0;$('#info'+k).textContent=k+' · Neutral reset'}
+ $('#calStatus').textContent='Neutral reset · Keep still briefly, then calibrate again.';
+ note('Neutral face reset.',2000);
+};
+
+// ---------- head frame ----------
+const H={top:[0,0],up:[0,-1],sd:[1,0],th:0,fw:300,fh:420,a:1,seen:false};
+function head(now){return !!(lm&&now-faceT<400)}
+
+// ---------- ear zoom cams ----------
+const cams={L:$('#cL').getContext('2d'),R:$('#cR').getContext('2d')};
+function drawCams(face){
+ for(const k in GR){
+  const c=cams[k],n=c.canvas.width;c.clearRect(0,0,n,n);
+  if(!face||!camOn||vid.readyState<2){c.fillStyle='#1b1030';c.fillRect(0,0,n,n);c.fillStyle='#ffd21f';c.textAlign='center';c.font='900 30px "Arial Black",Impact,sans-serif';c.fillText(camOn?'Where’d you go?':'No signal',n/2,n/2+10);continue}
+  const g=GR[k],rp=i=>[lm[i].x*vw,lm[i].y*vh],o1=rp(33),o2=rp(263),d=Math.hypot(o1[0]-o2[0],o1[1]-o2[1])||1;
+  const a=rp(234),b=rp(454),pts=g.ear.map(rp),m=[avg(pts.map(p=>p[0])),avg(pts.map(p=>p[1]))];
+  const dr=k==='L'?[b[0]-a[0],b[1]-a[1]]:[a[0]-b[0],a[1]-b[1]],dm=Math.hypot(dr[0],dr[1])||1;
+  const sz=d*1.2,sx=m[0]+dr[0]/dm*d*.3-sz/2,sy=m[1]+dr[1]/dm*d*.3-sz/2;
+  c.save();c.translate(n,0);c.scale(-1,1);c.drawImage(vid,sx,sy,sz,sz,0,0,n,n);c.restore();
+  c.lineWidth=4;c.strokeStyle='#000';c.fillStyle='#ffd21f';
+  for(const p of pts){c.beginPath();c.arc(n-(p[0]-sx)/sz*n,(p[1]-sy)/sz*n,9,0,7);c.fill();c.stroke()}
+ }
+}
+
+const fcx=$('#cF').getContext('2d');
+function drawFace(face,t){
+ const c=fcx.canvas,k=c.width/w;
+ if(!camOn||vid.readyState<2){fcx.fillStyle='#1b1030';fcx.fillRect(0,0,c.width,c.height);fcx.fillStyle='#ffd21f';fcx.textAlign='center';fcx.font='900 30px "Arial Black",Impact,sans-serif';fcx.fillText('Face cam off',c.width/2,c.height/2+10);return}
+ const main=ctx;ctx=fcx;ctx.save();ctx.setTransform(k,0,0,k,0,0);
+ const sc=Math.max(w/vw,h/vh);
+ ctx.save();ctx.translate(w,0);ctx.scale(-1,1);ctx.drawImage(vid,(w-vw*sc)/2,(h-vh*sc)/2,vw*sc,vh*sc);ctx.restore();
+ if(face&&H.a>.01){drawEar(E.L,t);drawEar(E.R,t);drawProxy(E.L);drawProxy(E.R)}
+ ctx.restore();ctx=main;
+}
+// ---------- main loop ----------
+let tp=performance.now(),mt=0;
+function frame(now){
+ requestAnimationFrame(frame);
+ const dt=Math.min(.033,(now-tp)/1000)||.016;tp=now;
+ if(landmarker&&vid.readyState>=2&&vid.currentTime!==lastVT){
+  lastVT=vid.currentTime;
+  try{
+   const r=landmarker.detectForVideo(vid,now);
+   if(r.faceLandmarks?.length){
+    lm=r.faceLandmarks[0];bs={};
+    for(const c of(r.faceBlendshapes?.[0]?.categories||[]))bs[c.categoryName]=c.score;
+    faceT=now;sense();
+   }else lm=null;
+  }catch(err){if(!frame.errorShown){note('Face tracker error: '+err.message,3500);frame.errorShown=true}}
+ }
+ const face=head(now),t=now/1000;
+ calibrateStep(now,face,dt);
+
+ if(camOn&&now>note.until){
+  if(!face){if(msgEl.textContent!=='No face found · Move into frame.')say('No face found · Move into frame.');}
+  else if(msgEl.textContent) say('');
+ }
+ updateMoonGame(dt);
+ for(const k of ['L','R']){
+  const e=E[k];
+  if(!face){for(const f of ['ear','brow','fore','blend','smile'])e.sig[f]=0;e.proxyOut=lerp(e.proxyOut,0,.25)}
+  drive(e,k,dt,face,t);pose(e,k,dt);
+  if(e.P[4]){ if(e.prevTip){ e.tipVel=[(e.P[4][0]-e.prevTip[0])/(dt||.016),(e.P[4][1]-e.prevTip[1])/(dt||.016)]; } else e.tipVel=[0,0]; e.prevTip=[e.P[4][0],e.P[4][1]]; }
+ }
+ wiggleSound(now);
+ drawSky(t,dt);
+ drawEar(E.L,t);drawEar(E.R,t);drawRabbitHead();if(S.rig){drawProxy(E.L);drawProxy(E.R)} drawArcadeHud();
+
+ if(now-mt>80){mt=now;for(const k of ['L','R']){
+  const e=E[k];bar('b'+k+'ear',e.sig.ear);bar('b'+k+'brow',e.sig.brow);bar('b'+k+'fore',e.sig.fore);
+  bar('b'+k+'proxy',e.proxyOut,1);bar('b'+k+'sup',e.act.sup,1);bar('b'+k+'ant',e.act.ant,1);bar('b'+k+'post',e.act.post,1);
+ }}
+}
+
+$('#sound').onclick=()=>{soundEnabled=!soundEnabled;$('#sound').setAttribute('aria-pressed',String(soundEnabled));$('#sound').textContent=soundEnabled?'♫ SOUND ON':'♫ SOUND OFF';if(soundEnabled)tone('success');};
+const dlg=$('#dlg');$('#why').onclick=()=>{dlg.showModal();$('#about').scrollIntoView()};$('#how').onclick=()=>{dlg.showModal();dlg.scrollTop=0};$('#facts').onclick=()=>{dlg.showModal();$('#about').scrollIntoView()};
+// The initial view is calibration, not a help popup.
+rs();syncUI();requestAnimationFrame(frame);
+
+// ---------- camera + MediaPipe ----------
+const VER='0.10.14',CDN=`https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@${VER}`,MODEL='https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task';
+$('#go').onclick=async()=>{
+ const b=$('#go');b.disabled=true;say('Loading the face tracker…');
+ try{
+  const mp=await import(`${CDN}/+esm`),fs=await mp.FilesetResolver.forVisionTasks(`${CDN}/wasm`);
+  const opt=d=>({baseOptions:{modelAssetPath:MODEL,delegate:d},runningMode:'VIDEO',numFaces:1,outputFaceBlendshapes:true,outputFacialTransformationMatrixes:true});
+  try{landmarker=await mp.FaceLandmarker.createFromOptions(fs,opt('GPU'))}catch(_){landmarker=await mp.FaceLandmarker.createFromOptions(fs,opt('CPU'))}
+  say('Allow camera access…');
+  vid.srcObject=await navigator.mediaDevices.getUserMedia({video:{width:1280,height:720,facingMode:'user'},audio:false});
+  await vid.play();vw=vid.videoWidth;vh=vid.videoHeight;
+  camOn=true;$('#liveBadge').textContent='LIVE';S.demo=false;$('#demo').checked=false;b.textContent='Camera on';b.classList.remove('on');$('#welcome').classList.add('hidden');$('#calStatus').textContent='Camera on · Ear calibration in progress.';startCal();
+ }catch(err){const error='Camera could not start: '+(err?.message||err)+'. Use HTTPS or localhost, and allow camera access.';say(error);$('#calStatus').textContent=error;$('#begin').disabled=false;$('#begin').textContent='Try again';b.disabled=false}
+};
+$('#begin').onclick=()=>{tone('plip');$('#begin').disabled=true;$('#begin').textContent='Opening camera…';$('#go').click()};
+
+// ---------------- WEBBIT! PHOTO BOOTH / SIX EAR-ONLY SHOTS ----------------
+// Camera pixels NEVER enter the photo-booth composition. MediaPipe remains the motion source.
+const PB={active:false,recording:false,working:false,images:Array(6).fill(null),png:null,gif:null,frames:[],beat:-1,delay:3,token:0};
+const PB_POSES=[
+ {ear:'L',pose:'STILL',word:'a lil bunny ♡'},
+ {ear:'R',pose:'STILL',word:'soft lil muscles'},
+ {ear:'L',pose:'EARS UP!',word:'UP UP UP!'},
+ {ear:'R',pose:'EARS UP!',word:'wiggle power <3'},
+ {ear:'L',pose:'EARS DOWN',word:'floppy floppy'},
+ {ear:'R',pose:'EARS DOWN',word:'certified wiggler'}
+];
+const pbEl=id=>document.getElementById(id);
+const boothBtn=pbEl('boothOpen'),booth=pbEl('photoBooth'),boothPreview=pbEl('pbPreview'),boothCtx=boothPreview.getContext('2d');
+function pbSetStatus(txt){pbEl('pbStatus').textContent=txt}
+function pbCanvas(width,height){const c=document.createElement('canvas');c.width=width;c.height=height;return c}
+function pbOpen(){
+ PB.active=true;booth.classList.add('open');booth.setAttribute('aria-hidden','false');
+ arSwitch(true);pbSetStatus(PB.images.every(Boolean)?'Your six-ear strip is ready to save ♡':'Ready to catch six close-ups: left & right, still / up / down ♡');pbUpdatePreview();
+}
+function pbClose(){if(PB.recording||PB.working)return;if(arRec&&arRec.state==='recording')arRec.stop();PB.active=false;booth.classList.remove('open');booth.setAttribute('aria-hidden','true')}
+boothBtn.addEventListener('click',pbOpen);pbEl('pbClose').addEventListener('click',pbClose);
+booth.addEventListener('click',ev=>{if(ev.target===booth)pbClose()});
+const pbText=(x,str,px,py,size,color='#fff',font='Arial Black')=>{x.fillStyle=color;x.font=`900 ${size}px ${font},Impact,sans-serif`;x.fillText(str,px,py)};
+function pbStar(x,cx,cy,sz,col='#ffebaf'){
+ x.fillStyle=col;x.beginPath();for(let i=0;i<8;i++){const a=Math.PI*i/4,r=i%2?sz*.36:sz;
+ i?x.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r):x.moveTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r)}x.closePath();x.fill();
+}
+function pbCover(x,im,dx,dy,dw,dh){
+ if(!im)return;const srcRatio=im.width/im.height,dstRatio=dw/dh;
+ let sx=0,sy=0,sw=im.width,sh=im.height;
+ if(srcRatio>dstRatio){sw=sh*dstRatio;sx=(im.width-sw)/2}else{sh=sw/dstRatio;sy=(im.height-sh)/2}
+ x.drawImage(im,sx,sy,sw,sh,dx,dy,dw,dh);
+}
+function pbEarPhoto(k){
+ // Isolated portrait render of the already-rigged animated ear, no source camera or face.
+ const c=pbCanvas(480,390),x=c.getContext('2d'),e=E[k],W=Math.max(12,e.W||25);
+ const g=x.createLinearGradient(0,0,480,520);
+ g.addColorStop(0,k==='L'?'#203950':'#352d55');g.addColorStop(.65,'#162541');g.addColorStop(1,k==='L'?'#405078':'#533650');
+ x.fillStyle=g;x.fillRect(0,0,480,390);
+ const halo=x.createRadialGradient(242,195,20,242,195,300);halo.addColorStop(0,'#d7f4ff42');halo.addColorStop(1,'#d7f4ff00');x.fillStyle=halo;x.fillRect(0,0,480,390);
+ x.strokeStyle='#dbf5ff70';x.lineWidth=5;x.strokeRect(11,11,458,368);
+ for(let i=0;i<12;i++)pbStar(x,(53+i*117)%480,(19+i*83)%520,i%3===0?5:2,'#e7ebff99');
+ if(!e.P||e.P.length<5)return c;
+ const pts=e.P.slice(1,5),xx=pts.map(p=>p[0]),yy=pts.map(p=>p[1]);
+ let xmin=Math.min(...xx)-W*1.65,xmax=Math.max(...xx)+W*1.65;
+ let ymin=Math.min(...yy)-W*1.1,ymax=Math.max(...yy)+W*1.1;
+ const spanX=xmax-xmin,spanY=ymax-ymin;
+ // Preserve portrait zoom and a stable full silhouette including the tip.
+ const scale=Math.min(410/spanX,334/spanY,3.8);
+ const centerX=(xmin+xmax)/2,centerY=(ymin+ymax)/2;
+ const originalCtx=ctx;
+ try{
+  ctx=x;x.save();x.translate(240,195);x.scale(scale,scale);x.translate(-centerX,-centerY);
+  drawEar(e,performance.now()/1000);x.restore();
+ }finally{ctx=originalCtx}
+ // Decorative design only; no head/face and no original stage pixels.
+ x.fillStyle='#ffffff88';x.fillRect(26,370,428,1);
+ return c;
+}
+function pbDrawTile(x,img,index,highlight=false){
+ const col=index%2,row=Math.floor(index/2),dx=58+col*313,dy=251+row*289,dw=293,dh=274;
+ const pose=PB_POSES[index];
+ x.fillStyle=highlight?'#ffb9d9':'#e4f5ff';x.fillRect(dx-5,dy-5,dw+10,dh+10);
+ x.fillStyle='#162743';x.fillRect(dx,dy,dw,dh);
+ x.save();x.beginPath();x.rect(dx+8,dy+39,dw-16,dh-46);x.clip();
+ if(img)pbCover(x,img,dx+8,dy+39,dw-16,dh-46);
+ else {
+  const gr=x.createLinearGradient(dx,dy,dx+dw,dy+dh);gr.addColorStop(0,'#172944');gr.addColorStop(1,'#51405f');x.fillStyle=gr;x.fillRect(dx+8,dy+39,dw-16,dh-46);
+  pbText(x,'♡',dx+115,dy+172,66,'#ffffff70');
+ }
+ x.restore();
+ x.fillStyle=highlight?'#ffc3dd':'#effaff';x.fillRect(dx+4,dy+4,dw-8,30);
+ pbText(x,`${String(index+1).padStart(2,'0')}  ${pose.ear==='L'?'L':'R'} · ${pose.pose}`,dx+12,dy+26,18,'#263250');
+ pbText(x,pose.word,dx+12,dy+dh-12,17,'#f6e6fd','Trebuchet MS');
+ if(highlight){x.strokeStyle='#fbceee';x.lineWidth=7;x.strokeRect(dx-6,dy-6,dw+12,dh+12)}
+}
+function pbDrawStory(c,highlight=-1){
+ const x=c.getContext('2d'),sx=c.width/720,sy=c.height/1280;
+ x.save();x.setTransform(sx,0,0,sy,0,0);
+ const g=x.createLinearGradient(0,0,720,1280);g.addColorStop(0,'#183654');g.addColorStop(.5,'#343254');g.addColorStop(1,'#563b62');x.fillStyle=g;x.fillRect(0,0,720,1280);
+ for(let i=0;i<46;i++)pbStar(x,(i*197)%720,(i*211)%1280,i%7===0?7:2,i%2?'#ccefff':'#ffd0e6');
+ x.fillStyle='#effbff';x.fillRect(27,23,666,1234);x.fillStyle='#142440';x.fillRect(38,34,644,1211);
+ pbText(x,'WEBBIT!',65,115,78,'#f1fcff');pbText(x,'I CAN WIGGLE MY EARS! <3',65,165,31,'#ffc3df');
+ x.fillStyle='#e8f9ff';x.fillRect(59,192,606,35);
+ pbText(x,'LEFT EAR  ×  3',68,218,19,'#31425d');pbText(x,'RIGHT EAR  ×  3',378,218,19,'#31425d');
+ for(let i=0;i<6;i++)pbDrawTile(x,PB.images[i],i,highlight===i);
+ pbText(x,'♡  EXPERIMENTAL EAR MAGIC  ♡',65,1155,24,'#f9c3da');
+ pbText(x,'THE RABBIT SOCIETY / @chaxnsee',65,1207,28,'#ecfbff');
+ pbText(x,'BY ENCHAX',516,1234,16,'#c7d6f8');
+ x.restore();return c;
+}
+function pbUpdatePreview(highlight=-1){if(!PB.active)return;pbDrawStory(boothPreview,highlight)}
+function pbEnableExports(on){['pbPNG','pbGIF','pbShare','pbRetake'].forEach(id=>pbEl(id).disabled=!on)}
+function pbUpdateBeats(shot){
+ for(let i=0;i<6;i++){pbEl('pbBeat'+i).classList.toggle('hot',i===shot);pbEl('pbBeat'+i).classList.toggle('done',i<shot)}
+}
+function pbBeep(){try{tone('plip')}catch(_){}}
+function pbFlash(){const f=pbEl('pbFlash');f.classList.remove('fired');void f.offsetWidth;f.classList.add('fired')}
+function pbCancel(){
+ PB.token++;PB.recording=false;PB.working=false;pbEl('pbCount').classList.remove('active');pbEl('pbShoot').disabled=false;
+ pbEl('pbCancel').hidden=true;document.querySelectorAll('input[name=pbDelay]').forEach(e=>e.disabled=false);
+ pbSetStatus('Six-shot sequence cancelled. You can try again ♡');pbEnableExports(PB.images.every(Boolean));pbUpdatePreview();
+}
+function pbStart(){
+ if(PB.recording||PB.working)return;
+ PB.token++;const token=PB.token;PB.delay=Number(document.querySelector('input[name="pbDelay"]:checked')?.value)||3;
+ PB.images=Array(6).fill(null);PB.png=null;PB.gif=null;PB.frames=[];PB.beat=-1;PB.recording=true;
+ pbEnableExports(false);pbEl('pbShoot').disabled=true;pbEl('pbCancel').hidden=false;
+ document.querySelectorAll('input[name=pbDelay]').forEach(e=>e.disabled=true);
+ pbEl('pbCount').classList.add('active');pbEl('pbShootProgress').firstElementChild.style.width='0%';
+ pbSetStatus(`Six animated-ear captures • ${PB.delay}s between shots • experimental proxy, no real-ear footage ♡`);
+ let shot=0,lastSecond=-1,shotStart=performance.now();pbUpdateBeats(shot);
+ function tick(now){
+  if(token!==PB.token||!PB.recording)return;
+  const pose=PB_POSES[shot],elapsed=now-shotStart;
+  const remain=Math.max(1,Math.ceil(PB.delay-elapsed/1000));
+  const countdown=pbEl('pbCount');
+  pbEl('pbCountNum').textContent=String(remain);
+  pbEl('pbCountLabel').textContent=`${pose.ear==='L'?'LEFT':'RIGHT'} · ${pose.pose}`;
+  pbEl('pbCountSub').textContent=`PHOTO ${shot+1} OF 6 · ${PB.delay}S DELAY`;
+  if(remain!==lastSecond){lastSecond=remain;pbBeep()}
+  pbEl('pbShootProgress').firstElementChild.style.width=(((shot+Math.min(1,elapsed/(PB.delay*1000)))/6)*100).toFixed(1)+'%';
+  if(elapsed<PB.delay*1000){requestAnimationFrame(tick);return}
+  PB.images[shot]=pbEarPhoto(pose.ear);pbFlash();pbBeep();pbUpdatePreview(shot);
+  pbSetStatus(`${shot+1}/6 saved! ${pose.ear==='L'?'LEFT':'RIGHT'} ${pose.pose.toLowerCase()} <3`);
+  shot++;if(shot<6){shotStart=now;lastSecond=-1;pbUpdateBeats(shot);requestAnimationFrame(tick);return}
+  PB.recording=false;PB.working=true;pbEl('pbCount').classList.remove('active');pbEl('pbCancel').hidden=true;
+  document.querySelectorAll('input[name=pbDelay]').forEach(e=>e.disabled=false);
+  pbEl('pbShootProgress').firstElementChild.style.width='100%';pbUpdateBeats(6);
+  pbSetStatus('SIX EARS CAPTURED! Printing a little ear wiggle collage... ♡');
+  PB.png=pbDrawStory(pbCanvas(720,1280));pbUpdatePreview();
+  // GIF shows a 6-photo echo, one highlighted frame per ear moment.
+  setTimeout(()=>{
+   if(token!==PB.token)return;
+   try{
+    const frames=[];
+    for(let i=0;i<6;i++){frames.push(pbDrawStory(pbCanvas(270,480),i))}
+    PB.frames=frames;PB.gif=pbEncodeGIF(frames,270,480,60);
+    pbSetStatus('TA-DA! 3 left + 3 right, a Story collage and a six-beat GIF. No face, only wiggles ♡');
+   }catch(err){console.warn(err);pbSetStatus('Six-photo Story ready ♡ The GIF could not be encoded: '+err.message)}
+   PB.working=false;pbEl('pbShoot').disabled=false;pbEnableExports(true);pbUpdatePreview();
+  },80);
+ }
+ requestAnimationFrame(tick);
+}
+pbEl('pbShoot').addEventListener('click',pbStart);pbEl('pbRetake').addEventListener('click',pbStart);pbEl('pbCancel').addEventListener('click',pbCancel);
+function pbDownload(blob,name){if(!blob)return;const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.style.display='none';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),9000)}
+function pbPNGBlob(){return new Promise(ok=>PB.png.toBlob(ok,'image/png'))}
+pbEl('pbPNG').addEventListener('click',async()=>{if(PB.png)pbDownload(await pbPNGBlob(),'webbit-six-ear-strips-@chaxnsee.png')});
+pbEl('pbGIF').addEventListener('click',()=>{if(PB.gif)pbDownload(PB.gif,'webbit-six-ear-echo-@chaxnsee.gif');else pbSetStatus('GIF unavailable; save your six-shot Story PNG ♡')});
+pbEl('pbShare').addEventListener('click',async()=>{
+ if(!PB.png)return;
+ const png=await pbPNGBlob(),file=new File([png],'webbit-six-ear-story.png',{type:'image/png'});
+ try{if(navigator.share&&(!navigator.canShare||navigator.canShare({files:[file]}))){await navigator.share({files:[file],title:'WEBBIT! The Rabbit Society',text:'I can wiggle my ears! <3 @chaxnsee'});return}}catch(err){if(err?.name==='AbortError')return;console.warn(err)}
+ pbDownload(png,'webbit-six-ear-story.png');pbSetStatus('Story saved! Open Instagram and choose your photo; add a real @chaxnsee mention sticker for a clickable tag ♡');
+});
+
+// LIVE AR CAMERA BOOTH — opt-in local canvas capture; the six-shot mode remains independent.
+const arCanvas=document.getElementById('arLiveCanvas'),arCtx=arCanvas.getContext('2d');
+const arStatus=t=>document.getElementById('arMessage').textContent=t;
+let arLive=true,arRec=null,arChunks=[],arVideo=null,arLoopActive=false;
+function arSwitch(live){
+ arLive=live;booth.classList.toggle('ar-live-mode',live);
+ document.getElementById('arModeLive').classList.toggle('arSelected',live);
+ document.getElementById('arModeStrip').classList.toggle('arSelected',!live);
+ if(live)arRenderStart();
+}
+document.getElementById('arModeLive').onclick=()=>arSwitch(true);
+document.getElementById('arModeStrip').onclick=()=>arSwitch(false);
+function arLandmark(i){
+ const q=lm&&lm[i];if(!q)return null;
+ const v=vid;const cw=arCanvas.width,ch=arCanvas.height;
+ const vw0=v.videoWidth||640,vh0=v.videoHeight||480;
+ const sc=Math.max(cw/vw0,ch/vh0),ox=(cw-vw0*sc)/2,oy=(ch-vh0*sc)/2;
+ return [cw-(q.x*vw0*sc+ox),q.y*vh0*sc+oy];
+}
+// Photo Booth uses the exact same spring rig, jelly materials, skins, and
+// rendering function as the main feed. Only the screen-space placement changes.
+function arDrawMainEar(k,anchor,earHeight){
+ const source=E[k];if(!source.P||source.P.length<5)return;
+ const base=source.P[0];
+ const tip=source.P[source.P.length-1];
+ const sourceHeight=Math.max(1,Math.abs(tip[1]-base[1]));
+ const scale=earHeight/sourceHeight;
+ const transformed={...source,P:source.P.map(p=>[anchor[0]+(p[0]-base[0])*scale,anchor[1]+(p[1]-base[1])*scale]),W:source.W*scale};
+ const prior=ctx;
+ try{ctx=arCtx;drawEar(transformed,performance.now()/1000)}
+ finally{ctx=prior}
+}
+function arRenderFrame(){
+ const x=arCtx,c=arCanvas,W=c.width,H=c.height;
+ x.clearRect(0,0,W,H);
+ if(camOn&&vid.readyState>=2){
+ const vw0=vid.videoWidth||640,vh0=vid.videoHeight||480;
+ const scale=Math.max(W/vw0,H/vh0),dw=vw0*scale,dh=vh0*scale;
+ x.save();x.translate(W,0);x.scale(-1,1);x.drawImage(vid,(W-dw)/2,(H-dh)/2,dw,dh);x.restore();
+ // Match the main feed: same E.L/E.R spring motion and SAME drawEar().
+ // Landmarks are only used to anchor the ears over the mirrored camera image.
+ const forehead=arLandmark(10),browImageLeft=arLandmark(70),browImageRight=arLandmark(300);
+ const cheekImageLeft=arLandmark(234),cheekImageRight=arLandmark(454);
+ if(forehead&&browImageLeft&&browImageRight){
+  const faceW=cheekImageLeft&&cheekImageRight?
+    Math.hypot(cheekImageRight[0]-cheekImageLeft[0],cheekImageRight[1]-cheekImageLeft[1]):
+    Math.hypot(browImageRight[0]-browImageLeft[0],browImageRight[1]-browImageLeft[1])*1.65;
+  // Visibly bigger than old ears: ~65% of detected face width per ear in height.
+  const earH=Math.max(165,Math.min(360,faceW*.87))*S.size;
+  const y=Math.min(forehead[1],browImageLeft[1],browImageRight[1])+Math.min(24,faceW*.09);
+  const spacing=Math.max(30,faceW*.24)*S.gap;
+  const xCenter=forehead[0];
+  // Normal horizontal orientation is mirrored by the camera transform.
+  // E.L is anatomical left, which appears on viewer's right.
+  arDrawMainEar('R',[xCenter-spacing,y],earH);
+  arDrawMainEar('L',[xCenter+spacing,y],earH);
+ }else{
+  x.fillStyle='#fff';x.font='18px sans-serif';x.fillText('Position your face in the frame',35,H/2);
+ }
+ }else{
+ const grd=x.createLinearGradient(0,0,0,H);grd.addColorStop(0,'#142548');grd.addColorStop(1,'#3a2860');x.fillStyle=grd;x.fillRect(0,0,W,H);
+ x.fillStyle='#fff';x.font='bold 24px sans-serif';x.textAlign='center';x.fillText('CAMERA PREVIEW',W/2,H/2);x.font='15px sans-serif';x.fillText('Enable camera to begin',W/2,H/2+30);x.textAlign='start';
+ }
+ x.fillStyle='#ffffffdd';x.fillRect(16,16,174,36);x.fillStyle='#163c68';x.font='900 22px sans-serif';x.fillText('WEBBIT! ♡',26,42);
+ x.fillStyle='#fff';x.font='bold 18px sans-serif';x.fillText('THE RABBIT SOCIETY · @chaxnsee',16,H-22);
+}
+function arRenderStart(){if(arLoopActive)return;arLoopActive=true;function tick(){if(!booth.classList.contains('open')){arLoopActive=false;return}if(arLive)arRenderFrame();requestAnimationFrame(tick)}requestAnimationFrame(tick)}
+document.getElementById('arStart').onclick=async()=>{
+ if(camOn){arStatus('Camera is already active. Select a rabbit skin from the main settings panel.');return}
+ try{document.getElementById('go').click();arStatus('Starting camera and loading face tracking… Camera permission may be requested.')}catch(e){arStatus('Camera unavailable: '+e.message)}
+};
+document.getElementById('arPhoto').onclick=()=>{
+ if(!camOn||vid.readyState<2){arStatus('Please enable the camera first.');return}
+ arRenderFrame();arCanvas.toBlob(b=>{if(b)pbDownload(b,'WEBBIT-rabbit-society-AR-photo.png')},'image/png');arStatus('AR photo saved locally. ♡');
+};
+document.getElementById('arRecord').onclick=()=>{
+ if(arRec&&arRec.state==='recording'){arRec.stop();return}
+ if(!camOn||vid.readyState<2){arStatus('Enable the camera before recording.');return}
+ if(!arCanvas.captureStream||!window.MediaRecorder){arStatus('Video recording is not supported in this browser. Try a recent Chrome or Edge.');return}
+ try{
+ arChunks=[];arVideo=null;const stream=arCanvas.captureStream(30);
+ const mime=['video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'].find(m=>MediaRecorder.isTypeSupported(m))||'';
+ arRec=new MediaRecorder(stream,mime?{mimeType:mime}:{});
+ arRec.ondataavailable=e=>{if(e.data.size)arChunks.push(e.data)};
+ arRec.onstop=()=>{arVideo=new Blob(arChunks,{type:arRec.mimeType||'video/webm'});document.getElementById('arSaveVideo').disabled=false;document.getElementById('arRecord').textContent='● RECORD VIDEO';document.getElementById('arRecord').classList.remove('recording');arStatus('Video ready! Save it below.');stream.getTracks().forEach(t=>t.stop())};
+ arRec.start(250);document.getElementById('arRecord').textContent='■ STOP RECORDING';document.getElementById('arRecord').classList.add('recording');arStatus('Recording camera + animated ears locally. No audio is recorded. Press STOP when ready.');
+ }catch(e){arStatus('Recording could not start: '+e.message)}
+};
+document.getElementById('arSaveVideo').onclick=()=>{if(arVideo)pbDownload(arVideo,'WEBBIT-rabbit-society-AR-video.webm')};
+
+// Embedded 8-bit GIF89a encoder; GIF is created in browser, no account or upload.
+function pbEncodeGIF(canvases,width,height,delay=60){
+ if(!canvases.length)throw new Error('no frames recorded');
+ const bytes=[];const put=(...xs)=>{for(const x of xs)bytes.push(x&255)},word=x=>put(x&255,x>>8),str=s=>{for(const c of s)put(c.charCodeAt(0))};
+ str('GIF89a');word(width);word(height);put(0xF7,0,0);
+ for(let n=0;n<256;n++)put(Math.round((n>>5)*255/7),Math.round(((n>>2)&7)*255/7),Math.round((n&3)*255/3));
+ put(0x21,0xFF,11);str('NETSCAPE2.0');put(3,1,0,0,0);
+ for(let fi=0;fi<canvases.length;fi++){
+  const source=canvases[fi],im=source.getContext('2d',{willReadFrequently:true}).getImageData(0,0,width,height).data;
+  const pix=new Uint8Array(width*height);
+  for(let i=0,j=0;i<im.length;i+=4,j++)pix[j]=(im[i]&0xE0)|((im[i+1]&0xE0)>>3)|((im[i+2]&0xC0)>>6);
+  put(0x21,0xF9,4,0);word(delay);put(0,0);
+  put(0x2C);word(0);word(0);word(width);word(height);put(0);
+  put(8);
+  const data=[];let bitBuffer=0,bitN=0,codeSize=9,next=258,dict=new Map();
+  const pushCode=code=>{bitBuffer|=code<<bitN;bitN+=codeSize;while(bitN>=8){data.push(bitBuffer&255);bitBuffer>>>=8;bitN-=8}};
+  pushCode(256);let prev=pix[0];
+  for(let i=1;i<pix.length;i++){
+   const p=pix[i],key=prev*256+p,known=dict.get(key);
+   if(known!==undefined){prev=known;continue}
+   pushCode(prev);
+   if(next<4096){dict.set(key,next++);if(next===((1<<codeSize)+1)&&codeSize<12)codeSize++}
+   else{pushCode(256);dict=new Map();next=258;codeSize=9}
+   prev=p;
+  }
+  pushCode(prev);pushCode(257);if(bitN>0)data.push(bitBuffer&255);
+  for(let i=0;i<data.length;i+=255){const len=Math.min(255,data.length-i);put(len);for(let j=0;j<len;j++)put(data[i+j])}
+  put(0);
+ }
+ put(0x3B);return new Blob([new Uint8Array(bytes)],{type:'image/gif'});
+}
+
+// ---------------- MINI LIBRARY — VERIFIED LINKS, STATIC/LOCAL INDEX ----------------
+const earBooks = [
+ {cat:'science',year:'2025',kind:'PEER REVIEWED',source:'Frontiers in Neuroscience',title:'Ear muscles respond when listening gets difficult',desc:'Muscle recordings suggest the superior auricular muscle becomes more active during effortful listening. Its tiny movements probably do not meaningfully improve hearing.',url:'https://pubmed.ncbi.nlm.nih.gov/39959575/'},
+ {cat:'science',year:'2020',kind:'PEER REVIEWED',source:'eLife',title:'A neural fossil: ears orient toward sounds',desc:'A study of ear-muscle electrical activity found traces of an ancient sound-orienting mechanism, even when visible ear motion is minimal.',url:'https://pubmed.ncbi.nlm.nih.gov/32618268/'},
+ {cat:'science',year:'2024',kind:'PEER REVIEWED',source:'Journal of Neurophysiology',title:'The vestigial pinna-orienting system',desc:'A closer look at ear-muscle activity during reflexive attention to unexpected auditory stimuli.',url:'https://pubmed.ncbi.nlm.nih.gov/38896795/'},
+ {cat:'science',year:'2025',kind:'PEER REVIEWED',source:'eNeuro',title:'Selective listening and auricular-muscle activity',desc:'Research on how attention to unpredictable sound sequences changes muscle activity in the human auriculomotor system.',url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC12548703/'},
+ {cat:'science',year:'2023',kind:'RESEARCH',source:'PMC',title:'Measuring tiny ear-muscle signals',desc:'An experiment using electrodes in and around the ear to investigate auricular muscle activity and sound direction.',url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10588413/'},
+ {cat:'press',year:'2025',kind:'RADIO / STORY',source:'NPR via GBH',title:'Your ears can’t prick up, but your ear muscles try',desc:'A short, listenable science story about our surprising leftover ear reflex.',url:'https://www.wgbh.org/news/2025-02-02/your-ears-cant-prick-up-but-your-ear-muscles-sure-try'},
+ {cat:'press',year:'2025',kind:'NEWS',source:'The Guardian',title:'“A neural fossil”: human ears try to move',desc:'A report on research linking ear-muscle activation to focused listening.',url:'https://www.theguardian.com/science/2025/jan/31/neural-fossil-human-ears-move-when-listening-scientists-say'},
+ {cat:'press',year:'2025',kind:'SCIENCE MAGAZINE',source:'Science News',title:'Wiggling ears may have once helped us hear',desc:'A friendly account of the small, vestigial muscle movements that remain in humans.',url:'https://www.sciencenews.org/article/wiggling-ears-hearing'},
+ {cat:'press',year:'2025',kind:'SCIENCE NEWS',source:'Live Science',title:'Ear-wiggling muscles flex when we strain to hear',desc:'Why cats point their ears and why our smaller ear-muscle response is still interesting.',url:'https://www.livescience.com/health/anatomy/vestigial-human-ear-wiggling-muscle-actually-flexes-when-were-straining-to-hear'},
+ {cat:'press',year:'2025',kind:'MAGAZINE',source:'Popular Science',title:'Most humans haven’t moved these muscles in millions of years',desc:'A popular-science take on the history and possible role of our auricular muscles.',url:'https://www.popsci.com/science/ear-muscles-wiggle/'},
+ {cat:'press',year:'2025',kind:'NEWS',source:'ScienceAlert',title:'Our ears still try to swivel to hear better',desc:'A playful explanation of the human hearing reflex that never completely disappeared.',url:'https://www.sciencealert.com/our-ears-still-try-to-swivel-around-to-hear-better-study-discovers'},
+ {cat:'press',year:'2025',kind:'SCIENCE NEWS',source:'Frontiers',title:'Ear muscles activate when people listen hard',desc:'The research team’s accessible summary of its 2025 listening-effort study.',url:'https://www.frontiersin.org/news/2025/01/31/ear-muscle-wiggling-ears-activates-listening-frontiers-neuroscience'},
+ {cat:'wiki',year:'REFERENCE',kind:'WIKIPEDIA',source:'Wikipedia',title:'Ear wiggling',desc:'A starting point for the skill, its unusual voluntary control, and the history of training with biofeedback.',url:'https://en.wikipedia.org/wiki/Ear_wiggling'},
+ {cat:'wiki',year:'REFERENCE',kind:'WIKIPEDIA',source:'Wikipedia',title:'Outer ear',desc:'An illustrated overview of the auricle, including the front, top and rear ear-moving muscles.',url:'https://en.wikipedia.org/wiki/Outer_ear'},
+ {cat:'wiki',year:'REFERENCE',kind:'ANATOMY',source:'NCBI Bookshelf',title:'External Ear Anatomy',desc:'A clinical anatomy overview of the anterior, superior, and posterior auricular muscles.',url:'https://www.ncbi.nlm.nih.gov/books/NBK470359/'},
+ {cat:'wiki',year:'REFERENCE',kind:'ANATOMY',source:'Kenhub',title:'The muscles of the external ear',desc:'Clear anatomical descriptions and visuals of the auricular muscles and their functions.',url:'https://www.kenhub.com/en/library/anatomy/the-ear'},
+ {cat:'creator',year:'WEBBIT',kind:'ARTIST',source:'Enchax',title:'Creatively Enchanted',desc:'Art, experiments, and creative technology by Enchax — Aung Nyein Chan.',url:'https://creativelyenchanted.com'},
+ {cat:'creator',year:'SOCIAL',kind:'INSTAGRAM',source:'Enchax',title:'@chaxnsee',desc:'Follow the maker of WEBBIT and tag your own little ear-wiggle creations.',url:'https://instagram.com/chaxnsee'},
+ {cat:'creator',year:'SUPPORT',kind:'DONATE',source:'Enchax',title:'Help the ear wiggle experiments grow',desc:'Support future experiments, materials, and documentation for this playful project.',url:'https://buymeacoffee.com/enchax'}
+];
+const libEl=id=>document.getElementById(id),libRoot=libEl('earLibrary');
+let libCategory='all',libFocus=null;
+function escLib(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function libRender(){
+ const q=libEl('libSearch').value.trim().toLocaleLowerCase();
+ const subset=earBooks.filter(v=>(libCategory==='all'||libCategory===v.cat)&&[v.title,v.source,v.desc,v.kind,v.year].join(' ').toLocaleLowerCase().includes(q));
+ libEl('libItems').innerHTML=subset.map(item=>`<article class="libItem"><div class="libMeta"><span class="libCategory">${escLib(item.cat)}</span><span>${escLib(item.kind)}</span><span>${escLib(item.year)}</span><span>${escLib(item.source)}</span></div><h3>${escLib(item.title)}</h3><p>${escLib(item.desc)}</p><a href="${escLib(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${escLib(item.title)} in a new tab">READ THE SOURCE ↗</a></article>`).join('')||'<p class="libNote">No matching ear things. Try a different word, little rabbit ♡</p>';
+ libEl('libCount').textContent=`✦ SHOWING ${subset.length} OF ${earBooks.length} HAND-PICKED LINKS · OPENS ORIGINAL SOURCES IN NEW TABS`;
+}
+function libOpen(){libFocus=document.activeElement;libRoot.classList.add('open');libRoot.setAttribute('aria-hidden','false');libEl('libSearch').value='';libCategory='all';document.querySelectorAll('[data-libcat]').forEach(b=>b.classList.toggle('active',b.dataset.libcat==='all'));libRender();libEl('libClose').focus();}
+function libClose(){libRoot.classList.remove('open');libRoot.setAttribute('aria-hidden','true'); if(libFocus&&libFocus.focus)libFocus.focus();}
+for(const id of ['libraryOpen','welcomeLibrary','dialogLibrary']){const el=libEl(id);if(el)el.addEventListener('click',()=>{if(id==='dialogLibrary'&&document.getElementById('dlg').open)document.getElementById('dlg').close();libOpen()});}
+libEl('libClose').addEventListener('click',libClose);
+libRoot.addEventListener('click',e=>{if(e.target===libRoot)libClose()});
+libRoot.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();libClose();}});
+libEl('libSearch').addEventListener('input',libRender);
+document.querySelectorAll('[data-libcat]').forEach(el=>el.addEventListener('click',()=>{libCategory=el.dataset.libcat;document.querySelectorAll('[data-libcat]').forEach(b=>b.classList.toggle('active',b===el));libRender();}));
+libRender();
+
+</script>
+</body></html>

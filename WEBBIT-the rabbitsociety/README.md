@@ -1,0 +1,1 @@
+WEBBIT! The Rabbit Society — live AR Photo Booth using exact main experience rabbit ear spring rig and rendering. Ears are enlarged and face anchored via MediaPipe. Deploy as static site on Vercel with no build command. Camera requires HTTPS and user permission. Tracking uses eyebrow/forehead proxy, not direct ear muscle tracking. Recordings are local.
